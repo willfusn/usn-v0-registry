@@ -10,7 +10,7 @@
       "description": "Blank application with your brand themed components",
       "files": [
         {
-          "path": "src/app/globals.css",
+          "path": "src/styles/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
@@ -54,7 +54,7 @@
       "registryDependencies": ["button", "input", "avatar", "sidebar"],
       "files": [
         {
-          "path": "src/app/globals.css",
+          "path": "src/styles/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
@@ -83,7 +83,7 @@
       "registryDependencies": ["badge", "button", "sidebar"],
       "files": [
         {
-          "path": "src/app/globals.css",
+          "path": "src/styles/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
@@ -107,7 +107,7 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/app/globals.css",
+          "path": "src/styles/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
