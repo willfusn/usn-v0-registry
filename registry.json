@@ -15,6 +15,11 @@
           "target": "styles/globals.css"
         },
         {
+          "path": "src/styles/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
           "path": "src/app/starter/layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
@@ -54,6 +59,11 @@
           "target": "styles/globals.css"
         },
         {
+          "path": "src/styles/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
           "path": "src/components/brand-header.tsx",
           "type": "registry:file",
           "target": "components/brand-header.tsx"
@@ -78,6 +88,11 @@
           "target": "styles/globals.css"
         },
         {
+          "path": "src/styles/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
           "path": "src/components/brand-sidebar.tsx",
           "type": "registry:file",
           "target": "components/brand-sidebar.tsx"
@@ -95,6 +110,11 @@
           "path": "src/styles/globals.css",
           "type": "registry:file",
           "target": "styles/globals.css"
+        },
+        {
+          "path": "src/styles/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
         }
       ]
     }
