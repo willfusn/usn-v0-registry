@@ -1,4 +1,4 @@
-# Design Registry Starter
+# Registry Starter
 
 This is a [Next.js](https://www.nextjs.org) application powered by Tailwind v4 and Shadcn/ui components to help 
 accelerate building a design systems implementation using Shadcn Registries.
