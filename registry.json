@@ -27,7 +27,7 @@
         {
           "path": "src/components/brand-header.tsx",
           "type": "registry:file",
-          "target": "components/brand-sidebar.tsx"
+          "target": "components/brand-header.tsx"
         },
         {
           "path": "src/components/logo.tsx",
