@@ -8,6 +8,10 @@
       "type": "registry:theme",
       "title": "Starter Prototype",
       "description": "Blank application with your brand themed components",
+      "registryDependencies": [
+        "https://design-starter.vercel.app/r/brand-header.tsx",
+        "https://design-starter.vercel.app/r/brand-sidebar.tsx"
+      ],
       "files": [
         {
           "path": "src/styles/globals.css",
@@ -23,11 +27,44 @@
           "path": "src/app/starter/page.tsx",
           "type": "registry:file",
           "target": "app/page.tsx"
+        }
+      ]
+    },
+    {
+      "name": "brand-header",
+      "type": "registry:component",
+      "title": "Brand Header",
+      "description": "A styled, simple, reusable header",
+      "registryDependencies": ["button", "input", "avatar", "sidebar"],
+      "files": [
+        {
+          "path": "src/styles/globals.css",
+          "type": "registry:file",
+          "target": "styles/globals.css"
         },
         {
           "path": "src/components/brand-header.tsx",
           "type": "registry:file",
           "target": "components/brand-header.tsx"
+        },
+        {
+          "path": "src/components/logo.tsx",
+          "type": "registry:file",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "brand-sidebar",
+      "type": "registry:component",
+      "title": "Brand Sidebar",
+      "description": "A styled, simple, reusable sidebar",
+      "registryDependencies": ["badge", "button", "sidebar"],
+      "files": [
+        {
+          "path": "src/styles/globals.css",
+          "type": "registry:file",
+          "target": "styles/globals.css"
         },
         {
           "path": "src/components/brand-sidebar.tsx",

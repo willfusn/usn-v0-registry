@@ -1,13 +1,14 @@
 "use client";
 
+import { HelpCircle, Menu, Search, X } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useSidebar } from "@/components/ui/sidebar";
-import { Grid, HelpCircle, Menu, Search, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+
 import { Logo } from "./logo";
 
 export function BrandHeader() {

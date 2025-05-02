@@ -67,7 +67,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 interface Component {
-  name: string;
+  name: string; // this must match the `registry.json` name
   description: string;
   components?: {
     [name: string]: ReactNode;
@@ -380,7 +380,7 @@ export default async function ComponentPage({
 
       <div className="mb-6 flex items-center justify-between">
         <h3 className="font-bold">Preview</h3>
-        <OpenInV0Button name={component.name} />
+        <OpenInV0Button name={component.name.toLowerCase()} />
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20 p-10">
