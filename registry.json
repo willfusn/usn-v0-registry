@@ -138,11 +138,163 @@
       ]
     },
     {
+      "name": "accordion",
+      "type": "registry:component",
+      "title": "Accordion",
+      "description": "A styled, simple, reusable accordion",
+      "registryDependencies": ["accordion"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "A styled, simple, reusable alert",
+      "registryDependencies": ["alert"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "Avatar",
+      "description": "A styled, simple, reusable avatar",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "Badge",
+      "description": "A styled, simple, reusable badge",
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:component",
       "title": "Button",
       "description": "A styled, simple, reusable button",
       "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Card",
+      "description": "A styled, simple, reusable card",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Checkbox",
+      "description": "A styled, simple, reusable checkbox",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Dialog",
+      "description": "A styled, simple, reusable dialog",
+      "registryDependencies": ["dialog"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:component",
+      "title": "Dropdown",
+      "description": "A styled, simple, reusable dropdown menu",
+      "registryDependencies": ["dropdown-menu"],
       "files": [
         {
           "path": "src/app/globals.css",

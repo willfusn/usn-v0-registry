@@ -40,7 +40,10 @@ export default function StartPage() {
           <div key={starter.name}>
             <div className="mb-6 flex items-center justify-between">
               <h3 className="font-bold">{starter.title}</h3>
-              <OpenInV0Button name={starter.name} />
+              <OpenInV0Button
+                name={starter.name}
+                prompt="This is a blank application prototype with existing components and shadcn styling. Prompt v0 to make changes or build on top of the existing template"
+              />
             </div>
 
             <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20">

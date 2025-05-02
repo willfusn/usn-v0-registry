@@ -4,7 +4,7 @@ import type { ComponentProps } from "react";
 export function OpenInV0Button({
   name,
   title = "Design Starter Kit",
-  prompt = "A blank app v0 generation with a sidebar, a header, and shadcn styling. Start prompting to see a preview",
+  prompt = "These are existing design system styles. Please utilize them alongside base shadcn components.",
   className,
 }: { name: string; title?: string; prompt?: string } & ComponentProps<
   typeof Button
