@@ -2,9 +2,7 @@ import { VercelToolbar } from "@vercel/toolbar/next";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import "@/styles/globals.css";
-import { RegistrySidebar } from "@/app/registry-sidebar";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "Design Registry",

@@ -10,9 +10,9 @@
       "description": "Blank application with your brand themed components",
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
-          "target": "styles/globals.css"
+          "target": "app/globals.css"
         },
         {
           "path": "src/styles/tailwind.config.ts",
@@ -54,9 +54,9 @@
       "registryDependencies": ["button", "input", "avatar", "sidebar"],
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
-          "target": "styles/globals.css"
+          "target": "app/globals.css"
         },
         {
           "path": "src/styles/tailwind.config.ts",
@@ -83,9 +83,9 @@
       "registryDependencies": ["badge", "button", "sidebar"],
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
-          "target": "styles/globals.css"
+          "target": "app/globals.css"
         },
         {
           "path": "src/styles/tailwind.config.ts",
@@ -107,9 +107,9 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
-          "target": "styles/globals.css"
+          "target": "app/globals.css"
         },
         {
           "path": "src/styles/tailwind.config.ts",
