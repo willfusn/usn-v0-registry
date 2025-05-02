@@ -1,18 +1,15 @@
 import { VercelToolbar } from "@vercel/toolbar/next";
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "@/app/globals.css";
-
-export const metadata: Metadata = {
-  title: "Design Registry",
-  description:
-    "Starter to help build a Shadcn Design Registry using Tailwind v4",
-  icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
-};
+import { BrandHeader } from "@/components/brand-header";
+import { BrandSidebar } from "@/components/brand-sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "sonner";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const geistMono = Geist_Mono({
@@ -30,7 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(fonts, "bg-background")}>
       <body>
-        {children}
+        <SidebarProvider>
+          <BrandHeader />
+          <BrandSidebar />
+          <main className="mt-16 flex w-full justify-center">
+            <div className="container">{children}</div>
+          </main>
+          <Toaster />
+        </SidebarProvider>
 
         {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>

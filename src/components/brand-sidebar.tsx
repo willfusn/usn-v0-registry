@@ -2,7 +2,7 @@
 
 import {
   AlertTriangle,
-  ChartArea,
+  ChartBarBig,
   Clock,
   Database,
   Home,
@@ -102,7 +102,7 @@ export function BrandSidebar({
     {
       title: "Analytics",
       href: "#analytics",
-      icon: <ChartArea className="size-4" />,
+      icon: <ChartBarBig className="size-4" />,
     },
     {
       title: "History",
@@ -195,24 +195,6 @@ export function BrandSidebar({
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-
-      <SidebarSeparator />
-
-      <SidebarFooter>
-        <div className={cn("space-y-3 p-4", isCollapsed && "p-2")}>
-          <div className="flex items-center justify-between">
-            <span className="flex items-center gap-2 font-semibold">
-              <Wallet className="size-4" />
-              {!isCollapsed && "Enterprise"}
-            </span>
-            {!isCollapsed && (
-              <Badge className="rounded-md border border-border bg-muted text-foreground">
-                Trial
-              </Badge>
-            )}
-          </div>
-        </div>
-      </SidebarFooter>
     </Sidebar>
   );
 }

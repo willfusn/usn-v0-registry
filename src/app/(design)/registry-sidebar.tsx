@@ -50,8 +50,8 @@ const blockItems = [
 
 const gettingStartedItems = [
   { name: "Home", path: "/" },
-  { name: "Tokens", path: "/tokens" },
-  { name: "Start", path: "/start" },
+  { name: "Design Tokens", path: "/tokens" },
+  { name: "v0 Starter", path: "/start" },
 ];
 
 export function RegistrySidebar() {
@@ -83,8 +83,8 @@ export function RegistrySidebar() {
       <SidebarHeader className="border-b">
         <div className="flex items-center justify-between px-2 py-2">
           <Link href="/" className="flex min-w-0 items-center gap-2">
-            <div className="flex-shrink-0 rounded-md bg-brand-one p-1">
-              <Squirrel className="size-5 text-white" />
+            <div className="flex-shrink-0 rounded-md bg-primary p-1">
+              <Squirrel className="size-5 text-secondary" />
             </div>
             <span className="overflow-hidden font-semibold opacity-100 transition-opacity duration-200">
               Design Registry

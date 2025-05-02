@@ -1,19 +1,27 @@
-import type { ComponentProps } from "react";
-
 import { Button } from "@/components/ui/button";
+import type { ComponentProps } from "react";
 
 export function OpenInV0Button({
   name,
+  title = "Design Starter Kit",
+  prompt = "A blank app v0 generation with a sidebar, a header, and shadcn styling. Start prompting to see a preview",
   className,
-}: { name: string } & ComponentProps<typeof Button>) {
+}: { name: string; title?: string; prompt?: string } & ComponentProps<
+  typeof Button
+>) {
+  const searchParams = new URLSearchParams({
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`,
+    title,
+    prompt,
+  }).toString();
+
   return (
     <Button
       aria-label="Open in v0"
       className={`flex items-center gap-2 rounded-md bg-black px-4 py-2 text-white hover:bg-black/90 ${className}`}
     >
       <a
-        // FIXME: Add `registry.json` and everything later
-        href={`https://v0.dev/chat/api/open?url=${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`}
+        href={`https://v0.dev/chat/api/open?${searchParams}`}
         target="_blank"
         rel="noreferrer"
         className="flex items-center gap-2"

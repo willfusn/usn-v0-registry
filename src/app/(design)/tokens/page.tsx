@@ -1,285 +1,261 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+"use client";
+
 import { ColorBlock } from "./color-block";
 
 export default function TokensPage() {
   return (
     <div className="container p-10">
       <div className="mb-8">
-        <h1 className="font-bold text-3xl tracking-tight">Tokens</h1>
+        <h1 className="font-bold text-3xl tracking-tight">Design Tokens</h1>
         <p className="mt-1 text-muted-foreground">
           A comprehensive overview of all color tokens used in the design system
         </p>
       </div>
 
-      {/* Base Colors */}
+      {/* Primary Theme */}
       <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Base Colors</h2>
+        <h2 className="mb-4 font-semibold text-xl">Primary Theme</h2>
         <p className="mb-6 text-muted-foreground">
-          The foundational colors that define the overall look and feel of the
+          The core colors that define the primary theme and overall look of the
           interface.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
             name="Background"
-            variable="--color-background"
-            className="border bg-background text-foreground"
+            value="oklch(0.97 0.01 80.72)"
+            className="bg-background text-foreground"
           />
           <ColorBlock
             name="Foreground"
-            variable="--color-foreground"
+            value="oklch(0.3 0.04 30.2)"
             className="bg-foreground text-background"
           />
-        </div>
-      </section>
-
-      {/* Component Colors */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Component Colors</h2>
-        <p className="mb-6 text-muted-foreground">
-          Colors used for specific UI components like cards and popovers.
-        </p>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock
-            name="Card"
-            variable="--color-card"
-            className="border bg-card text-card-foreground"
-          />
-          <ColorBlock
-            name="Card Foreground"
-            variable="--color-card-foreground"
-            className="bg-card-foreground text-card"
-          />
-          <ColorBlock
-            name="Popover"
-            variable="--color-popover"
-            className="border bg-popover text-popover-foreground"
-          />
-          <ColorBlock
-            name="Popover Foreground"
-            variable="--color-popover-foreground"
-            className="bg-popover-foreground text-popover"
-          />
-        </div>
-      </section>
-
-      {/* Brand Colors */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Brand Colors</h2>
-        <p className="mb-6 text-muted-foreground">
-          The primary brand colors that represent the identity of the product or
-          organization.
-        </p>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <ColorBlock
-            name="Brand One"
-            variable="--color-brand-one"
-            className="bg-[var(--color-brand-one)] text-[var(--color-brand-one-foreground)]"
-          />
-          <ColorBlock
-            name="Brand Two"
-            variable="--color-brand-two"
-            className="bg-[var(--color-brand-two)] text-[var(--color-brand-two-foreground)]"
-          />
-          <ColorBlock
-            name="Brand Three"
-            variable="--color-brand-three"
-            className="bg-[var(--color-brand-three)] text-[var(--color-brand-three-foreground)]"
-          />
-          <ColorBlock
-            name="Brand Four"
-            variable="--color-brand-four"
-            className="bg-[var(--color-brand-four)] text-[var(--color-brand-four-foreground)]"
-          />
-          <ColorBlock
-            name="Brand Five"
-            variable="--color-brand-five"
-            className="bg-[var(--color-brand-five)] text-[var(--color-brand-five-foreground)]"
-          />
-        </div>
-      </section>
-
-      {/* UI State Colors */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">UI State Colors</h2>
-        <p className="mb-6 text-muted-foreground">
-          Colors used to indicate different states and actions in the user
-          interface.
-        </p>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <ColorBlock
             name="Primary"
-            variable="--color-primary"
+            value="oklch(0.52 0.13 144.17)"
             className="bg-primary text-primary-foreground"
           />
           <ColorBlock
             name="Primary Foreground"
-            variable="--color-primary-foreground"
-            className="border bg-primary-foreground text-primary"
-          />
-          <ColorBlock
-            name="Secondary"
-            variable="--color-secondary"
-            className="bg-secondary text-secondary-foreground"
-          />
-          <ColorBlock
-            name="Secondary Foreground"
-            variable="--color-secondary-foreground"
-            className="bg-secondary-foreground text-secondary"
-          />
-          <ColorBlock
-            name="Accent"
-            variable="--color-accent"
-            className="border bg-accent text-accent-foreground"
-          />
-          <ColorBlock
-            name="Accent Foreground"
-            variable="--color-accent-foreground"
-            className="bg-accent-foreground text-accent"
-          />
-          <ColorBlock
-            name="Muted"
-            variable="--color-muted"
-            className="bg-muted text-muted-foreground"
-          />
-          <ColorBlock
-            name="Muted Foreground"
-            variable="--color-muted-foreground"
-            className="bg-muted-foreground text-muted"
-          />
-          <ColorBlock
-            name="Destructive"
-            variable="--color-destructive"
-            className="bg-destructive text-destructive-foreground"
-          />
-          <ColorBlock
-            name="Destructive Foreground"
-            variable="--color-destructive-foreground"
-            className="bg-destructive-foreground text-destructive"
+            value="oklch(1.0 0 0)"
+            className="bg-primary-foreground text-primary"
           />
         </div>
       </section>
 
-      {/* Utility Colors */}
+      {/* Secondary & Accent */}
       <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Utility Colors</h2>
+        <h2 className="mb-4 font-semibold text-xl">Secondary & Accent</h2>
+        <p className="mb-6 text-muted-foreground">
+          Colors used for secondary elements and accents throughout the
+          interface.
+        </p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ColorBlock
+            name="Secondary"
+            value="oklch(0.96 0.02 147.64)"
+            className="bg-secondary text-secondary-foreground"
+          />
+          <ColorBlock
+            name="Secondary Foreground"
+            value="oklch(0.43 0.12 144.31)"
+            className="bg-secondary-foreground text-secondary"
+          />
+          <ColorBlock
+            name="Accent"
+            value="oklch(0.9 0.05 146.04)"
+            className="bg-accent text-accent-foreground"
+          />
+          <ColorBlock
+            name="Accent Foreground"
+            value="oklch(0.43 0.12 144.31)"
+            className="bg-accent-foreground text-accent"
+          />
+        </div>
+      </section>
+
+      {/* UI Component */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">UI Component</h2>
+        <p className="mb-6 text-muted-foreground">
+          Colors used for specific UI components like cards, popovers, and muted
+          elements.
+        </p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ColorBlock
+            name="Card"
+            value="oklch(0.97 0.01 80.72)"
+            className="bg-card text-card-foreground"
+          />
+          <ColorBlock
+            name="Card Foreground"
+            value="oklch(0.3 0.04 30.2)"
+            className="bg-card-foreground text-card"
+          />
+          <ColorBlock
+            name="Popover"
+            value="oklch(0.97 0.01 80.72)"
+            className="bg-popover text-popover-foreground"
+          />
+          <ColorBlock
+            name="Popover Foreground"
+            value="oklch(0.3 0.04 30.2)"
+            className="bg-popover-foreground text-popover"
+          />
+          <ColorBlock
+            name="Muted"
+            value="oklch(0.94 0.01 74.42)"
+            className="bg-muted text-muted-foreground"
+          />
+          <ColorBlock
+            name="Muted Foreground"
+            value="oklch(0.45 0.05 39.21)"
+            className="bg-muted-foreground text-muted"
+          />
+        </div>
+      </section>
+
+      {/* Utility & Form */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Utility & Form</h2>
         <p className="mb-6 text-muted-foreground">
           Colors used for borders, inputs, and other utility elements.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <ColorBlock
             name="Border"
-            variable="--color-border"
+            value="oklch(0.88 0.02 74.64)"
             className="bg-border text-foreground"
           />
           <ColorBlock
             name="Input"
-            variable="--color-input"
+            value="oklch(0.88 0.02 74.64)"
             className="bg-input text-foreground"
           />
           <ColorBlock
             name="Ring"
-            variable="--color-ring"
-            className="bg-ring text-white"
+            value="oklch(0.52 0.13 144.17)"
+            className="bg-ring text-foreground"
           />
         </div>
       </section>
 
-      {/* Chart Colors */}
+      {/* Status & Feedback */}
       <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Chart Colors</h2>
+        <h2 className="mb-4 font-semibold text-xl">Status & Feedback</h2>
         <p className="mb-6 text-muted-foreground">
-          Colors used for data visualization and charts.
-        </p>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
-          <ColorBlock
-            name="Chart 1"
-            variable="--color-chart-1"
-            className="bg-[var(--color-chart-1)] text-white"
-          />
-          <ColorBlock
-            name="Chart 2"
-            variable="--color-chart-2"
-            className="bg-[var(--color-chart-2)] text-foreground"
-          />
-          <ColorBlock
-            name="Chart 3"
-            variable="--color-chart-3"
-            className="bg-[var(--color-chart-3)] text-foreground"
-          />
-          <ColorBlock
-            name="Chart 4"
-            variable="--color-chart-4"
-            className="bg-[var(--color-chart-4)] text-foreground"
-          />
-          <ColorBlock
-            name="Chart 5"
-            variable="--color-chart-5"
-            className="bg-[var(--color-chart-5)] text-foreground"
-          />
-        </div>
-      </section>
-
-      {/* Sidebar Colors */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Sidebar Colors</h2>
-        <p className="mb-6 text-muted-foreground">
-          Colors specific to the sidebar component.
+          Colors used to indicate different states and provide feedback to
+          users.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
-            name="Sidebar Background"
-            variable="--color-sidebar-background"
-            className="border bg-[var(--color-sidebar-background)] text-[var(--color-sidebar-foreground)]"
+            name="Destructive"
+            value="oklch(0.54 0.19 26.72)"
+            className="bg-destructive text-destructive-foreground"
           />
           <ColorBlock
-            name="Sidebar Foreground"
-            variable="--color-sidebar-foreground"
-            className="bg-[var(--color-sidebar-foreground)] text-[var(--color-sidebar-background)]"
-          />
-          <ColorBlock
-            name="Sidebar Primary"
-            variable="--color-sidebar-primary"
-            className="bg-[var(--color-sidebar-primary)] text-[var(--color-sidebar-primary-foreground)]"
-          />
-          <ColorBlock
-            name="Sidebar Primary Foreground"
-            variable="--color-sidebar-primary-foreground"
-            className="border bg-[var(--color-sidebar-primary-foreground)] text-[var(--color-sidebar-primary)]"
-          />
-          <ColorBlock
-            name="Sidebar Accent"
-            variable="--color-sidebar-accent"
-            className="bg-[var(--color-sidebar-accent)] text-[var(--color-sidebar-accent-foreground)]"
-          />
-          <ColorBlock
-            name="Sidebar Accent Foreground"
-            variable="--color-sidebar-accent-foreground"
-            className="border bg-[var(--color-sidebar-accent-foreground)] text-[var(--color-sidebar-accent)]"
-          />
-          <ColorBlock
-            name="Sidebar Border"
-            variable="--color-sidebar-border"
-            className="border bg-[var(--color-sidebar-border)] text-white"
-          />
-          <ColorBlock
-            name="Sidebar Ring"
-            variable="--color-sidebar-ring"
-            className="bg-[var(--color-sidebar-ring)] text-white"
+            name="Destructive Foreground"
+            value="oklch(1.0 0 0)"
+            className="bg-destructive-foreground text-destructive"
           />
         </div>
       </section>
 
-      {/*TODO: Add customize feature*/}
-      <div className="mt-8 flex justify-end">
-        <Button variant="outline" className="mr-2">
-          Copy All Variables
-        </Button>
-        <Button>
-          Customize Theme
-          <ArrowRight className="ml-2 size-4" />
-        </Button>
-      </div>
+      {/* Chart & Visualization */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Chart & Visualization</h2>
+        <p className="mb-6 text-muted-foreground">
+          Colors used for data visualization and charts.
+        </p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5">
+          <ColorBlock
+            name="Chart 1"
+            value="oklch(0.67 0.16 144.21)"
+            className="bg-chart-1 text-foreground"
+          />
+          <ColorBlock
+            name="Chart 2"
+            value="oklch(0.58 0.14 144.18)"
+            className="bg-chart-2 text-foreground"
+          />
+          <ColorBlock
+            name="Chart 3"
+            value="oklch(0.52 0.13 144.17)"
+            className="bg-chart-3 text-foreground"
+          />
+          <ColorBlock
+            name="Chart 4"
+            value="oklch(0.43 0.12 144.31)"
+            className="bg-chart-4 text-foreground"
+          />
+          <ColorBlock
+            name="Chart 5"
+            value="oklch(0.22 0.05 145.73)"
+            className="bg-chart-5 text-foreground"
+          />
+        </div>
+      </section>
+
+      {/* Sidebar & Navigation */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Sidebar & Navigation</h2>
+        <p className="mb-6 text-muted-foreground">
+          Colors specific to the sidebar and navigation components.
+        </p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ColorBlock
+            name="Sidebar"
+            value="oklch(0.94 0.01 74.42)"
+            className="bg-sidebar))] textdebar-foreground"
+          />
+          <ColorBlock
+            name="Sidebar Foreground"
+            value="oklch(0.3 0.04 30.2)"
+            className="bg-sidebar-foreground text-sidebar"
+          />
+          <ColorBlock
+            name="Sidebar Primary"
+            value="oklch(0.52 0.13 144.17)"
+            className="bg-sidebar-primary text-sidebar-primary-forereground"
+          />
+          <ColorBlock
+            name="Sidebar Primary Foreground"
+            value="oklch(1.0 0 0)"
+            className="bg-sidebar-primary-foreground text-sidebar-primary"
+          />
+          <ColorBlock
+            name="Sidebar Accent"
+            value="oklch(0.9 0.05 146.04)"
+            className="bg-sidebar-accent text-sidebar-accent-foreground"
+          />
+          <ColorBlock
+            name="Sidebar Accent Foreground"
+            value="oklch(0.43 0.12 144.31)"
+            className="bg-sidebar-accent-foreground text-sidebar-accent"
+          />
+          <ColorBlock
+            name="Sidebar Border"
+            value="oklch(0.88 0.02 74.64)"
+            className="bg-sidebar-border text-sidebar-foreground"
+          />
+          <ColorBlock
+            name="Sidebar Ring"
+            value="oklch(0.52 0.13 144.17)"
+            className="bg-sidebar-ring text-sidebar-foreground"
+          />
+        </div>
+      </section>
+
+      {/*<div className="mt-8 flex justify-end">*/}
+      {/*  <Button variant="outline" className="mr-2">*/}
+      {/*    <Copy className="mr-2 h-4 w-4" />*/}
+      {/*    Copy All Variables*/}
+      {/*  </Button>*/}
+      {/*  <Button>*/}
+      {/*    Customize Theme*/}
+      {/*    <ArrowRight className="ml-2 h-4 w-4" />*/}
+      {/*  </Button>*/}
+      {/*</div>*/}
     </div>
   );
 }

@@ -10,17 +10,17 @@
       "description": "Blank application with your brand themed components",
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
         {
-          "path": "src/styles/tailwind.config.ts",
+          "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
         {
-          "path": "src/app/starter/layout.tsx",
+          "path": "src/app/starter/root-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
@@ -54,12 +54,12 @@
       "registryDependencies": ["button", "input", "avatar", "sidebar"],
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
         {
-          "path": "src/styles/tailwind.config.ts",
+          "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
@@ -83,12 +83,12 @@
       "registryDependencies": ["badge", "button", "sidebar"],
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
         {
-          "path": "src/styles/tailwind.config.ts",
+          "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
@@ -107,12 +107,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/styles/globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
         {
-          "path": "src/styles/tailwind.config.ts",
+          "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         }

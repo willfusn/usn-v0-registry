@@ -15,9 +15,10 @@ export default function StartPage() {
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">Start</h1>
+          <h1 className="font-bold text-3xl tracking-tight">v0 Starter</h1>
           <p className="mt-1 text-muted-foreground">
-            A blank application with your brand themed components
+            A blank application with brand themed components ready to open in
+            v0.
           </p>
         </div>
       </div>
