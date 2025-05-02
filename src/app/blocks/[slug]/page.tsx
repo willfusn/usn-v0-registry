@@ -42,8 +42,11 @@ const blocks: { [name: string]: Block } = {
   },
 };
 
-export default function BlockPage({ params }: { params: { slug: string } }) {
-  const block = blocks[params.slug];
+export default async function BlockPage({
+  params,
+}: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const block = blocks[slug];
 
   if (!block) {
     notFound();
