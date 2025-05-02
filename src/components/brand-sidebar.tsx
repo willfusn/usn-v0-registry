@@ -2,7 +2,7 @@
 
 import {
   AlertTriangle,
-  ChartBarBig,
+  BarChart2,
   Clock,
   Database,
   Home,
@@ -102,7 +102,7 @@ export function BrandSidebar({
     {
       title: "Analytics",
       href: "#analytics",
-      icon: <ChartBarBig className="size-4" />,
+      icon: <BarChart2 className="size-4" />,
     },
     {
       title: "History",

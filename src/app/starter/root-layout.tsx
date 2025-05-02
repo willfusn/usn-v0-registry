@@ -1,23 +1,16 @@
 import { VercelToolbar } from "@vercel/toolbar/next";
-import type { Metadata } from "next";
-import React, { type ReactNode } from "react";
-
-import { cn } from "@/lib/utils";
 import { Geist, Geist_Mono } from "next/font/google";
+import React, { type ReactNode } from "react";
+import { Toaster } from "sonner";
 
-import "@/app/globals.css";
 import { BrandHeader } from "@/components/brand-header";
 import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { Toaster } from "sonner";
+import { cn } from "@/lib/utils";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
+import "@/app/globals.css";
 
-const fonts = `${geist.variable} ${geistMono.variable}`;
+const geist = Geist({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -25,7 +18,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(fonts, "bg-background")}>
+    <html lang="en" className={cn(geist.className, "bg-background")}>
       <body>
         <SidebarProvider>
           <BrandHeader />

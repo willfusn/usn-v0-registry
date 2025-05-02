@@ -1,11 +1,12 @@
 import { VercelToolbar } from "@vercel/toolbar/next";
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
-import { Geist, Geist_Mono } from "next/font/google";
 
 import "@/app/globals.css";
+import "@/app/tailwind.css";
 
 export const metadata: Metadata = {
   title: "Design Registry",
@@ -14,13 +15,7 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
-
-const fonts = `${geist.variable} ${geistMono.variable}`;
+const geist = Geist({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -28,7 +23,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(fonts, "bg-background")}>
+    <html lang="en" className={cn(geist.className, "bg-background")}>
       <body>
         {children}
 

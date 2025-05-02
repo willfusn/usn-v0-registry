@@ -1,3 +1,6 @@
+import { ArrowRight, Blocks, ToyBrick } from "lucide-react";
+import Link from "next/link";
+
 import {
   Card,
   CardContent,
@@ -5,8 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, Blocks, Github, ToyBrick } from "lucide-react";
-import Link from "next/link";
 
 const componentItems = [
   { name: "Accordion", path: "/components/accordion" },
@@ -42,14 +43,15 @@ export default function Home() {
             <CardHeader className="space-y-1">
               <div className="flex items-center justify-between">
                 <CardTitle>Components</CardTitle>
-                <div className="rounded-md bg-brand-three p-1">
-                  <ToyBrick className="size-5 text-brand-foreground" />
+                <div className="rounded-md bg-primary p-1">
+                  <ToyBrick className="size-5 text-secondary" />
                 </div>
               </div>
               <CardDescription>
                 Reusable UI components for your application
               </CardDescription>
             </CardHeader>
+
             <CardContent>
               <div className="space-y-2">
                 {componentItems.map((item) => (
@@ -60,7 +62,7 @@ export default function Home() {
                     <Link href={item.path} className="text-sm hover:underline">
                       {item.name}
                     </Link>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    <ArrowRight className="size-4 text-muted-foreground" />
                   </div>
                 ))}
               </div>
@@ -71,8 +73,8 @@ export default function Home() {
             <CardHeader className="space-y-1">
               <div className="flex items-center justify-between">
                 <CardTitle>Blocks</CardTitle>
-                <div className="rounded-md bg-brand-two p-1">
-                  <Blocks className="size-5 text-brand-foreground" />
+                <div className="rounded-md bg-foreground p-1">
+                  <Blocks className="size-5 text-secondary" />
                 </div>
               </div>
               <CardDescription>
@@ -90,7 +92,7 @@ export default function Home() {
                     <Link href={item.path} className="text-sm hover:underline">
                       {item.name}
                     </Link>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    <ArrowRight className="size-4 text-muted-foreground" />
                   </div>
                 ))}
               </div>
