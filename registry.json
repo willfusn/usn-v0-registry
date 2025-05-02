@@ -153,6 +153,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -172,6 +177,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -191,6 +201,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -210,6 +225,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -229,6 +249,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -248,6 +273,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -267,6 +297,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -286,6 +321,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     },
@@ -305,6 +345,11 @@
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         }
       ]
     }
