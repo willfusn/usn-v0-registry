@@ -23,7 +23,7 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="size-8"
+            className="hidden size-8 md:flex"
             onClick={toggleSidebar}
           >
             {isCollapsed ? (
@@ -32,6 +32,16 @@ export function BrandHeader() {
               <X className="size-4" />
             )}
           </Button>
+
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-8 md:hidden"
+            onClick={toggleSidebar}
+          >
+            <Menu className="size-4" />
+          </Button>
+
           <Link href="/" className="flex items-center">
             <Logo />
           </Link>
@@ -77,13 +87,13 @@ export function BrandHeader() {
           </Avatar>
         </div>
 
-        <div className="md:hidden">
+        <div className="flex gap-2 md:hidden">
           <Button variant="ghost" size="sm" className="text-foreground">
             <Search className="h-5 w-5" />
           </Button>
           <Avatar className="size-8">
-            <AvatarFallback className="bg-brand text-brand-foreground">
-              ME
+            <AvatarFallback className="bg-primary text-primary-foreground">
+              <span className="text-xs">ME</span>
             </AvatarFallback>
           </Avatar>
         </div>
