@@ -1,11 +1,22 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import type React from "react";
 import { ColorBlock } from "./color-block";
 
 export default function TokensPage() {
   return (
     <div className="container p-10">
       <div className="mb-8">
+        <Button variant="ghost" size="sm" asChild className="mb-4">
+          <Link href="/">
+            <ArrowLeft className="mr-2 size-4" />
+            Back to Home
+          </Link>
+        </Button>
+
         <h1 className="font-bold text-3xl tracking-tight">Design Tokens</h1>
         <p className="mt-1 text-muted-foreground">
           A comprehensive overview of all color tokens used in the design system
@@ -248,12 +259,12 @@ export default function TokensPage() {
 
       {/*<div className="mt-8 flex justify-end">*/}
       {/*  <Button variant="outline" className="mr-2">*/}
-      {/*    <Copy className="mr-2 h-4 w-4" />*/}
+      {/*    <Copy className="mr-2 size-4" />*/}
       {/*    Copy All Variables*/}
       {/*  </Button>*/}
       {/*  <Button>*/}
       {/*    Customize Theme*/}
-      {/*    <ArrowRight className="ml-2 h-4 w-4" />*/}
+      {/*    <ArrowRight className="ml-2 size-4" />*/}
       {/*  </Button>*/}
       {/*</div>*/}
     </div>

@@ -137,13 +137,17 @@ const components: { [name: string]: Component } = {
       Default: (
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarFallback className="bg-primary text-primary-foreground">
+            <span className="text-xs">CN</span>
+          </AvatarFallback>
         </Avatar>
       ),
       Fallback: (
         <Avatar>
           <AvatarImage src="https://github.com" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarFallback className="bg-primary text-primary-foreground">
+            <span className="text-xs">CN</span>
+          </AvatarFallback>
         </Avatar>
       ),
     },
@@ -367,7 +371,7 @@ export default async function ComponentPage({
         <div>
           <Button variant="ghost" size="sm" asChild className="mb-4">
             <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" />
+              <ArrowLeft className="mr-2 size-4" />
               Back to Home
             </Link>
           </Button>

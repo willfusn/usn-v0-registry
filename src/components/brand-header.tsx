@@ -71,8 +71,8 @@ export function BrandHeader() {
           </Button>
 
           <Avatar className="size-8">
-            <AvatarFallback className="bg-brand-one text-brand-one-foreground">
-              ME
+            <AvatarFallback className="bg-primary text-primary-foreground">
+              <span className="text-xs">ME</span>
             </AvatarFallback>
           </Avatar>
         </div>
