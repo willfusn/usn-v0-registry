@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Design Registry",
+  "homepage": "https://design-starter.vercel.app",
+  "items": [
+    {
+      "name": "starter",
+      "type": "registry:theme",
+      "title": "Starter Prototype",
+      "description": "Blank application with your brand themed components",
+      "files": [
+        {
+          "path": "styles/globals.css",
+          "type": "registry:file",
+          "target": "styles/globals.css"
+        },
+        {
+          "path": "app/starter/layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
+          "path": "app/starter/page.tsx",
+          "type": "registry:file",
+          "target": "app/page.tsx"
+        },
+        {
+          "path": "components/brand-header.tsx",
+          "type": "registry:file",
+          "target": "components/brand-header.tsx"
+        },
+        {
+          "path": "components/brand-sidebar.tsx",
+          "type": "registry:file",
+          "target": "components/brand-sidebar.tsx"
+        }
+      ]
+    }
+  ]
+}

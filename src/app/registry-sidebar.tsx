@@ -52,6 +52,12 @@ const blockItems = [
   { name: "Testimonials", path: "/blocks/testimonials" },
 ];
 
+const gettingStartedItems = [
+  { name: "Home", path: "/" },
+  { name: "Tokens", path: "/tokens" },
+  { name: "Start", path: "/start" },
+];
+
 export function RegistrySidebar() {
   const pathname = usePathname();
   const [searchTerm, setSearchTerm] = useState("");
@@ -77,20 +83,21 @@ export function RegistrySidebar() {
   }, [searchTerm]);
 
   return (
-    <Sidebar>
+    <Sidebar collapsible="icon">
       <SidebarHeader className="border-b">
-        <div className="flex items-center gap-2 px-4 py-2">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="rounded-md bg-brand-one p-1">
-              <Squirrel className="size-4 text-white" />
+        <div className="flex items-center justify-between px-2 py-2">
+          <Link href="/" className="flex min-w-0 items-center gap-2">
+            <div className="flex-shrink-0 rounded-md bg-brand-one p-1">
+              <Squirrel className="size-5 text-white" />
             </div>
-            <span className="font-semibold">Design Registry</span>
+            <span className="overflow-hidden font-semibold opacity-100 transition-opacity duration-200">
+              Design Registry
+            </span>
           </Link>
         </div>
-
-        <div className="px-4 py-2">
+        <div className="px-2 py-2 opacity-100 transition-all duration-200">
           <div className="relative">
-            <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
+            <Search className="absolute top-2.5 left-2.5 h-4 w-4 text-muted-foreground" />
             <Input
               type="search"
               placeholder="Search..."
@@ -103,28 +110,54 @@ export function RegistrySidebar() {
       </SidebarHeader>
 
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={pathname === "/"}>
-                <Link href="/">
-                  <Home className="size-4" />
-                  <span>Home</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarGroup>
+        <Collapsible defaultOpen={true} className="group/collapsible">
+          <SidebarGroup>
+            <CollapsibleTrigger className="w-full">
+              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                <div className="flex min-w-0 items-center">
+                  <Home className="h-4 w-4 flex-shrink-0" />
+                  <span className="ml-2 opacity-100 transition-all duration-200">
+                    Getting Started
+                  </span>
+                </div>
+                <ChevronDown className="size-4 flex-shrink-0 opacity-100 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+              </SidebarGroupLabel>
+            </CollapsibleTrigger>
+
+            <CollapsibleContent>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  {gettingStartedItems.map((item) => (
+                    <SidebarMenuItem key={item.path}>
+                      <SidebarMenuButton
+                        asChild
+                        isActive={pathname === item.path}
+                      >
+                        <Link href={item.path} className="flex items-center">
+                          <span className="ml-2 opacity-100 transition-all duration-200">
+                            {item.name}
+                          </span>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </CollapsibleContent>
+          </SidebarGroup>
+        </Collapsible>
 
         <Collapsible defaultOpen={true} className="group/collapsible">
           <SidebarGroup>
             <CollapsibleTrigger className="w-full">
               <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex items-center">
-                  <ToyBrick className="mr-2 size-4" />
-                  Components
+                <div className="flex min-w-0 items-center">
+                  <ToyBrick className="size-4 flex-shrink-0" />
+                  <span className="ml-2 transition-all duration-200">
+                    Components
+                  </span>
                 </div>
-                <ChevronDown className="size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                <ChevronDown className="h-4 w-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
               </SidebarGroupLabel>
             </CollapsibleTrigger>
             <CollapsibleContent>
@@ -149,14 +182,17 @@ export function RegistrySidebar() {
         <Collapsible defaultOpen={true} className="group/collapsible">
           <SidebarGroup>
             <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex items-center justify-between cursor-pointer">
-                <div className="flex items-center">
-                  <Blocks className="mr-2 size-4" />
-                  Blocks
+              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                <div className="flex min-w-0 items-center">
+                  <Blocks className="h-4 w-4 flex-shrink-0" />
+                  <span className="ml-2 transition-all duration-200">
+                    Blocks
+                  </span>
                 </div>
-                <ChevronDown className="size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                <ChevronDown className="h-4 w-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
               </SidebarGroupLabel>
             </CollapsibleTrigger>
+
             <CollapsibleContent>
               <SidebarGroupContent>
                 <SidebarMenu>

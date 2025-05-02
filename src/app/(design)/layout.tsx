@@ -19,12 +19,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
-      </body>
-    </html>
+    <SidebarProvider>
+      <RegistrySidebar />
+      <SidebarInset>
+        <div className="flex min-h-screen flex-col">{children}</div>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }

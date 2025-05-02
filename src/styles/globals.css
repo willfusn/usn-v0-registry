@@ -346,11 +346,15 @@
   --color-popover-foreground: var(--popover-foreground);
 
   --color-brand-one: var(--brand-one);
+  --color-brand-one-foreground: var(--brand-one-foreground);
   --color-brand-two: var(--brand-two);
+  --color-brand-two-foreground: var(--brand-two-foreground);
   --color-brand-three: var(--brand-three);
+  --color-brand-three-foreground: var(--brand-three-foreground);
   --color-brand-four: var(--brand-four);
+  --color-brand-four-foreground: var(--brand-four-foreground);
   --color-brand-five: var(--brand-five);
-  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-five-foreground: var(--brand-five-foreground);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
