@@ -2,10 +2,10 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{ts,tsx,js,jsx,mdx}",
+    "./components/**/*.{ts,tsx,js,jsx,mdx}",
+    "./app/**/*.{ts,tsx,js,jsx,mdx}",
+    "*.{ts,tsx,js,jsx,mdx}",
   ],
   theme: {
     extend: {
@@ -13,53 +13,26 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
 
-        card: {
-          DEFAULT: "var(--card)",
-          foreground: "var(--card-foreground)",
-        },
+        card: "var(--card)",
+        "card-foreground": "var(--card-foreground)",
 
-        popover: {
-          DEFAULT: "var(--popover)",
-          foreground: "var(--popover-foreground)",
-        },
+        popover: "var(--popover)",
+        "popover-foreground": "var(--popover-foreground)",
 
-        brand: {
-          one: "var(--brand-one)",
-          "one-foreground": "var(--brand-one-foreground)",
-          two: "var(--brand-two)",
-          "two-foreground": "var(--brand-two-foreground)",
-          three: "var(--brand-three)",
-          "three-foreground": "var(--brand-three-foreground)",
-          four: "var(--brand-four)",
-          "four-foreground": "var(--brand-four-foreground)",
-          five: "var(--brand-five)",
-          "five-foreground": "var(--brand-five-foreground)",
-        },
+        primary: "var(--primary)",
+        "primary-foreground": "var(--primary-foreground)",
 
-        primary: {
-          DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)",
-        },
+        secondary: "var(--secondary)",
+        "secondary-foreground": "var(--secondary-foreground)",
 
-        secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "var(--secondary-foreground)",
-        },
+        muted: "var(--muted)",
+        "muted-foreground": "var(--muted-foreground)",
 
-        muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
-        },
+        accent: "var(--accent)",
+        "accent-foreground": "var(--accent-foreground)",
 
-        accent: {
-          DEFAULT: "var(--accent)",
-          foreground: "var(--accent-foreground)",
-        },
-
-        destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--destructive-foreground)",
-        },
+        destructive: "var(--destructive)",
+        "destructive-foreground": "var(--destructive-foreground)",
 
         border: "var(--border)",
         input: "var(--input)",
@@ -74,7 +47,7 @@ const config: Config = {
         },
 
         sidebar: {
-          DEFAULT: "var(--sidebar-background)",
+          DEFAULT: "var(--sidebar)",
           foreground: "var(--sidebar-foreground)",
           primary: "var(--sidebar-primary)",
           "primary-foreground": "var(--sidebar-primary-foreground)",
@@ -84,20 +57,12 @@ const config: Config = {
           ring: "var(--sidebar-ring)",
         },
       },
-
-      fontFamily: {
-        sans: "var(--font-sans)",
-        serif: "var(--font-serif)",
-        mono: "var(--font-mono)",
-      },
-
       borderRadius: {
         sm: "var(--radius-sm)",
         md: "var(--radius-md)",
         lg: "var(--radius-lg)",
         xl: "var(--radius-xl)",
       },
-
       boxShadow: {
         "2xs": "var(--shadow-2xs)",
         xs: "var(--shadow-xs)",
@@ -108,26 +73,22 @@ const config: Config = {
         xl: "var(--shadow-xl)",
         "2xl": "var(--shadow-2xl)",
       },
-
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
+        mono: ["var(--font-mono)", "monospace"],
+      },
       keyframes: {
         "fade-in-scale": {
-          "0%": {
-            opacity: "0",
-            transform: "scale(0.95)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "scale(1)",
-          },
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
-
       animation: {
         "fade-in-scale": "fade-in-scale 0.3s ease-out",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
-
 export default config;
