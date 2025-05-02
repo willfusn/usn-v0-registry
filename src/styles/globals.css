@@ -184,6 +184,11 @@
     --ds-space-48: 3rem;
 
     /* FONTS */
+    --ds-font-sans:
+      ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --ds-font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --ds-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
 
     /* RADIUS */
     --ds-radius-0: 0;
@@ -321,6 +326,12 @@
     /* Border radius */
     --radius: var(--ds-radius-medium);
 
+    /* Fonts */
+    --font-sans: var(--ds-font-sans);
+    --font-serif: var(--ds-font-serif);
+    --font-mono: var(--ds-font-mono);
+
+    /* Sidebar */
     --sidebar-background: var(--ds-background);
     --sidebar-foreground: var(--ds-text-default);
     --sidebar-primary: var(--ds-brand-one);
@@ -389,6 +400,10 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 
   --radius: var(--radius);
   --radius-md: calc(var(--radius) - 2px);

@@ -43,13 +43,9 @@ const componentItems = [
 ];
 
 const blockItems = [
-  { name: "Hero Sections", path: "/blocks/hero-sections" },
-  { name: "Feature Sections", path: "/blocks/feature-sections" },
-  { name: "Pricing Tables", path: "/blocks/pricing-tables" },
-  { name: "Contact Forms", path: "/blocks/contact-forms" },
-  { name: "Footers", path: "/blocks/footers" },
-  { name: "Headers", path: "/blocks/headers" },
-  { name: "Testimonials", path: "/blocks/testimonials" },
+  { name: "Header", path: "/blocks/header" },
+  { name: "Sidebar", path: "/blocks/sidebar" },
+  { name: "Hero", path: "/blocks/hero" },
 ];
 
 const gettingStartedItems = [

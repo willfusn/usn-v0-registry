@@ -8,10 +8,6 @@
       "type": "registry:theme",
       "title": "Starter Prototype",
       "description": "Blank application with your brand themed components",
-      "registryDependencies": [
-        "https://design-starter.vercel.app/r/brand-header.tsx",
-        "https://design-starter.vercel.app/r/brand-sidebar.tsx"
-      ],
       "files": [
         {
           "path": "src/styles/globals.css",
@@ -27,6 +23,21 @@
           "path": "src/app/starter/page.tsx",
           "type": "registry:file",
           "target": "app/page.tsx"
+        },
+        {
+          "path": "src/components/brand-header.tsx",
+          "type": "registry:file",
+          "target": "components/brand-sidebar.tsx"
+        },
+        {
+          "path": "src/components/logo.tsx",
+          "type": "registry:file",
+          "target": "components/logo.tsx"
+        },
+        {
+          "path": "src/components/brand-sidebar.tsx",
+          "type": "registry:file",
+          "target": "components/brand-sidebar.tsx"
         }
       ]
     },

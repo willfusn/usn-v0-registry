@@ -5,40 +5,27 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface Block {
+  title: string;
   name: string;
   description: string;
 }
 
-const blocks: { [name: string]: Block } = {
-  "hero-sections": {
-    name: "Hero Sections",
+const blocks: { [component: string]: Block } = {
+  header: {
+    title: "Header",
+    name: "brand-header",
+    description: "Styled header for top level navigation",
+  },
+  sidebar: {
+    title: "Brand Sidebar",
+    name: "brand-sidebar",
+    description: "Styled sidebar for navigation",
+  },
+  hero: {
+    title: "Hero",
+    name: "hero",
     description:
-      "Attention-grabbing sections for the top of your landing pages.",
-  },
-  "feature-sections": {
-    name: "Feature Sections",
-    description:
-      "Showcase your product's features with these pre-built sections.",
-  },
-  "pricing-tables": {
-    name: "Pricing Tables",
-    description: "Display your pricing options in an easy-to-compare format.",
-  },
-  "contact-forms": {
-    name: "Contact Forms",
-    description: "Pre-built contact forms with validation and styling.",
-  },
-  footers: {
-    name: "Footers",
-    description: "Various footer layouts for your website or application.",
-  },
-  headers: {
-    name: "Headers",
-    description: "Navigation headers with various layouts and features.",
-  },
-  testimonials: {
-    name: "Testimonials",
-    description: "Display customer testimonials in various layouts.",
+      "Attention-grabbing section for the top of your landing pages.",
   },
 };
 
@@ -62,7 +49,7 @@ export default async function BlockPage({
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">{block.name}</h1>
+          <h1 className="font-bold text-3xl tracking-tight">{block.title}</h1>
           <p className="mt-1 text-muted-foreground">{block.description}</p>
         </div>
       </div>
@@ -74,7 +61,7 @@ export default async function BlockPage({
 
       <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20 p-10">
         <div className="text-muted-foreground">
-          Block Preview for {block.name}
+          Block Preview for {block.title}
         </div>
       </div>
     </div>
