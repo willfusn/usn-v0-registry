@@ -10,78 +10,78 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--color-background)",
-        foreground: "var(--color-foreground)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
 
         card: {
-          DEFAULT: "var(--color-card)",
-          foreground: "var(--color-card-foreground)",
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
         },
 
         popover: {
-          DEFAULT: "var(--color-popover)",
-          foreground: "var(--color-popover-foreground)",
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
         },
 
         brand: {
-          one: "var(--color-brand-one)",
-          "one-foreground": "var(--color-brand-one-foreground)",
-          two: "var(--color-brand-two)",
-          "two-foreground": "var(--color-brand-two-foreground)",
-          three: "var(--color-brand-three)",
-          "three-foreground": "var(--color-brand-three-foreground)",
-          four: "var(--color-brand-four)",
-          "four-foreground": "var(--color-brand-four-foreground)",
-          five: "var(--color-brand-five)",
-          "five-foreground": "var(--color-brand-five-foreground)",
+          one: "var(--brand-one)",
+          "one-foreground": "var(--brand-one-foreground)",
+          two: "var(--brand-two)",
+          "two-foreground": "var(--brand-two-foreground)",
+          three: "var(--brand-three)",
+          "three-foreground": "var(--brand-three-foreground)",
+          four: "var(--brand-four)",
+          "four-foreground": "var(--brand-four-foreground)",
+          five: "var(--brand-five)",
+          "five-foreground": "var(--brand-five-foreground)",
         },
 
         primary: {
-          DEFAULT: "var(--color-primary)",
-          foreground: "var(--color-primary-foreground)",
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
 
         secondary: {
-          DEFAULT: "var(--color-secondary)",
-          foreground: "var(--color-secondary-foreground)",
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
         },
 
         muted: {
-          DEFAULT: "var(--color-muted)",
-          foreground: "var(--color-muted-foreground)",
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
         },
 
         accent: {
-          DEFAULT: "var(--color-accent)",
-          foreground: "var(--color-accent-foreground)",
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
         },
 
         destructive: {
-          DEFAULT: "var(--color-destructive)",
-          foreground: "var(--color-destructive-foreground)",
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
         },
 
-        border: "var(--color-border)",
-        input: "var(--color-input)",
-        ring: "var(--color-ring)",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
 
         chart: {
-          1: "var(--color-chart-1)",
-          2: "var(--color-chart-2)",
-          3: "var(--color-chart-3)",
-          4: "var(--color-chart-4)",
-          5: "var(--color-chart-5)",
+          1: "var(--chart-1)",
+          2: "var(--chart-2)",
+          3: "var(--chart-3)",
+          4: "var(--chart-4)",
+          5: "var(--chart-5)",
         },
 
         sidebar: {
-          DEFAULT: "var(--color-sidebar-background)",
-          foreground: "var(--color-sidebar-foreground)",
-          primary: "var(--color-sidebar-primary)",
-          "primary-foreground": "var(--color-sidebar-primary-foreground)",
-          accent: "var(--color-sidebar-accent)",
-          "accent-foreground": "var(--color-sidebar-accent-foreground)",
-          border: "var(--color-sidebar-border)",
-          ring: "var(--color-sidebar-ring)",
+          DEFAULT: "var(--sidebar-background)",
+          foreground: "var(--sidebar-foreground)",
+          primary: "var(--sidebar-primary)",
+          "primary-foreground": "var(--sidebar-primary-foreground)",
+          accent: "var(--sidebar-accent)",
+          "accent-foreground": "var(--sidebar-accent-foreground)",
+          border: "var(--sidebar-border)",
+          ring: "var(--sidebar-ring)",
         },
       },
 
