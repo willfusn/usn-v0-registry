@@ -51,7 +51,7 @@ const blockItems = [
 const gettingStartedItems = [
   { name: "Home", path: "/" },
   { name: "Design Tokens", path: "/tokens" },
-  { name: "v0 Starter", path: "/start" },
+  { name: "v0 Starter", path: "/starter" },
 ];
 
 export function RegistrySidebar() {

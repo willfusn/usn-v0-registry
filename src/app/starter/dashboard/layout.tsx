@@ -1,8 +1,9 @@
+import type React from "react";
+import { Toaster } from "sonner";
+
 import { BrandHeader } from "@/components/brand-header";
 import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import type React from "react";
-import { Toaster } from "sonner";
 
 import "@/app/globals.css";
 
