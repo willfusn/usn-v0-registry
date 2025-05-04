@@ -60,21 +60,6 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
-@layer text {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-foreground;
-  }
-
-  p {
-    @apply leading-tight text-muted-foreground;
-  }
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -59,9 +59,8 @@ const componentItems = [
 ];
 
 const blockItems = [
-  { name: "Header", path: "/blocks/header" },
-  { name: "Sidebar", path: "/blocks/sidebar" },
   { name: "Hero", path: "/blocks/hero" },
+  { name: "Promo", path: "/blocks/promo" },
 ];
 
 const gettingStartedItems = [

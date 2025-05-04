@@ -84,6 +84,7 @@
         }
       ]
     },
+
     {
       "name": "brand-header",
       "type": "registry:component",
@@ -137,6 +138,56 @@
         }
       ]
     },
+
+    {
+      "name": "hero",
+      "type": "registry:component",
+      "title": "Hero",
+      "description": "A styled, simple hero",
+      "registryDependencies": ["badge", "button"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/components/hero.tsx",
+          "type": "registry:file",
+          "target": "components/hero.tsx"
+        }
+      ]
+    },
+    {
+      "name": "promo",
+      "type": "registry:component",
+      "title": "Promo",
+      "description": "A styled, simple, reusable promo section",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/components/promo.tsx",
+          "type": "registry:file",
+          "target": "components/promo.tsx"
+        }
+      ]
+    },
+
     {
       "name": "accordion",
       "type": "registry:component",

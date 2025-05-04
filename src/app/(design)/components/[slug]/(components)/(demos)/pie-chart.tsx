@@ -93,7 +93,7 @@ export function PieChartComponent() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-3xl font-bold"
+                          className="fill-foreground font-bold text-3xl"
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
@@ -117,7 +117,7 @@ export function PieChartComponent() {
         <div className="flex items-center gap-2 font-medium leading-none">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="text-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
