@@ -26,7 +26,7 @@ export default async function BlockPage({
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">{block.name}</h1>
+          <h1 className="font-bold text-3xl tracking-tight">{block.title}</h1>
           <p className="mt-1 text-muted-foreground">{block.description}</p>
         </div>
       </div>

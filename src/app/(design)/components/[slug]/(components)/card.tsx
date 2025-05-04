@@ -9,7 +9,8 @@ import {
 } from "@/components/ui/card";
 
 export const card = {
-  name: "Card",
+  name: "card",
+  title: "Card",
   description:
     "Containers for displaying content and actions about a single subject.",
   components: {

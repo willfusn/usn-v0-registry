@@ -15,7 +15,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export const breadcrumb = {
-  name: "Breadcrumb",
+  name: "breadcrumb",
+  title: "Breadcrumb",
   description:
     "Displays the path to the current resource using a hierarchy of links.",
   components: {

@@ -55,7 +55,8 @@ const invoices = [
 ];
 
 export const table = {
-  name: "Table",
+  name: "table",
+  title: "Table",
   description: "A responsive table component.",
   components: {
     Default: (

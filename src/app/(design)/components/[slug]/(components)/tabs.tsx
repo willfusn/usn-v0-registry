@@ -12,7 +12,8 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const tabs = {
-  name: "Tabs",
+  name: "tabs",
+  title: "Tabs",
   description:
     "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   components: {

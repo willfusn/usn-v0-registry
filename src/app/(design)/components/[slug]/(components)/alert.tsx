@@ -2,7 +2,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle, Terminal } from "lucide-react";
 
 export const alert = {
-  name: "Alert",
+  name: "alert",
+  title: "Alert",
   description: "Displays a callout for user attention.",
   components: {
     Default: (

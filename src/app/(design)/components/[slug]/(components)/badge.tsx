@@ -3,7 +3,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const badge = {
-  name: "Badge",
+  name: "badge",
+  title: "Badge",
   description: "Displays a small count or status indicator.",
   components: {
     Default: <Badge>Badge</Badge>,

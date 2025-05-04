@@ -1,7 +1,8 @@
 import { Slider } from "@/components/ui/slider";
 
 export const slider = {
-  name: "Slider",
+  name: "slider",
+  title: "Slider",
   description:
     "An input where the user selects a value from within a given range.",
   components: {

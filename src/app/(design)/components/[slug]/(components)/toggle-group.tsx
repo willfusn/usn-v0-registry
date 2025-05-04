@@ -3,7 +3,8 @@ import { Bold, Italic, Underline } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export const toggleGroup = {
-  name: "Tooltip",
+  name: "toggle-group",
+  title: "Toggle Group",
   description:
     "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   components: {

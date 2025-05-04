@@ -1,7 +1,8 @@
 import { Hero } from "@/components/hero";
 
 export const hero = {
-  name: "Hero",
+  title: "Hero",
+  name: "hero",
   description: "Attention-grabbing section for the top of your landing pages.",
   components: {
     Default: (

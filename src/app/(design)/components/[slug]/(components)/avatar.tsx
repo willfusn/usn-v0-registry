@@ -1,7 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const avatar = {
-  name: "Avatar",
+  name: "avatar",
+  title: "Avatar",
   description: "An image element with a fallback for representing the user.",
   components: {
     Default: (

@@ -6,7 +6,8 @@ import {
 } from "@/components/ui/accordion";
 
 export const accordion = {
-  name: "Accordion",
+  name: "accordion",
+  title: "Accordion",
   description:
     "A vertically stacked set of interactive headings that each reveal a section of content.",
   components: {

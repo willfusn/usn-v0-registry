@@ -27,6 +27,7 @@ import { toggleGroup } from "@/app/(design)/components/[slug]/(components)/toggl
 import { tooltip } from "@/app/(design)/components/[slug]/(components)/tooltip";
 
 interface Component {
+  title: string;
   name: string; // this must match the `registry.json` name
   description: string;
   components?: {

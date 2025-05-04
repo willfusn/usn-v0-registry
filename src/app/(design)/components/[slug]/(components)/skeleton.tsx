@@ -1,7 +1,8 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const skeleton = {
-  name: "Skeleton",
+  name: "skeleton",
+  title: "Skeleton",
   description: "Use to show a placeholder while content is loading..",
   components: {
     Default: (

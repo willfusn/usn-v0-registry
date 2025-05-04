@@ -3,7 +3,8 @@ import { BarChartComponent } from "@/app/(design)/components/[slug]/(components)
 import { PieChartComponent } from "@/app/(design)/components/[slug]/(components)/(demos)/pie-chart";
 
 export const chart = {
-  name: "Chart",
+  name: "chart",
+  title: "Chart",
   description:
     "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
   components: {

@@ -3,7 +3,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export const input = {
-  name: "Input",
+  name: "input",
+  title: "Input",
   description:
     "Displays a form input field or a component that looks like an input field.",
   components: {

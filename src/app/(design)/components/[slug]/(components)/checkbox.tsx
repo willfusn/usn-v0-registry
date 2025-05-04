@@ -1,7 +1,8 @@
 import { Checkbox } from "@/components/ui/checkbox";
 
 export const checkbox = {
-  name: "Checkbox",
+  name: "checkbox",
+  title: "Checkbox",
   description: "Allows users to select multiple items from a list of options.",
   components: {
     Default: (

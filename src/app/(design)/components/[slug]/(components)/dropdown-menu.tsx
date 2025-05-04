@@ -31,7 +31,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export const dropdownMenu = {
-  name: "Dropdown Menu",
+  name: "dropdown-menu",
+  title: "Dropdown Menu",
   description: "Displays a menu to the user triggered by a button.",
   components: {
     Default: (
