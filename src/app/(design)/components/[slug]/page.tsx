@@ -27,7 +27,7 @@ export default async function ComponentPage({
             </Link>
           </Button>
           <h1 className="font-bold text-3xl tracking-tight">
-            {component.name}
+            {component.title}
           </h1>
           <p className="mt-1 text-muted-foreground">{component.description}</p>
         </div>
@@ -35,7 +35,7 @@ export default async function ComponentPage({
 
       <div className="mb-6 flex items-center justify-between">
         <h3 className="font-bold">Preview</h3>
-        <OpenInV0Button name={component.name.toLowerCase()} />
+        <OpenInV0Button name={component.name} />
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20 p-10">

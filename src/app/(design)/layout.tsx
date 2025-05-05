@@ -21,7 +21,7 @@ export default function RootLayout({
     <SidebarProvider>
       <RegistrySidebar />
 
-      <div className="flex flex-col">
+      <div className="flex grow flex-col">
         <MobileMenu />
 
         <SidebarInset>
