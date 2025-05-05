@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run registry:build && next dev",
+    "build": "npm run registry:build && next build",
     "start": "next start",
     "test": "vitest run",
     "lint": "biome check",
