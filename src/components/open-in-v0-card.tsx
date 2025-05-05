@@ -16,39 +16,41 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useState } from "react";
+import { ReactElement, ReactNode, useState } from "react";
 import { Check, Copy } from "lucide-react";
+import registry from "@/registry";
 
-interface RegistryItemCardProps {
+interface OpenInV0CardProps {
   name: string;
   description?: string;
+  title?: string;
+  prompt?: string;
   previewUrl?: string;
-  title?: string;
-  prompt?: string;
+  components?: {
+    [name: string]: ReactNode | ReactElement;
+  };
 }
 
-interface v0LinkProps {
-  title?: string;
-  prompt?: string;
-  url: string;
-}
-
-export function RegistryItemCard({
+export function OpenInV0Card({
   name,
   description,
-  previewUrl,
   title,
   prompt,
-}: RegistryItemCardProps) {
+  previewUrl,
+  components,
+}: OpenInV0CardProps) {
   const [copied, setCopied] = useState(false);
+  const registryItem = registry.items.find(
+    (item: { name: string }) => item.name === name
+  );
   const registryUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`;
   const npxCommand = "npx shadcn@latest add " + registryUrl;
   const v0Url =
     "https://v0.dev/chat/api/open?" +
     new URLSearchParams({
       url: registryUrl,
-      title: title || "",
-      prompt: prompt || "",
+      title: title || registryItem?.title || "",
+      prompt: prompt || registryItem?.description || "",
     }).toString();
 
   const copyToClipboard = async () => {
@@ -61,14 +63,18 @@ export function RegistryItemCard({
     }
   };
 
-  return (
+  return registryItem ? (
     <section>
       <Card id="starting-kit">
         <CardHeader>
           <div className="flex items-center justify-between gap-4">
             <div>
-              <CardTitle className="text-lg font-medium">{name}</CardTitle>
-              <CardDescription>{description}</CardDescription>
+              <CardTitle className="text-lg font-medium">
+                {title || registryItem.title}
+              </CardTitle>
+              <CardDescription>
+                {description || registryItem.description}
+              </CardDescription>
             </div>
             <div className="flex items-center justify-between gap-1">
               <TooltipProvider>
@@ -118,20 +124,30 @@ export function RegistryItemCard({
             </div>
           </div>
         </CardHeader>
-        {previewUrl && (
-          <CardContent>
+        <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
+          {components &&
+            Object.entries(components).map(([key, node]) => (
+              <div className="w-full" key={key}>
+                {node}
+              </div>
+            ))}
+          {previewUrl && (
             <div
               className={`h-[800px] w-full rounded-md border border-border overflow-hidden`}
             >
               <iframe
                 src={previewUrl}
                 className="w-full h-full"
-                title="Template Preview"
+                title="Page Preview"
               />
             </div>
-          </CardContent>
-        )}
+          )}
+        </CardContent>
       </Card>
     </section>
+  ) : (
+    <div className="flex items-center justify-center h-full">
+      <p className="text-muted-foreground">No registry item found</p>
+    </div>
   );
 }

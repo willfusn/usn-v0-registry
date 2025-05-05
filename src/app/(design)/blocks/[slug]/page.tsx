@@ -5,10 +5,13 @@ import { notFound } from "next/navigation";
 import { blocks } from "@/app/(design)/blocks/[slug]/(blocks)";
 import { OpenInV0Button } from "@/components/open-in-v0";
 import { Button } from "@/components/ui/button";
+import { OpenInV0Card } from "@/components/open-in-v0-card";
 
 export default async function BlockPage({
   params,
-}: { params: Promise<{ slug: string }> }) {
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const block = blocks[slug];
 
@@ -30,23 +33,11 @@ export default async function BlockPage({
           <p className="mt-1 text-muted-foreground">{block.description}</p>
         </div>
       </div>
-
-      <div className="mb-3 flex items-center justify-between">
-        <h3 className="font-bold">Preview</h3>
-        <OpenInV0Button name={block.name} />
-      </div>
-
-      <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20 p-10">
-        {block.components ? (
-          Object.entries(block.components).map(([key, node]) => (
-            <div className="w-full" key={key}>
-              {node}
-            </div>
-          ))
-        ) : (
-          <></>
-        )}
-      </div>
+      <OpenInV0Card
+        name={block.name}
+        title="Block Preview"
+        components={block.components}
+      />
     </div>
   );
 }
