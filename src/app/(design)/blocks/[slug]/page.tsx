@@ -17,7 +17,7 @@ export default async function BlockPage({
   }
 
   return (
-    <div className="container p-10">
+    <div className="container md:p-10">
       <div className="mb-6 flex items-center justify-between">
         <div>
           <Button variant="ghost" size="sm" asChild className="mb-4">

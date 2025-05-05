@@ -8,7 +8,7 @@ import { ColorBlock } from "./color-block";
 
 export default function TokensPage() {
   return (
-    <div className="container p-10">
+    <div className="container p-5 md:p-10">
       <div className="mb-8">
         <Button variant="ghost" size="sm" asChild className="mb-4">
           <Link href="/">
