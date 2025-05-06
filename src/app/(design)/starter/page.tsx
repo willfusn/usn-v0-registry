@@ -1,4 +1,5 @@
 import { OpenInV0Button } from "@/components/open-in-v0";
+import { OpenInV0Card } from "@/components/open-in-v0-card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -35,27 +36,13 @@ export default function StartPage() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-8">
         {starters.map((starter) => (
-          <div key={starter.name}>
-            <div className="mb-6 flex items-center justify-between">
-              <h3 className="font-bold">{starter.title}</h3>
-              <OpenInV0Button
-                name={starter.name}
-                prompt="This is a blank application prototype with existing components and shadcn styling. Prompt v0 to make changes or build on top of the existing template"
-              />
-            </div>
-
-            <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20">
-              <div className="h-[800px] w-full overflow-hidden rounded-md border border-border">
-                <iframe
-                  title="Starter"
-                  src={starter.url}
-                  className="h-full w-full overflow-hidden"
-                />
-              </div>
-            </div>
-          </div>
+          <OpenInV0Card
+            key={starter.name}
+            name={starter.name}
+            previewUrl={starter.url}
+          ></OpenInV0Card>
         ))}
       </div>
     </div>

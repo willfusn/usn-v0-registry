@@ -453,11 +453,11 @@
       ]
     },
     {
-      "name": "data-picker",
+      "name": "date-picker",
       "type": "registry:component",
-      "title": "Data Picker",
-      "description": "A styled, simple, reusable data picker",
-      "registryDependencies": ["data-picker"],
+      "title": "Date Picker",
+      "description": "A styled, simple, reusable date picker",
+      "registryDependencies": ["date-picker"],
       "files": [
         {
           "path": "src/app/globals.css",

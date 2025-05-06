@@ -5,10 +5,13 @@ import { notFound } from "next/navigation";
 import { components } from "@/app/(design)/components/[slug]/(components)";
 import { OpenInV0Button } from "@/components/open-in-v0";
 import { Button } from "@/components/ui/button";
+import { OpenInV0Card } from "@/components/open-in-v0-card";
 
 export default async function ComponentPage({
   params,
-}: { params: Promise<{ slug: string }> }) {
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const component = components[slug];
 
@@ -33,22 +36,11 @@ export default async function ComponentPage({
         </div>
       </div>
 
-      <div className="mb-6 flex items-center justify-between">
-        <h3 className="font-bold">Preview</h3>
-        <OpenInV0Button name={component.name} />
-      </div>
-
-      <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-primary/20 p-10">
-        {component.components ? (
-          Object.entries(component.components).map(([key, node]) => (
-            <div className="w-full" key={key}>
-              {node}
-            </div>
-          ))
-        ) : (
-          <></>
-        )}
-      </div>
+      <OpenInV0Card
+        name={component.name}
+        title="Component Preview"
+        components={component.components}
+      />
     </div>
   );
 }
