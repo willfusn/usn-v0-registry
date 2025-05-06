@@ -3,7 +3,7 @@
   "name": "calendar",
   "type": "registry:component",
   "title": "Calendar",
-  "description": "A styled, simple, reusable calendar",
+  "description": "A date field component that allows users to enter and edit date.",
   "registryDependencies": [
     "calendar"
   ],

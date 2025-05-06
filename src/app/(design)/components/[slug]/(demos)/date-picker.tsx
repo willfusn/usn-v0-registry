@@ -15,9 +15,6 @@ const date = new Date();
 
 export const datePicker = {
   name: "date-picker",
-  title: "Date Picker",
-  description:
-    "Displays the path to the current resource using a hierarchy of links.",
   components: {
     Default: (
       <Popover>

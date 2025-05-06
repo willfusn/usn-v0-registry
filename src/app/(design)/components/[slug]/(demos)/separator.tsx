@@ -2,8 +2,6 @@ import { Separator } from "@/components/ui/separator";
 
 export const separator = {
   name: "separator",
-  title: "Separator",
-  description: "Visually or semantically separates content.",
   components: {
     Default: (
       <div>

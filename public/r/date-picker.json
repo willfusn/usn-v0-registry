@@ -3,7 +3,7 @@
   "name": "date-picker",
   "type": "registry:component",
   "title": "Date Picker",
-  "description": "A styled, simple, reusable date picker",
+  "description": "Displays the path to the current resource using a hierarchy of links.",
   "registryDependencies": [
     "date-picker"
   ],

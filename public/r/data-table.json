@@ -3,7 +3,7 @@
   "name": "data-table",
   "type": "registry:component",
   "title": "Data Table",
-  "description": "A styled, simple, reusable data table",
+  "description": "Powerful table and datagrids built using TanStack Table.",
   "registryDependencies": [
     "data-table"
   ],

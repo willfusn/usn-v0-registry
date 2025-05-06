@@ -3,7 +3,7 @@
   "name": "input",
   "type": "registry:component",
   "title": "Input",
-  "description": "A styled, simple, reusable input",
+  "description": "Displays a form input field or a component that looks like an input field.",
   "registryDependencies": [
     "input"
   ],

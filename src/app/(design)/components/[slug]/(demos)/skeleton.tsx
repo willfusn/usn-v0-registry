@@ -2,8 +2,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export const skeleton = {
   name: "skeleton",
-  title: "Skeleton",
-  description: "Use to show a placeholder while content is loading..",
   components: {
     Default: (
       <div className="flex items-center space-x-4">

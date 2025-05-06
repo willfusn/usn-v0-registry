@@ -3,7 +3,7 @@
   "name": "avatar",
   "type": "registry:component",
   "title": "Avatar",
-  "description": "A styled, simple, reusable avatar",
+  "description": "An image element with a fallback for representing the user.",
   "registryDependencies": [
     "avatar"
   ],

@@ -3,7 +3,7 @@
   "name": "dropdown-menu",
   "type": "registry:component",
   "title": "Dropdown",
-  "description": "A styled, simple, reusable dropdown menu",
+  "description": "Displays a menu to the user triggered by a button.",
   "registryDependencies": [
     "dropdown-menu"
   ],

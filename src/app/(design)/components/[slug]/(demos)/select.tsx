@@ -10,9 +10,6 @@ import {
 
 export const select = {
   name: "select",
-  title: "Select",
-  description:
-    "Displays a list of options for the user to pick from—triggered by a button.",
   components: {
     Default: (
       <Select>

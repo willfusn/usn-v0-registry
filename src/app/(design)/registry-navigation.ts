@@ -34,5 +34,5 @@ export const blockItems = [
 export const gettingStartedItems = [
   { name: "Home", path: "/" },
   { name: "Design Tokens", path: "/tokens" },
-  { name: "v0 Starter", path: "/starter" },
+  { name: "Starter Kit", path: "/starter" },
 ];

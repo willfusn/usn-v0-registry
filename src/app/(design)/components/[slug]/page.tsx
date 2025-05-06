@@ -2,9 +2,10 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { components } from "@/app/(design)/components/[slug]/(components)";
+import { demos } from "@/app/(design)/components/[slug]/(demos)";
 import { OpenInV0Card } from "@/components/open-in-v0-card";
 import { Button } from "@/components/ui/button";
+import { getComponent } from "@/lib/utils";
 
 export default async function ComponentPage({
   params,
@@ -12,11 +13,14 @@ export default async function ComponentPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const component = components[slug];
+
+  const component = getComponent(slug);
 
   if (!component) {
     notFound();
   }
+
+  const { components } = demos[slug];
 
   return (
     <div className="container p-5 md:p-10">
@@ -31,14 +35,13 @@ export default async function ComponentPage({
           <h1 className="font-bold text-3xl tracking-tight">
             {component.title}
           </h1>
-          <p className="mt-1 text-muted-foreground">{component.description}</p>
         </div>
       </div>
 
       <OpenInV0Card
         name={component.name}
         title="Component Preview"
-        components={component.components}
+        components={components}
       />
     </div>
   );

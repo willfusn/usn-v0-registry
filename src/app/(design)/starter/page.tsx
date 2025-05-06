@@ -29,10 +29,7 @@ export default function StartPage() {
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">v0 Starter</h1>
-          <p className="mt-1 text-muted-foreground">
-            Blank applications with brand themed components ready to open in v0.
-          </p>
+          <h1 className="font-bold text-3xl tracking-tight">Starter Kit</h1>
         </div>
       </div>
 

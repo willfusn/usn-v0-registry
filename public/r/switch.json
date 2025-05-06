@@ -2,8 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch",
   "type": "registry:component",
-  "title": "Switch",
-  "description": "A styled, simple, reusable switch",
+  "description": "A control that allows the user to toggle between checked and not checked.",
   "registryDependencies": [
     "switch"
   ],

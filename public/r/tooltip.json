@@ -3,7 +3,7 @@
   "name": "tooltip",
   "type": "registry:component",
   "title": "Tooltip",
-  "description": "A styled, simple, reusable tooltip",
+  "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   "registryDependencies": [
     "tooltip"
   ],

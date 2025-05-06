@@ -4,9 +4,6 @@ import { Label } from "@/components/ui/label";
 
 export const input = {
   name: "input",
-  title: "Input",
-  description:
-    "Displays a form input field or a component that looks like an input field.",
   components: {
     Default: <Input placeholder="Default" />,
     Email: <Input type="email" placeholder="Email" />,

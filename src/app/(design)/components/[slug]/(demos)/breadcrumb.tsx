@@ -16,9 +16,6 @@ import {
 
 export const breadcrumb = {
   name: "breadcrumb",
-  title: "Breadcrumb",
-  description:
-    "Displays the path to the current resource using a hierarchy of links.",
   components: {
     Default: (
       <Breadcrumb>

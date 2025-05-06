@@ -3,7 +3,7 @@
   "name": "card",
   "type": "registry:component",
   "title": "Card",
-  "description": "A styled, simple, reusable card",
+  "description": "Containers for displaying content and actions about a single subject.",
   "registryDependencies": [
     "card"
   ],

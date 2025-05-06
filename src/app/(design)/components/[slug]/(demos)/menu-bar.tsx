@@ -16,9 +16,6 @@ import {
 
 export const menuBar = {
   name: "menu-bar",
-  title: "Menu Bar",
-  description:
-    "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
   components: {
     Default: (
       <Menubar>

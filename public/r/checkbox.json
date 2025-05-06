@@ -3,7 +3,7 @@
   "name": "checkbox",
   "type": "registry:component",
   "title": "Checkbox",
-  "description": "A styled, simple, reusable checkbox",
+  "description": "Allows users to select multiple items from a list of options.",
   "registryDependencies": [
     "checkbox"
   ],

@@ -10,9 +10,6 @@ import {
 
 export const card = {
   name: "card",
-  title: "Card",
-  description:
-    "Containers for displaying content and actions about a single subject.",
   components: {
     Default: (
       <Card className="w-[350px]">

@@ -3,7 +3,7 @@
   "name": "menu-bar",
   "type": "registry:component",
   "title": "Menu Bar",
-  "description": "A styled, simple, reusable menu bar",
+  "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
   "registryDependencies": [
     "menu-bar"
   ],

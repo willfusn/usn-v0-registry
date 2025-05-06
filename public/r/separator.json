@@ -3,7 +3,7 @@
   "name": "separator",
   "type": "registry:component",
   "title": "Separator",
-  "description": "A styled, simple, reusable separator",
+  "description": "Visually or semantically separates content.",
   "registryDependencies": [
     "separator"
   ],

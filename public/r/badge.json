@@ -3,7 +3,7 @@
   "name": "badge",
   "type": "registry:component",
   "title": "Badge",
-  "description": "A styled, simple, reusable badge",
+  "description": "Displays a small count or status indicator.",
   "registryDependencies": [
     "badge"
   ],

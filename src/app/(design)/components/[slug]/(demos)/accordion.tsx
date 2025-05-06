@@ -7,9 +7,6 @@ import {
 
 export const accordion = {
   name: "accordion",
-  title: "Accordion",
-  description:
-    "A vertically stacked set of interactive headings that each reveal a section of content.",
   components: {
     Accordion: (
       <Accordion type="single" collapsible className="w-full">

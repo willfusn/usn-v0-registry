@@ -3,7 +3,7 @@
   "name": "select",
   "type": "registry:component",
   "title": "Select",
-  "description": "A styled, simple, reusable select",
+  "description": "Displays a list of options for the user to pick from—triggered by a button.",
   "registryDependencies": [
     "select"
   ],

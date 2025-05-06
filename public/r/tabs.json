@@ -3,7 +3,7 @@
   "name": "tabs",
   "type": "registry:component",
   "title": "Tabs",
-  "description": "A styled, simple, reusable tabs",
+  "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   "registryDependencies": [
     "tabs"
   ],

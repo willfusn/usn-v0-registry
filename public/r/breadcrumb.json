@@ -3,7 +3,7 @@
   "name": "breadcrumb",
   "type": "registry:component",
   "title": "Breadcrumb",
-  "description": "A styled, simple, reusable breadcrumb",
+  "description": "Displays the path to the current resource using a hierarchy of links.",
   "registryDependencies": [
     "breadcrumb"
   ],

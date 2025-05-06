@@ -3,7 +3,7 @@
   "name": "table",
   "type": "registry:component",
   "title": "Table",
-  "description": "A styled, simple, reusable table",
+  "description": "A responsive table component.",
   "registryDependencies": [
     "table"
   ],

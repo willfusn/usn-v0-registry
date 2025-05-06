@@ -3,7 +3,7 @@
   "name": "chart",
   "type": "registry:component",
   "title": "Chart",
-  "description": "A styled, simple, reusable chart",
+  "description": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
   "registryDependencies": [
     "chart"
   ],

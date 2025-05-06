@@ -4,8 +4,6 @@ import Link from "next/link";
 
 export const badge = {
   name: "badge",
-  title: "Badge",
-  description: "Displays a small count or status indicator.",
   components: {
     Default: <Badge>Badge</Badge>,
     Secondary: <Badge variant="secondary">Secondary</Badge>,

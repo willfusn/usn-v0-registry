@@ -3,7 +3,7 @@
   "name": "button",
   "type": "registry:component",
   "title": "Button",
-  "description": "A styled, simple, reusable button",
+  "description": "Allows users to take actions with a single click or tap.",
   "registryDependencies": [
     "button"
   ],

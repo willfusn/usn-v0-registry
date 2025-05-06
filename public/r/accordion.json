@@ -3,7 +3,7 @@
   "name": "accordion",
   "type": "registry:component",
   "title": "Accordion",
-  "description": "A styled, simple, reusable accordion",
+  "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
   "registryDependencies": [
     "accordion"
   ],

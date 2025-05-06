@@ -3,7 +3,7 @@
   "name": "dialog",
   "type": "registry:component",
   "title": "Dialog",
-  "description": "A styled, simple, reusable dialog",
+  "description": "A modal dialog that interrupts the user with important content.",
   "registryDependencies": [
     "dialog"
   ],

@@ -167,7 +167,7 @@
       "name": "promo",
       "type": "registry:component",
       "title": "Promo",
-      "description": "A styled, simple, reusable promo section",
+      "description": "A styled, simple, reusable promotional section",
       "registryDependencies": ["button"],
       "files": [
         {
@@ -192,7 +192,7 @@
       "name": "accordion",
       "type": "registry:component",
       "title": "Accordion",
-      "description": "A styled, simple, reusable accordion",
+      "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
       "registryDependencies": ["accordion"],
       "files": [
         {
@@ -216,7 +216,7 @@
       "name": "alert",
       "type": "registry:component",
       "title": "Alert",
-      "description": "A styled, simple, reusable alert",
+      "description": "Displays a callout for user attention.",
       "registryDependencies": ["alert"],
       "files": [
         {
@@ -240,7 +240,7 @@
       "name": "avatar",
       "type": "registry:component",
       "title": "Avatar",
-      "description": "A styled, simple, reusable avatar",
+      "description": "An image element with a fallback for representing the user.",
       "registryDependencies": ["avatar"],
       "files": [
         {
@@ -264,7 +264,7 @@
       "name": "badge",
       "type": "registry:component",
       "title": "Badge",
-      "description": "A styled, simple, reusable badge",
+      "description": "Displays a small count or status indicator.",
       "registryDependencies": ["badge"],
       "files": [
         {
@@ -288,7 +288,7 @@
       "name": "breadcrumb",
       "type": "registry:component",
       "title": "Breadcrumb",
-      "description": "A styled, simple, reusable breadcrumb",
+      "description": "Displays the path to the current resource using a hierarchy of links.",
       "registryDependencies": ["breadcrumb"],
       "files": [
         {
@@ -312,7 +312,7 @@
       "name": "button",
       "type": "registry:component",
       "title": "Button",
-      "description": "A styled, simple, reusable button",
+      "description": "Allows users to take actions with a single click or tap.",
       "registryDependencies": ["button"],
       "files": [
         {
@@ -336,7 +336,7 @@
       "name": "calendar",
       "type": "registry:component",
       "title": "Calendar",
-      "description": "A styled, simple, reusable calendar",
+      "description": "A date field component that allows users to enter and edit date.",
       "registryDependencies": ["calendar"],
       "files": [
         {
@@ -360,7 +360,7 @@
       "name": "card",
       "type": "registry:component",
       "title": "Card",
-      "description": "A styled, simple, reusable card",
+      "description": "Containers for displaying content and actions about a single subject.",
       "registryDependencies": ["card"],
       "files": [
         {
@@ -384,7 +384,7 @@
       "name": "chart",
       "type": "registry:component",
       "title": "Chart",
-      "description": "A styled, simple, reusable chart",
+      "description": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
       "registryDependencies": ["chart"],
       "files": [
         {
@@ -408,7 +408,7 @@
       "name": "checkbox",
       "type": "registry:component",
       "title": "Checkbox",
-      "description": "A styled, simple, reusable checkbox",
+      "description": "Allows users to select multiple items from a list of options.",
       "registryDependencies": ["checkbox"],
       "files": [
         {
@@ -432,7 +432,7 @@
       "name": "data-table",
       "type": "registry:component",
       "title": "Data Table",
-      "description": "A styled, simple, reusable data table",
+      "description": "Powerful table and datagrids built using TanStack Table.",
       "registryDependencies": ["data-table"],
       "files": [
         {
@@ -456,7 +456,7 @@
       "name": "date-picker",
       "type": "registry:component",
       "title": "Date Picker",
-      "description": "A styled, simple, reusable date picker",
+      "description": "Displays the path to the current resource using a hierarchy of links.",
       "registryDependencies": ["date-picker"],
       "files": [
         {
@@ -480,7 +480,7 @@
       "name": "dialog",
       "type": "registry:component",
       "title": "Dialog",
-      "description": "A styled, simple, reusable dialog",
+      "description": "A modal dialog that interrupts the user with important content.",
       "registryDependencies": ["dialog"],
       "files": [
         {
@@ -504,7 +504,7 @@
       "name": "dropdown-menu",
       "type": "registry:component",
       "title": "Dropdown",
-      "description": "A styled, simple, reusable dropdown menu",
+      "description": "Displays a menu to the user triggered by a button.",
       "registryDependencies": ["dropdown-menu"],
       "files": [
         {
@@ -528,7 +528,7 @@
       "name": "input",
       "type": "registry:component",
       "title": "Input",
-      "description": "A styled, simple, reusable input",
+      "description": "Displays a form input field or a component that looks like an input field.",
       "registryDependencies": ["input"],
       "files": [
         {
@@ -552,7 +552,7 @@
       "name": "menu-bar",
       "type": "registry:component",
       "title": "Menu Bar",
-      "description": "A styled, simple, reusable menu bar",
+      "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
       "registryDependencies": ["menu-bar"],
       "files": [
         {
@@ -576,7 +576,7 @@
       "name": "select",
       "type": "registry:component",
       "title": "Select",
-      "description": "A styled, simple, reusable select",
+      "description": "Displays a list of options for the user to pick from—triggered by a button.",
       "registryDependencies": ["select"],
       "files": [
         {
@@ -600,7 +600,7 @@
       "name": "separator",
       "type": "registry:component",
       "title": "Separator",
-      "description": "A styled, simple, reusable separator",
+      "description": "Visually or semantically separates content.",
       "registryDependencies": ["separator"],
       "files": [
         {
@@ -624,7 +624,7 @@
       "name": "skeleton",
       "type": "registry:component",
       "title": "Skeleton",
-      "description": "A styled, simple, reusable skeleton",
+      "description": "Use to show a placeholder while content is loading.",
       "registryDependencies": ["skeleton"],
       "files": [
         {
@@ -648,7 +648,7 @@
       "name": "slider",
       "type": "registry:component",
       "title": "Slider",
-      "description": "A styled, simple, reusable slider",
+      "description": "An input where the user selects a value from within a given range.",
       "registryDependencies": ["slider"],
       "files": [
         {
@@ -672,7 +672,7 @@
       "name": "switch",
       "type": "registry:component",
       "title": "Switch",
-      "description": "A styled, simple, reusable switch",
+      "description": "A control that allows the user to toggle between checked and not checked.",
       "registryDependencies": ["switch"],
       "files": [
         {
@@ -696,7 +696,7 @@
       "name": "table",
       "type": "registry:component",
       "title": "Table",
-      "description": "A styled, simple, reusable table",
+      "description": "A responsive table component.",
       "registryDependencies": ["table"],
       "files": [
         {
@@ -720,7 +720,7 @@
       "name": "tabs",
       "type": "registry:component",
       "title": "Tabs",
-      "description": "A styled, simple, reusable tabs",
+      "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
       "registryDependencies": ["tabs"],
       "files": [
         {
@@ -744,7 +744,7 @@
       "name": "toggle-group",
       "type": "registry:component",
       "title": "Toggle Group",
-      "description": "A styled, simple, reusable toggle group",
+      "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
       "registryDependencies": ["toggle-group"],
       "files": [
         {
@@ -768,7 +768,7 @@
       "name": "tooltip",
       "type": "registry:component",
       "title": "Tooltip",
-      "description": "A styled, simple, reusable tooltip",
+      "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
       "registryDependencies": ["tooltip"],
       "files": [
         {

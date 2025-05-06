@@ -3,7 +3,7 @@
   "name": "skeleton",
   "type": "registry:component",
   "title": "Skeleton",
-  "description": "A styled, simple, reusable skeleton",
+  "description": "Use to show a placeholder while content is loading.",
   "registryDependencies": [
     "skeleton"
   ],

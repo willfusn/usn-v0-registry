@@ -3,7 +3,7 @@
   "name": "alert",
   "type": "registry:component",
   "title": "Alert",
-  "description": "A styled, simple, reusable alert",
+  "description": "Displays a callout for user attention.",
   "registryDependencies": [
     "alert"
   ],

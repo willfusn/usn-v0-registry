@@ -13,9 +13,6 @@ import { Label } from "@/components/ui/label";
 
 export const dialog = {
   name: "dialog",
-  title: "Dialog",
-  description:
-    "A modal dialog that interrupts the user with important content.",
   components: {
     Default: (
       <Dialog>

@@ -13,9 +13,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const tabs = {
   name: "tabs",
-  title: "Tabs",
-  description:
-    "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   components: {
     Default: (
       <Tabs defaultValue="account" className="w-[400px]">
