@@ -1,11 +1,11 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "data-picker",
+  "name": "date-picker",
   "type": "registry:component",
-  "title": "Data Picker",
-  "description": "A styled, simple, reusable data picker",
+  "title": "Date Picker",
+  "description": "A styled, simple, reusable date picker",
   "registryDependencies": [
-    "data-picker"
+    "date-picker"
   ],
   "files": [
     {

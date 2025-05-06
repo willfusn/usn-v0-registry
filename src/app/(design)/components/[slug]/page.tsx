@@ -3,9 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { components } from "@/app/(design)/components/[slug]/(components)";
-import { OpenInV0Button } from "@/components/open-in-v0";
-import { Button } from "@/components/ui/button";
 import { OpenInV0Card } from "@/components/open-in-v0-card";
+import { Button } from "@/components/ui/button";
 
 export default async function ComponentPage({
   params,

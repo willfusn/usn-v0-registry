@@ -1,9 +1,9 @@
-import { OpenInV0Button } from "@/components/open-in-v0";
-import { OpenInV0Card } from "@/components/open-in-v0-card";
-import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
+
+import { OpenInV0Card } from "@/components/open-in-v0-card";
+import { Button } from "@/components/ui/button";
 
 const starters = [
   {
@@ -42,7 +42,7 @@ export default function StartPage() {
             key={starter.name}
             name={starter.name}
             previewUrl={starter.url}
-          ></OpenInV0Card>
+          />
         ))}
       </div>
     </div>

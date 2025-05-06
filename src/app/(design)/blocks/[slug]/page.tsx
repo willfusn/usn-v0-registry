@@ -3,9 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { blocks } from "@/app/(design)/blocks/[slug]/(blocks)";
-import { OpenInV0Button } from "@/components/open-in-v0";
-import { Button } from "@/components/ui/button";
 import { OpenInV0Card } from "@/components/open-in-v0-card";
+import { Button } from "@/components/ui/button";
 
 export default async function BlockPage({
   params,
