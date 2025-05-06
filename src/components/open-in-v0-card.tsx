@@ -85,7 +85,7 @@ export function OpenInV0Card({
                     Copy npx command
                   </TooltipContent>
 
-                  <TooltipTrigger>
+                  <TooltipTrigger asChild>
                     <Button
                       onClick={copyToClipboard}
                       variant="outline"
