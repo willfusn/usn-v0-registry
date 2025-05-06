@@ -1,12 +1,32 @@
 # Registry Starter
 
-This is a [Next.js](https://www.nextjs.org) application powered by Tailwind v4 and Shadcn/ui components to help 
-accelerate building a design systems implementation using Shadcn Registries.
+This is a [Next.js](https://www.nextjs.org) application powered by Tailwind v4 and [`shadcn/ui`](https://ui.shadcn.com/)
+components to help accelerate building a design system implementation using Shadcn components while exposing said
+components via a [`shadcn/ui registry`](https://ui.shadcn.com/docs/registry).
 
-In order to configure this, all you need to change is the `BRAND TOKENS` section in the
-[`globals.css`](./src/styles/globals.css) file.  All the `--ds-*` will be propagated to the necessary Shadcn and 
-Tailwind theme classes from there.  So far, it seems more than reasonable to use [`v0.dev`](https://v0.dev) or other 
-LLMs to generate CSS for your brand.
+To use a custom theme for all the components, all you need to do is modify the CSS tokens in
+[`globals.css`](./src/app/globals.css). More information on these practices can be found
+on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
+
+This registry application also exposes `Open in v0` buttons for each component. Once this application is deployed, the
+`Open in v0` button redirects to [`v0.dev`](https://v0.dev) with a prepopulated prompt and a URL pointing back to this
+registry's `/r/${component_name}.json` endpoint. This endpoint will provide v0 the necessary file information, content,
+and metadata to start your v0 chat with your component, theme, and other related code.
+
+These `/r/${component_name}.json` files are generated using `shadcn/ui` during the `build` and `dev` based on the
+repository's [`registry.json`](./registry.json). For more information, refer to the
+[documentation](https://ui.shadcn.com/docs/registry/registry-json).
+
+## File Structure
+
+`app/(design)` routes contains the registry pages.
+`app/starter` routes contains both `store` and `dashboard` full starter pages
+
+`@/components` contain all compound components
+`@/components/ui` contain all base `shadcn/ui` components
+
+`@/hooks` contain all react hooks
+`@/lib` contain all business logic & utils
 
 ## Getting Started
 
@@ -18,8 +38,6 @@ pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ### Production mode
 
@@ -35,8 +53,8 @@ Your app should be up and running on [http://localhost:3000](http://localhost:30
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) — learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) — an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) — your feedback and contributions
 are welcome!
