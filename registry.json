@@ -160,6 +160,11 @@
           "path": "src/components/login.tsx",
           "type": "registry:file",
           "target": "components/login.tsx"
+        },
+        {
+          "path": "src/components/logo.tsx",
+          "type": "registry:file",
+          "target": "components/logo.tsx"
         }
       ]
     },
