@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { MobileMenu } from "@/app/(design)/registry-mobile-menu";
 import { RegistrySidebar } from "@/app/(design)/registry-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
@@ -19,13 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <SidebarProvider>
-      <RegistrySidebar />
-
-      <div className="flex grow flex-col">
-        <MobileMenu />
+      <div className="relative flex min-h-screen grow flex-col md:flex-row">
+        <RegistrySidebar />
 
         <SidebarInset>
-          <div className="flex min-h-screen flex-col">{children}</div>
+          <div className="flex flex-col">{children}</div>
         </SidebarInset>
       </div>
     </SidebarProvider>

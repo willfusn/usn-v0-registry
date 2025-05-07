@@ -4,25 +4,28 @@ import {
   Blocks,
   ChevronDown,
   Home,
+  Menu,
   Search,
-  Squirrel,
   ToyBrick,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import {
-  blockItems,
-  componentItems,
-  gettingStartedItems,
-} from "@/app/(design)/registry-navigation";
+import { RegistryLogo } from "@/app/(design)/registry-logo";
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Input } from "@/components/ui/input";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import {
   Sidebar,
   SidebarContent,
@@ -34,9 +37,54 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+
+export const componentItems = [
+  { name: "Accordion", path: "/components/accordion" },
+  { name: "Alert", path: "/components/alert" },
+  { name: "Avatar", path: "/components/avatar" },
+  { name: "Badge", path: "/components/badge" },
+  { name: "Breadcrumb", path: "/components/breadcrumb" },
+  { name: "Button", path: "/components/button" },
+  { name: "Calendar", path: "/components/calendar" },
+  { name: "Card", path: "/components/card" },
+  { name: "Chart", path: "/components/chart" },
+  { name: "Checkbox", path: "/components/checkbox" },
+  { name: "Date Picker", path: "/components/date-picker" },
+  { name: "Data Table", path: "/components/data-table" },
+  { name: "Dialog", path: "/components/dialog" },
+  { name: "Dropdown Menu", path: "/components/dropdown-menu" },
+  { name: "Input", path: "/components/input" },
+  { name: "Menu Bar", path: "/components/menu-bar" },
+  { name: "Select", path: "/components/select" },
+  { name: "Separator", path: "/components/separator" },
+  { name: "Skeleton", path: "/components/skeleton" },
+  { name: "Slider", path: "/components/slider" },
+  { name: "Switch", path: "/components/switch" },
+  { name: "Table", path: "/components/table" },
+  { name: "Tabs", path: "/components/tabs" },
+  { name: "Toggle Group", path: "/components/toggle-group" },
+  { name: "Tooltip", path: "/components/tooltip" },
+];
+
+export const blockItems = [
+  { name: "Hero", path: "/blocks/hero" },
+  { name: "Promo", path: "/blocks/promo" },
+];
+
+export const gettingStartedItems = [
+  { name: "Home", path: "/" },
+  { name: "Design Tokens", path: "/tokens" },
+  { name: "Starter Kit", path: "/starter" },
+];
 
 export function RegistrySidebar() {
   const pathname = usePathname();
+
+  const [open, setOpen] = useState(false);
+  const isMobile = useIsMobile();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredComponents, setFilteredComponents] = useState(componentItems);
   const [filteredBlocks, setFilteredBlocks] = useState(blockItems);
@@ -59,136 +107,273 @@ export function RegistrySidebar() {
     }
   }, [searchTerm]);
 
+  // close mobile if the screen expands
+  useEffect(() => {
+    if (!isMobile) {
+      setOpen(false);
+    }
+  }, [isMobile]);
+
   return (
-    <Sidebar collapsible="icon">
-      <SidebarHeader className="border-b">
-        <div className="flex items-center justify-between px-2 py-2">
-          <Link href="/" className="flex min-w-0 items-center gap-2">
-            <div className="flex-shrink-0 rounded-md bg-primary p-1">
-              <Squirrel className="size-5 text-secondary" />
-            </div>
-            <span className="overflow-hidden font-semibold opacity-100 transition-opacity duration-200">
-              Design Registry
-            </span>
-          </Link>
-        </div>
-        <div className="px-2 py-2 opacity-100 transition-all duration-200">
-          <div className="relative">
-            <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search..."
-              className="pl-8"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+    <>
+      {/* MOBILE MENU */}
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetTrigger asChild>
+          <div className="flex items-center justify-start rounded-md p-4 md:hidden">
+            <Button aria-label="Open menu">
+              <Menu className="size-5" />
+            </Button>
           </div>
-        </div>
-      </SidebarHeader>
+        </SheetTrigger>
 
-      <SidebarContent>
-        <Collapsible defaultOpen={true} className="group/collapsible">
-          <SidebarGroup>
-            <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex min-w-0 items-center">
-                  <Home className="size-4 flex-shrink-0" />
-                  <span className="ml-2 opacity-100 transition-all duration-200">
-                    Getting Started
-                  </span>
+        <SheetContent side="left" className="w-[300px] p-0 sm:w-[350px]">
+          <SheetTitle className="hidden">Menu</SheetTitle>
+
+          <div className="flex h-full flex-col">
+            {/* Header */}
+            <div className="border-b">
+              <div className="flex items-center justify-between px-4 py-3">
+                <Link
+                  href="/"
+                  className="flex min-w-0 items-center gap-2"
+                  onClick={() => setOpen(false)}
+                >
+                  <RegistryLogo />
+                </Link>
+              </div>
+              <div className="px-4 py-2">
+                <div className="relative">
+                  <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
+                  <Input
+                    type="search"
+                    placeholder="Search..."
+                    className="pl-8"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
                 </div>
-                <ChevronDown className="size-4 flex-shrink-0 opacity-100 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-              </SidebarGroupLabel>
-            </CollapsibleTrigger>
+              </div>
+            </div>
 
-            <CollapsibleContent>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {gettingStartedItems.map((item) => (
-                    <SidebarMenuItem key={item.path}>
-                      <SidebarMenuButton
-                        asChild
-                        isActive={pathname === item.path}
+            {/* Navigation */}
+            <div className="flex-1 overflow-auto py-2">
+              <Collapsible defaultOpen={true} className="px-2 py-1">
+                <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md p-2 hover:bg-accent">
+                  <div className="flex items-center">
+                    <Home className="mr-2 size-4" />
+                    <span>Getting Started</span>
+                  </div>
+                  <ChevronDown className="size-4 transition-transform duration-200 [&[data-state=open]]:rotate-180" />
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <div className="mt-1 ml-6 space-y-1">
+                    {gettingStartedItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "block rounded-md px-2 py-1.5 text-sm",
+                          pathname === item.path
+                            ? "bg-accent font-medium text-accent-foreground"
+                            : "hover:bg-accent/50",
+                        )}
                       >
-                        <Link href={item.path} className="flex items-center">
-                          <span className="ml-2 opacity-100 transition-all duration-200">
-                            {item.name}
-                          </span>
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </CollapsibleContent>
-          </SidebarGroup>
-        </Collapsible>
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
 
-        <Collapsible defaultOpen={true} className="group/collapsible">
-          <SidebarGroup>
-            <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex min-w-0 items-center">
-                  <ToyBrick className="size-4 flex-shrink-0" />
-                  <span className="ml-2 transition-all duration-200">
-                    Components
-                  </span>
-                </div>
-                <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-              </SidebarGroupLabel>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {filteredComponents.map((item) => (
-                    <SidebarMenuItem key={item.path}>
-                      <SidebarMenuButton
-                        asChild
-                        isActive={pathname === item.path}
+              <Collapsible defaultOpen={true} className="px-2 py-1">
+                <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md p-2 hover:bg-accent">
+                  <div className="flex items-center">
+                    <ToyBrick className="mr-2 size-4" />
+                    <span>Components</span>
+                  </div>
+                  <ChevronDown className="size-4 transition-transform duration-200 [&[data-state=open]]:rotate-180" />
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <div className="mt-1 ml-6 space-y-1">
+                    {filteredComponents.map((item) => (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "block rounded-md px-2 py-1.5 text-sm",
+                          pathname === item.path
+                            ? "bg-accent font-medium text-accent-foreground"
+                            : "hover:bg-accent/50",
+                        )}
                       >
-                        <Link href={item.path}>{item.name}</Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </CollapsibleContent>
-          </SidebarGroup>
-        </Collapsible>
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
 
-        <Collapsible defaultOpen={true} className="group/collapsible">
-          <SidebarGroup>
-            <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex min-w-0 items-center">
-                  <Blocks className="size-4 flex-shrink-0" />
-                  <span className="ml-2 transition-all duration-200">
-                    Blocks
-                  </span>
-                </div>
-                <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-              </SidebarGroupLabel>
-            </CollapsibleTrigger>
-
-            <CollapsibleContent>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {filteredBlocks.map((item) => (
-                    <SidebarMenuItem key={item.path}>
-                      <SidebarMenuButton
-                        asChild
-                        isActive={pathname === item.path}
+              <Collapsible defaultOpen={true} className="px-2 py-1">
+                <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md p-2 hover:bg-accent">
+                  <div className="flex items-center">
+                    <Blocks className="mr-2 size-4" />
+                    <span>Blocks</span>
+                  </div>
+                  <ChevronDown className="size-4 transition-transform duration-200 [&[data-state=open]]:rotate-180" />
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <div className="mt-1 ml-6 space-y-1">
+                    {filteredBlocks.map((item) => (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "block rounded-md px-2 py-1.5 text-sm",
+                          pathname === item.path
+                            ? "bg-accent font-medium text-accent-foreground"
+                            : "hover:bg-accent/50",
+                        )}
                       >
-                        <Link href={item.path}>{item.name}</Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </CollapsibleContent>
-          </SidebarGroup>
-        </Collapsible>
-      </SidebarContent>
-    </Sidebar>
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+      {/* DESKTOP SIDEBAR */}
+      <Sidebar collapsible="icon">
+        <SidebarHeader className="border-b">
+          <div className="flex items-center justify-between px-2 py-2">
+            <Link href="/" className="flex min-w-0 items-center gap-2">
+              <RegistryLogo />
+            </Link>
+          </div>
+          <div className="px-2 py-2 opacity-100 transition-all duration-200">
+            <div className="relative">
+              <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Search..."
+                className="pl-8"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
+        </SidebarHeader>
+
+        <SidebarContent>
+          <Collapsible defaultOpen={true} className="group/collapsible">
+            <SidebarGroup>
+              <CollapsibleTrigger className="w-full">
+                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                  <div className="flex min-w-0 items-center">
+                    <Home className="size-4 flex-shrink-0" />
+                    <span className="ml-2 opacity-100 transition-all duration-200">
+                      Getting Started
+                    </span>
+                  </div>
+                  <ChevronDown className="size-4 flex-shrink-0 opacity-100 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                </SidebarGroupLabel>
+              </CollapsibleTrigger>
+
+              <CollapsibleContent>
+                <SidebarGroupContent>
+                  <SidebarMenu>
+                    {gettingStartedItems.map((item) => (
+                      <SidebarMenuItem key={item.path}>
+                        <SidebarMenuButton
+                          asChild
+                          isActive={pathname === item.path}
+                        >
+                          <Link href={item.path} className="flex items-center">
+                            <span className="ml-2 opacity-100 transition-all duration-200">
+                              {item.name}
+                            </span>
+                          </Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    ))}
+                  </SidebarMenu>
+                </SidebarGroupContent>
+              </CollapsibleContent>
+            </SidebarGroup>
+          </Collapsible>
+
+          <Collapsible defaultOpen={true} className="group/collapsible">
+            <SidebarGroup>
+              <CollapsibleTrigger className="w-full">
+                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                  <div className="flex min-w-0 items-center">
+                    <ToyBrick className="size-4 flex-shrink-0" />
+                    <span className="ml-2 transition-all duration-200">
+                      Components
+                    </span>
+                  </div>
+                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                </SidebarGroupLabel>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <SidebarGroupContent>
+                  <SidebarMenu>
+                    {filteredComponents.map((item) => (
+                      <SidebarMenuItem key={item.path}>
+                        <SidebarMenuButton
+                          asChild
+                          isActive={pathname === item.path}
+                        >
+                          <Link href={item.path}>{item.name}</Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    ))}
+                  </SidebarMenu>
+                </SidebarGroupContent>
+              </CollapsibleContent>
+            </SidebarGroup>
+          </Collapsible>
+
+          <Collapsible defaultOpen={true} className="group/collapsible">
+            <SidebarGroup>
+              <CollapsibleTrigger className="w-full">
+                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                  <div className="flex min-w-0 items-center">
+                    <Blocks className="size-4 flex-shrink-0" />
+                    <span className="ml-2 transition-all duration-200">
+                      Blocks
+                    </span>
+                  </div>
+                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                </SidebarGroupLabel>
+              </CollapsibleTrigger>
+
+              <CollapsibleContent>
+                <SidebarGroupContent>
+                  <SidebarMenu>
+                    {filteredBlocks.map((item) => (
+                      <SidebarMenuItem key={item.path}>
+                        <SidebarMenuButton
+                          asChild
+                          isActive={pathname === item.path}
+                        >
+                          <Link href={item.path}>{item.name}</Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    ))}
+                  </SidebarMenu>
+                </SidebarGroupContent>
+              </CollapsibleContent>
+            </SidebarGroup>
+          </Collapsible>
+        </SidebarContent>
+      </Sidebar>
+    </>
   );
 }
