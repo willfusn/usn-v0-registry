@@ -140,6 +140,30 @@
     },
 
     {
+      "name": "login",
+      "type": "registry:component",
+      "title": "Login",
+      "description": "Username & password login section with customer quote.",
+      "registryDependencies": ["badge", "button"],
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/components/login.tsx",
+          "type": "registry:file",
+          "target": "components/login.tsx"
+        }
+      ]
+    },
+    {
       "name": "hero",
       "type": "registry:component",
       "title": "Hero",
