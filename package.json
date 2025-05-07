@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "npm run registry:build && next dev",
+    "dev": "npm run registry:build && next dev --turbopack",
     "build": "npm run registry:build && next build",
     "start": "next start",
     "test": "vitest run",
