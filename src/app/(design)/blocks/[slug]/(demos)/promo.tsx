@@ -1,10 +1,7 @@
 import { Promo } from "@/components/promo";
 
 export const promo = {
-  title: "Promo",
   name: "promo",
-  description:
-    "Attention-grabbing section to display the current promotional deal.",
   components: {
     Default: (
       <Promo

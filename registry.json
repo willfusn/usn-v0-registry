@@ -143,7 +143,7 @@
       "name": "hero",
       "type": "registry:component",
       "title": "Hero",
-      "description": "A styled, simple hero",
+      "description": "Attention-grabbing section for the top of your landing pages.",
       "registryDependencies": ["badge", "button"],
       "files": [
         {
@@ -167,7 +167,7 @@
       "name": "promo",
       "type": "registry:component",
       "title": "Promo",
-      "description": "A styled, simple, reusable promotional section",
+      "description": "Attention-grabbing section to display the current promotional deal.",
       "registryDependencies": ["button"],
       "files": [
         {

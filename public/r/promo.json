@@ -3,7 +3,7 @@
   "name": "promo",
   "type": "registry:component",
   "title": "Promo",
-  "description": "A styled, simple, reusable promotional section",
+  "description": "Attention-grabbing section to display the current promotional deal.",
   "registryDependencies": [
     "button"
   ],

@@ -3,7 +3,7 @@
   "name": "hero",
   "type": "registry:component",
   "title": "Hero",
-  "description": "A styled, simple hero",
+  "description": "Attention-grabbing section for the top of your landing pages.",
   "registryDependencies": [
     "badge",
     "button"
