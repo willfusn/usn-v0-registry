@@ -22,7 +22,7 @@ export default async function BlockPage({
   const { components } = demos[slug];
 
   return (
-    <div className="container md:p-10">
+    <div className="container p-5 md:p-10">
       <div className="mb-6 flex items-center justify-between">
         <div>
           <Button variant="ghost" size="sm" asChild className="mb-4">
