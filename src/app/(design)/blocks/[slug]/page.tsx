@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { demos } from "@/app/(design)/blocks/[slug]/(demos)";
-import { OpenInV0Card } from "@/components/open-in-v0-card";
+import { ComponentCard } from "@/components/component-card";
 import { Button } from "@/components/ui/button";
 import { getComponent } from "@/lib/utils";
 
@@ -35,9 +35,10 @@ export default async function BlockPage({
         </div>
       </div>
 
-      <OpenInV0Card
+      <ComponentCard
         name={block.name}
         title="Block Preview"
+        promptTitle={`${block.title} Block Kit`}
         components={components}
       />
     </div>

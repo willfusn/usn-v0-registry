@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { demos } from "@/app/(design)/components/[slug]/(demos)";
-import { OpenInV0Card } from "@/components/open-in-v0-card";
+import { ComponentCard } from "@/components/component-card";
 import { Button } from "@/components/ui/button";
 import { getComponent } from "@/lib/utils";
 
@@ -38,9 +38,10 @@ export default async function ComponentPage({
         </div>
       </div>
 
-      <OpenInV0Card
+      <ComponentCard
         name={component.name}
         title="Component Preview"
+        promptTitle={`${component.title} Component Kit`}
         components={components}
       />
     </div>

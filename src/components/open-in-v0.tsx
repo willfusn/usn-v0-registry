@@ -1,29 +1,42 @@
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import type { ComponentProps } from "react";
 
+import { Button } from "@/components/ui/button";
+
+function buildV0Url(registryUrl: string, title?: string, prompt?: string) {
+  const params = new URLSearchParams();
+  params.append("url", registryUrl);
+
+  if (title != null) {
+    params.append("title", title);
+  }
+
+  if (prompt != null) {
+    params.append("prompt", prompt);
+  }
+
+  return `https://v0.dev/chat/api/open?${params.toString()}`;
+}
+
 export function OpenInV0Button({
-  name,
-  title = "Design Starter Kit",
-  prompt = "These are existing design system styles. Please utilize them alongside base shadcn components.",
+  registryUrl,
+  title,
+  prompt = "These are existing design system styles and files. Please utilize them alongside base components to build.",
   className,
-}: { name: string; title?: string; prompt?: string } & ComponentProps<
+}: { registryUrl: string; title?: string; prompt?: string } & ComponentProps<
   typeof Button
 >) {
-  const searchParams = new URLSearchParams({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`,
-    title,
-    prompt,
-  }).toString();
+  const url = buildV0Url(registryUrl, title, prompt);
 
   return (
     <Button
       aria-label="Open in v0"
       className={`flex items-center gap-2 rounded-md bg-black px-4 py-2 text-white hover:bg-black/90 ${className}`}
     >
-      <a
-        href={`https://v0.dev/chat/api/open?${searchParams}`}
+      <Link
+        href={url}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="flex items-center gap-2"
       >
         <span>Open in</span>
@@ -43,7 +56,7 @@ export function OpenInV0Button({
             fill="currentColor"
           />
         </svg>
-      </a>
+      </Link>
     </Button>
   );
 }

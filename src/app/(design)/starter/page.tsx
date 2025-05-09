@@ -2,7 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 
-import { OpenInV0Card } from "@/components/open-in-v0-card";
+import { ComponentCard } from "@/components/component-card";
 import { Button } from "@/components/ui/button";
 
 const starters = [
@@ -35,9 +35,11 @@ export default function StartPage() {
 
       <div className="flex flex-col gap-8">
         {starters.map((starter) => (
-          <OpenInV0Card
+          <ComponentCard
             key={starter.name}
             name={starter.name}
+            title={starter.title}
+            promptTitle={`${starter.title} Starter Kit`}
             previewUrl={starter.url}
           />
         ))}
