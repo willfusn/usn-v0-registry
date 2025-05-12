@@ -1,9 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "store",
+  "name": "blank",
   "type": "registry:block",
-  "title": "Store Starter",
-  "description": "A blank Store application with your brand themed components",
+  "title": "Blank Starter",
+  "description": "A blank application with all brand components and code",
   "files": [
     {
       "path": "src/app/globals.css",
@@ -24,8 +24,8 @@
       "target": "app/layout.tsx"
     },
     {
-      "path": "src/app/starter/store/page.tsx",
-      "content": "import ProductGrid from \"@/components/product-grid\";\nimport { getCategories, getProducts } from \"@/lib/products\";\n\nexport default async function Store() {\n  const products = await getProducts();\n  const categories = await getCategories();\n\n  return (\n    <div className=\"flex min-h-screen flex-col\">\n      <main className=\"flex-1\">\n        <section className=\"py-12\">\n          <div className=\"container px-4 md:px-6\">\n            <div className=\"flex flex-col items-center justify-center space-y-4 text-center\">\n              <div className=\"space-y-2\">\n                <h1 className=\"font-bold text-3xl tracking-tighter sm:text-4xl md:text-5xl\">\n                  Welcome to Store\n                </h1>\n\n                <p className=\"mx-auto max-w-[700px] text-gray-500 md:text-xl\">\n                  Shop our unique collection of products. Free shipping on all\n                  orders!\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n\n        <section className=\"py-8 md:py-12\">\n          <div className=\"container px-4 md:px-6\">\n            <ProductGrid products={products} categories={categories} />\n          </div>\n        </section>\n      </main>\n    </div>\n  );\n}\n",
+      "path": "src/app/starter/blank/page.tsx",
+      "content": "export default async function Store() {\n  return <div className=\"flex min-h-screen flex-col\" />;\n}\n",
       "type": "registry:page",
       "target": "app/page.tsx"
     },

@@ -16,6 +16,11 @@ const starters = [
     name: "store",
     url: "/starter/store",
   },
+  {
+    title: "Blank",
+    name: "blank",
+    url: "/starter/blank",
+  },
 ];
 
 export default function StartPage() {
