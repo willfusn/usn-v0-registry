@@ -4,8 +4,32 @@
   "homepage": "https://registry-starter.vercel.app",
   "items": [
     {
-      "name": "dashboard",
+      "name": "theme",
       "type": "registry:theme",
+      "title": "Global Theme",
+      "description": "Brand themed styles using Tailwind and Shadcn/ui",
+      "files": [
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/starter/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starter/root-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "dashboard",
+      "type": "registry:block",
       "title": "Dashboard Starter",
       "description": "A blank Dashboard application with your brand themed components",
       "files": [
@@ -26,29 +50,26 @@
         },
         {
           "path": "src/app/starter/dashboard/page.tsx",
-          "type": "registry:file",
+          "type": "registry:page",
           "target": "app/page.tsx"
         },
         {
           "path": "src/components/brand-header.tsx",
-          "type": "registry:file",
-          "target": "components/brand-header.tsx"
+          "type": "registry:component"
         },
         {
           "path": "src/components/logo.tsx",
-          "type": "registry:file",
-          "target": "components/logo.tsx"
+          "type": "registry:component"
         },
         {
           "path": "src/components/brand-sidebar.tsx",
-          "type": "registry:file",
-          "target": "components/brand-sidebar.tsx"
+          "type": "registry:component"
         }
       ]
     },
     {
       "name": "store",
-      "type": "registry:theme",
+      "type": "registry:block",
       "title": "Store Starter",
       "description": "A blank Store application with your brand themed components",
       "files": [
@@ -69,18 +90,16 @@
         },
         {
           "path": "src/app/starter/store/page.tsx",
-          "type": "registry:file",
+          "type": "registry:page",
           "target": "app/page.tsx"
         },
         {
           "path": "src/components/product-grid.tsx",
-          "type": "registry:file",
-          "target": "components/product-grid.tsx"
+          "type": "registry:component"
         },
         {
           "path": "src/lib/products.ts",
-          "type": "registry:file",
-          "target": "lib/products.ts"
+          "type": "registry:lib"
         }
       ]
     },
@@ -90,27 +109,18 @@
       "type": "registry:component",
       "title": "Brand Header",
       "description": "A styled, simple, reusable header",
-      "registryDependencies": ["button", "input", "avatar", "sidebar"],
+      "registryDependencies": [
+        "button",
+        "input",
+        "avatar",
+        "sidebar",
+        "https://registry-starter.vercel.app/r/theme.json",
+        "https://registry-starter.vercel.app/r/logo.json"
+      ],
       "files": [
         {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
           "path": "src/components/brand-header.tsx",
-          "type": "registry:file",
-          "target": "components/brand-header.tsx"
-        },
-        {
-          "path": "src/components/logo.tsx",
-          "type": "registry:file",
-          "target": "components/logo.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -119,22 +129,16 @@
       "type": "registry:component",
       "title": "Brand Sidebar",
       "description": "A styled, simple, reusable sidebar",
-      "registryDependencies": ["badge", "button", "sidebar"],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "sidebar",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
       "files": [
         {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
           "path": "src/components/brand-sidebar.tsx",
-          "type": "registry:file",
-          "target": "components/brand-sidebar.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -144,27 +148,51 @@
       "type": "registry:component",
       "title": "Login",
       "description": "Username & password login section with customer quote.",
-      "registryDependencies": ["badge", "button"],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "https://registry-starter.vercel.app/r/theme.json",
+        "https://registry-starter.vercel.app/r/logo.json"
+      ],
       "files": [
         {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
           "path": "src/components/login.tsx",
-          "type": "registry:file",
-          "target": "components/login.tsx"
-        },
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "brand-header",
+      "type": "registry:component",
+      "title": "Brand Header",
+      "description": "A styled, simple, reusable header",
+      "registryDependencies": [
+        "button",
+        "input",
+        "avatar",
+        "sidebar",
+        "https://registry-starter.vercel.app/r/theme.json",
+        "https://registry-starter.vercel.app/r/logo.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/brand-header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo",
+      "type": "registry:component",
+      "title": "Brand Logo",
+      "description": "A styled, simple, reusable logo",
+      "registryDependencies": [
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
         {
           "path": "src/components/logo.tsx",
-          "type": "registry:file",
-          "target": "components/logo.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -173,22 +201,15 @@
       "type": "registry:component",
       "title": "Hero",
       "description": "Attention-grabbing section for the top of your landing pages.",
-      "registryDependencies": ["badge", "button"],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
       "files": [
         {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
           "path": "src/components/hero.tsx",
-          "type": "registry:file",
-          "target": "components/hero.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -197,624 +218,266 @@
       "type": "registry:component",
       "title": "Promo",
       "description": "Attention-grabbing section to display the current promotional deal.",
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "button",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
       "files": [
         {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
           "path": "src/components/promo.tsx",
-          "type": "registry:file",
-          "target": "components/promo.tsx"
+          "type": "registry:component"
         }
       ]
     },
 
     {
       "name": "accordion",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Accordion",
       "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
-      "registryDependencies": ["accordion"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "accordion",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "alert",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Alert",
       "description": "Displays a callout for user attention.",
-      "registryDependencies": ["alert"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "alert",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "avatar",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
-      "registryDependencies": ["avatar"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "avatar",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "badge",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Badge",
       "description": "Displays a small count or status indicator.",
-      "registryDependencies": ["badge"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "badge",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "breadcrumb",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Breadcrumb",
       "description": "Displays the path to the current resource using a hierarchy of links.",
-      "registryDependencies": ["breadcrumb"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "breadcrumb",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "button",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Button",
       "description": "Allows users to take actions with a single click or tap.",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "button",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "calendar",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Calendar",
       "description": "A date field component that allows users to enter and edit date.",
-      "registryDependencies": ["calendar"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "calendar",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "card",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Card",
       "description": "Containers for displaying content and actions about a single subject.",
-      "registryDependencies": ["card"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "card",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "chart",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Chart",
       "description": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
-      "registryDependencies": ["chart"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "chart",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "checkbox",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Checkbox",
       "description": "Allows users to select multiple items from a list of options.",
-      "registryDependencies": ["checkbox"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "checkbox",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "data-table",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Data Table",
       "description": "Powerful table and datagrids built using TanStack Table.",
-      "registryDependencies": ["data-table"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "data-table",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "date-picker",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Date Picker",
       "description": "Displays the path to the current resource using a hierarchy of links.",
-      "registryDependencies": ["date-picker"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "date-picker",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "dialog",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Dialog",
       "description": "A modal dialog that interrupts the user with important content.",
-      "registryDependencies": ["dialog"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "dialog",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "dropdown-menu",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Dropdown",
       "description": "Displays a menu to the user triggered by a button.",
-      "registryDependencies": ["dropdown-menu"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "dropdown-menu",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "input",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Input",
       "description": "Displays a form input field or a component that looks like an input field.",
-      "registryDependencies": ["input"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "input",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "menu-bar",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Menu Bar",
       "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
-      "registryDependencies": ["menu-bar"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "menu-bar",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "select",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Select",
       "description": "Displays a list of options for the user to pick from—triggered by a button.",
-      "registryDependencies": ["select"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "select",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "separator",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Separator",
       "description": "Visually or semantically separates content.",
-      "registryDependencies": ["separator"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "separator",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "skeleton",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Skeleton",
       "description": "Use to show a placeholder while content is loading.",
-      "registryDependencies": ["skeleton"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "skeleton",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "slider",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Slider",
       "description": "An input where the user selects a value from within a given range.",
-      "registryDependencies": ["slider"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "slider",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "switch",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Switch",
       "description": "A control that allows the user to toggle between checked and not checked.",
-      "registryDependencies": ["switch"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "switch",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "table",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Table",
       "description": "A responsive table component.",
-      "registryDependencies": ["table"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "table",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "tabs",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Tabs",
       "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-      "registryDependencies": ["tabs"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "tabs",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "toggle-group",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Toggle Group",
       "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-      "registryDependencies": ["toggle-group"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "toggle-group",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     },
     {
       "name": "tooltip",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Tooltip",
       "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-      "registryDependencies": ["tooltip"],
-      "files": [
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/starter/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starter/root-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
+      "registryDependencies": [
+        "tooltip",
+        "https://registry-starter.vercel.app/r/theme.json"
       ]
     }
   ]
