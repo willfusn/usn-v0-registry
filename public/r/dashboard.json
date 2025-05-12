@@ -3,7 +3,7 @@
   "name": "dashboard",
   "type": "registry:block",
   "title": "Dashboard Starter",
-  "description": "A blank Dashboard application with your brand themed components",
+  "description": "A dashboard application with your brand themed components",
   "files": [
     {
       "path": "src/app/globals.css",

@@ -3,7 +3,7 @@
   "name": "store",
   "type": "registry:block",
   "title": "Store Starter",
-  "description": "A blank Store application with your brand themed components",
+  "description": "A store application with your brand themed components",
   "files": [
     {
       "path": "src/app/globals.css",

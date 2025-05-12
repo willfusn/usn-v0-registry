@@ -18,29 +18,16 @@ export function Hero({
   backgroundImage: string;
 }) {
   return (
-    <div className="relative h-[600px] w-full overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src={backgroundImage}
-        alt="Hero background"
-        fill
-        priority
-        className="object-cover"
-      />
-
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/60" />
-
-      {/* Content */}
+    <div className="relative h-[600px] w-full bg-foreground/10">
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <Badge variant="secondary" className="mb-4">
             Coming soon
           </Badge>
-          <h1 className="font-bold text-4xl text-white tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
             {title}
           </h1>
-          <p className="mt-6 text-white/90 text-xl">{description}</p>
+          <p className="mt-6 text-xl">{description}</p>
           <div className="mt-10">
             <Button
               asChild
