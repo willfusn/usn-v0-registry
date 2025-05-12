@@ -14,8 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <SidebarProvider>
-      <BrandHeader />
-      <BrandSidebar />
       <main className="mt-16 flex w-full justify-center">
         <div className="container">{children}</div>
       </main>
