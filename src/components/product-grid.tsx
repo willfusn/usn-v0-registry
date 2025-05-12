@@ -6,9 +6,12 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { categories, products } from "@/lib/products";
+import type { Product } from "@/lib/products";
 
-export default function ProductGrid() {
+export default function ProductGrid({
+  categories,
+  products,
+}: { categories: string[]; products: Product[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const filteredProducts = selectedCategory
@@ -42,9 +45,7 @@ export default function ProductGrid() {
         {filteredProducts.map((product) => (
           <Card key={product.id} className="overflow-hidden p-0">
             <Link href={`/products/${product.id}`}>
-              <div className="flex aspect-square items-center justify-center bg-white p-6">
-                <span className="text-7xl">{product.emoji}</span>
-              </div>
+              <div className="flex aspect-square items-center justify-center bg-white p-6" />
             </Link>
 
             <CardContent className="p-4">
@@ -59,7 +60,7 @@ export default function ProductGrid() {
             <CardFooter className="flex items-center justify-between p-4 pt-0">
               <div className="font-semibold">${product.price.toFixed(2)}</div>
               <Button size="sm">
-                <ShoppingCart className="mr-2 h-4 w-4" /> Add
+                <ShoppingCart className="mr-2 size-4" /> Add
               </Button>
             </CardFooter>
           </Card>

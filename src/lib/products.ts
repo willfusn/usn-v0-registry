@@ -1,76 +1,44 @@
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  emoji: string;
-  category: string;
+import { z } from "zod";
+
+const ProductSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  price: z.number(),
+  description: z.string(),
+  category: z.string(),
+  brand: z.string(),
+  stock: z.number(),
+});
+
+export type Product = z.infer<typeof ProductSchema>;
+
+export async function getProducts(): Promise<Product[]> {
+  try {
+    const response = await fetch("https://api.vercel.app/products");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+
+    const data = await response.json();
+
+    return z.array(ProductSchema).parse(data);
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      console.error("Validation error:", error.issues);
+    } else {
+      console.error("Error fetching products:", error);
+    }
+    throw error;
+  }
 }
 
-export const categories = ["Clothing", "Food", "Tech"];
-
-export const products: Product[] = [
-  {
-    id: "emoji-cookie-1",
-    name: "Cookie Emoji Baking Set",
-    description:
-      "Create your own emoji cookies with this baking set that includes cookie cutters and decorating tools.",
-    price: 22.99,
-    emoji: "🍪",
-    category: "Food",
-  },
-  {
-    id: "emoji-pizza-1",
-    name: "Pizza Emoji Cutter Set",
-    description:
-      "Cut your pizza in style with this emoji pizza cutter set. Perfect for pizza lovers!",
-    price: 15.99,
-    emoji: "🍕",
-    category: "Food",
-  },
-  {
-    id: "emoji-hat-1",
-    name: "Sunglasses Emoji Cap",
-    description:
-      "A stylish cap featuring the sunglasses emoji. Adjustable strap for a perfect fit.",
-    price: 17.99,
-    emoji: "🧢",
-    category: "Clothing",
-  },
-  {
-    id: "emoji-phone-1",
-    name: "Phone Emoji Case",
-    description:
-      "Protect your phone with this fun emoji case featuring the classic phone emoji. Compatible with most smartphones.",
-    price: 14.99,
-    emoji: "📱",
-    category: "Tech",
-  },
-  {
-    id: "emoji-shoes-1",
-    name: "Sneakers Emoji Sneakers",
-    description:
-      "Step up your shoe game with these sneakers featuring the cool sneakers emoji.",
-    price: 49.99,
-    emoji: "👟",
-    category: "Clothing",
-  },
-  {
-    id: "emoji-bag-1",
-    name: "Shopping Bag Emoji Tote",
-    description:
-      "Carry your things in this spacious and stylish shopping bag emoji tote. Eco-friendly material.",
-    price: 18.99,
-    emoji: "🛍️",
-    category: "Clothing",
-  },
-  {
-    id: "emoji-camera-1",
-    name: "Camera Emoji Lens Cleaner",
-    description:
-      "Keep your lenses spotless with this camera emoji-themed lens cleaner. Compact and convenient.",
-    price: 8.99,
-    emoji: "📸",
-    category: "Tech",
-  },
-];
+export async function getCategories(): Promise<string[]> {
+  try {
+    const products = await getProducts();
+    return Array.from(new Set(products.map((product) => product.category)));
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+    throw error;
+  }
+}
