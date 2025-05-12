@@ -183,18 +183,19 @@ export function RegistrySidebar() {
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
-                    <ToyBrick className="size-4 flex-shrink-0" />
+                    <Blocks className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
-                      Components
+                      Blocks
                     </span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
                 </SidebarGroupLabel>
               </CollapsibleTrigger>
+
               <CollapsibleContent>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {filteredComponents.map((item) => (
+                    {filteredBlocks.map((item) => (
                       <SidebarMenuItem key={item.path}>
                         <SidebarMenuButton
                           asChild
@@ -215,19 +216,18 @@ export function RegistrySidebar() {
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
-                    <Blocks className="size-4 flex-shrink-0" />
+                    <ToyBrick className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
-                      Blocks
+                      Components
                     </span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
                 </SidebarGroupLabel>
               </CollapsibleTrigger>
-
               <CollapsibleContent>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {filteredBlocks.map((item) => (
+                    {filteredComponents.map((item) => (
                       <SidebarMenuItem key={item.path}>
                         <SidebarMenuButton
                           asChild
