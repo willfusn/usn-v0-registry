@@ -15,6 +15,11 @@
           "target": "app/globals.css"
         },
         {
+          "path": "src/app/starter/tailwind.css",
+          "type": "registry:file",
+          "target": "app/tailwind.css"
+        },
+        {
           "path": "src/app/starter/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"

@@ -22,6 +22,7 @@ import { getComponent } from "@/lib/utils";
 
 interface ComponentCardProps {
   name: string;
+  baseUrl: string;
   description?: string;
   title?: string;
   prompt?: string;
@@ -38,6 +39,7 @@ export function ComponentCard({
   description,
   prompt,
   promptTitle,
+  baseUrl,
   previewUrl,
   components,
 }: ComponentCardProps) {
@@ -45,7 +47,7 @@ export function ComponentCard({
 
   const component = getComponent(name);
 
-  const registryUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/r/${name}.json`;
+  const registryUrl = `https://${baseUrl}/r/${name}.json`;
   const npxCommand = `npx shadcn@latest add ${registryUrl}`;
 
   const copyToClipboard = async () => {

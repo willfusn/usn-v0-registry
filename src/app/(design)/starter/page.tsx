@@ -43,6 +43,7 @@ export default function StartPage() {
           <ComponentCard
             key={starter.name}
             name={starter.name}
+            baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
             title={starter.title}
             promptTitle={`${starter.title} Starter Kit`}
             previewUrl={starter.url}
