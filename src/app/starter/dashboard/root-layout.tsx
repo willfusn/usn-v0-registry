@@ -8,8 +8,7 @@ import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 
-import "@/styles/globals.css";
-import "@/styles/tailwind.css";
+import "@/app/globals.css";
 
 const geist = Geist({ subsets: ["latin"] });
 

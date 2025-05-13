@@ -3,8 +3,7 @@ import { Toaster } from "sonner";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
 
-import "@/styles/globals.css";
-import "@/styles/tailwind.css";
+import "@/app/globals.css";
 
 export default function RootLayout({
   children,
