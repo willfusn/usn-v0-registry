@@ -7,6 +7,12 @@ import { ComponentCard } from "@/components/component-card";
 import { Button } from "@/components/ui/button";
 import { getComponent } from "@/lib/utils";
 
+export async function generateStaticParams() {
+  return Object.keys(demos).map((slug) => ({
+    slug,
+  }));
+}
+
 export default async function BlockPage({
   params,
 }: {
