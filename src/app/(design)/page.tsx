@@ -107,13 +107,20 @@ export default function Home() {
               This design registry serves as a central repository for all UI
               components and blocks used in your applications. It helps maintain
               consistency across your products and speeds up development by
-              providing ready-to-use components.
+              providing ready-to-use components. Each component and block is
+              documented with examples. You can browse components by category,
+              search for specific components, and view examples of how they are
+              used in different contexts.
             </p>
             <p className="mt-2 text-muted-foreground">
-              Each component and block is documented with examples, props, and
-              usage guidelines. You can browse components by category, search
-              for specific components, and view examples of how they are used in
-              different contexts.
+              To get started, visit{" "}
+              <a href="/starter" className="underline">
+                v0 Starter Kit
+              </a>{" "}
+              to select a starting point and click the{" "}
+              <span className="font-bold">Open in v0</span> button. You can also
+              open individual components or blocks in v0 if you want a smaller
+              or more specific starting point.
             </p>
 
             <p className="mt-4 ">
