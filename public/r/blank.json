@@ -19,7 +19,7 @@
     },
     {
       "path": "src/app/starter/blank/root-layout.tsx",
-      "content": "import type React from \"react\";\nimport { Toaster } from \"sonner\";\n\nimport { SidebarProvider } from \"@/components/ui/sidebar\";\n\nimport \"@/app/globals.css\";\nimport \"@/app/tailwind.css\";\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <SidebarProvider>\n      {children}\n      <Toaster />\n    </SidebarProvider>\n  );\n}\n",
+      "content": "import type React from \"react\";\nimport { Toaster } from \"sonner\";\n\nimport { SidebarProvider } from \"@/components/ui/sidebar\";\n\nimport \"@/styles/globals.css\";\nimport \"@/styles/tailwind.css\";\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <SidebarProvider>\n      {children}\n      <Toaster />\n    </SidebarProvider>\n  );\n}\n",
       "type": "registry:file",
       "target": "app/layout.tsx"
     },

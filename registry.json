@@ -12,12 +12,12 @@
         {
           "path": "src/app/globals.css",
           "type": "registry:file",
-          "target": "app/globals.css"
+          "target": "styles/globals.css"
         },
         {
           "path": "src/app/starter/tailwind.css",
           "type": "registry:file",
-          "target": "app/tailwind.css"
+          "target": "styles/tailwind.css"
         },
         {
           "path": "src/app/starter/tailwind.config.ts",
