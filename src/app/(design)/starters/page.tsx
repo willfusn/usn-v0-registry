@@ -9,17 +9,17 @@ const starters = [
   {
     title: "Dashboard",
     name: "dashboard",
-    url: "/starter/dashboard",
+    url: "/starters/dashboard",
   },
   {
     title: "Store",
     name: "store",
-    url: "/starter/store",
+    url: "/starters/store",
   },
   {
     title: "Blank",
     name: "blank",
-    url: "/starter/blank",
+    url: "/starters/blank",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function StartPage() {
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">Starter Kit</h1>
+          <h1 className="font-bold text-3xl tracking-tight">Starters</h1>
         </div>
       </div>
 

@@ -113,11 +113,11 @@ export default function Home() {
               used in different contexts.
             </p>
             <p className="mt-2 text-muted-foreground">
-              To get started, visit{" "}
-              <a href="/starter" className="underline">
-                v0 Starter Kit
+              To get begin, select a{" "}
+              <a href="/starters" className="underline">
+                starter
               </a>{" "}
-              to select a starting point and click the{" "}
+              and click the{" "}
               <span className="font-bold">Open in v0</span> button. You can also
               open individual components or blocks in v0 if you want a smaller
               or more specific starting point.

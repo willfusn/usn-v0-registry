@@ -15,18 +15,17 @@
           "target": "app/globals.css"
         },
         {
-          "path": "src/app/starter/tailwind.config.ts",
+          "path": "src/app/starters/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
         {
-          "path": "src/app/starter/root-layout.tsx",
+          "path": "src/app/starters/root-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
       ]
     },
-
     {
       "name": "dashboard",
       "type": "registry:block",
@@ -39,17 +38,17 @@
           "target": "app/globals.css"
         },
         {
-          "path": "src/app/starter/tailwind.config.ts",
+          "path": "src/app/starters/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
         {
-          "path": "src/app/starter/dashboard/root-layout.tsx",
+          "path": "src/app/starters/dashboard/root-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starter/dashboard/page.tsx",
+          "path": "src/app/starters/dashboard/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         },
@@ -79,17 +78,17 @@
           "target": "app/globals.css"
         },
         {
-          "path": "src/app/starter/tailwind.config.ts",
+          "path": "src/app/starters/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
         {
-          "path": "src/app/starter/store/root-layout.tsx",
+          "path": "src/app/starters/store/root-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starter/store/page.tsx",
+          "path": "src/app/starters/store/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         },
@@ -115,17 +114,17 @@
           "target": "app/globals.css"
         },
         {
-          "path": "src/app/starter/tailwind.config.ts",
+          "path": "src/app/starters/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },
         {
-          "path": "src/app/starter/blank/root-layout.tsx",
+          "path": "src/app/starters/blank/root-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starter/blank/page.tsx",
+          "path": "src/app/starters/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         },
@@ -151,7 +150,6 @@
         }
       ]
     },
-
     {
       "name": "brand-header",
       "type": "registry:component",
@@ -190,7 +188,6 @@
         }
       ]
     },
-
     {
       "name": "login",
       "type": "registry:component",
@@ -277,7 +274,6 @@
         }
       ]
     },
-
     {
       "name": "accordion",
       "type": "registry:ui",
