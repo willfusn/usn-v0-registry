@@ -121,7 +121,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 ">
-              <a href="https://github.com/willsather/design-system-starter">
+              <a href="https://github.com/willsather/registry-starter">
                 <svg
                   width="1024"
                   height="1024"
