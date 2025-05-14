@@ -1,9 +1,9 @@
 <a href="https://registry-starter.vercel.app/">
-  <h1 align="center">Registry Template</h1>
+  <h1 align="center">Registry Starter</h1>
 </a>
 
 <p align="center">
-    Registry Template is a free, open-source template built with Next.js and the Shadcn/ui Registries that helps you quickly build an AI-Native Design System Implementation.
+    Registry Starter is a free, open-source template built with Next.js and the Shadcn/ui Registries that helps you quickly build an AI-Native Design System Implementation.
 </p>
 
 <p align="center">
@@ -18,9 +18,9 @@
 
 ## Deploy Your Own
 
-You can deploy your own version of the Next.js Registry Template to Vercel with one click:
+You can deploy your own version of the Next.js Registry Starter to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwillsather%2Fregistry-starter&project-name=my-registry&repository-name=my-registry-starter&demo-title=Registry%20Template&demo-description=An%20Open-Source%20Registry%20Template%20Built%20With%20Next.js%20and%20Shadcn%2Fui%20Registries%20by%20Vercel&demo-url=https%3A%2F%2Fregistry-starter.vercel.app)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwillsather%2Fregistry-starter&project-name=my-registry&repository-name=my-registry-starter&demo-title=Registry%20Starter&demo-description=An%20Open-Source%20Registry%20Starter%20Built%20With%20Next.js%20and%20Shadcn%2Fui%20Registries%20by%20Vercel&demo-url=https%3A%2F%2Fregistry-starter.vercel.app)
 
 
 ## Open in v0
@@ -54,7 +54,7 @@ pnpm install
 pnpm dev
 ```
 
-Your app template should now be running on [localhost:3000](http://localhost:3000).
+Your app should now be running on [localhost:3000](http://localhost:3000).
 
 ## File Structure
 
