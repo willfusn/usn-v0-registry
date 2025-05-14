@@ -25,7 +25,7 @@ You can deploy your own version of the Next.js Registry Template to Vercel with 
 
 ## Open in v0
 
-<a href="https://v0.dev/chat/api/open?title=Dashboard+Kit&prompt=These+are+existing+design+system+styles+and+files.+Please+utilize+them+alongside+base+components+to+build.&url=https%3A%2F%2Fregistry-starter.vercel.app%2Fr%2Fdashboard.json"><img src="https://v0.dev/chat-static/button.svg" alt="Open in v0" width="99" height="32" /></a>
+[![Open in v0](https://v0.dev/chat-static/button.svg)](https://v0.dev/chat/api/open?title=Dashboard+Kit&prompt=These+are+existing+design+system+styles+and+files.+Please+utilize+them+alongside+base+components+to+build.&url=https%3A%2F%2Fregistry-starter.vercel.app%2Fr%2Fdashboard.json)
 
 This registry application also exposes `Open in v0` buttons for each component. Once this application is deployed, the
 `Open in v0` button redirects to [`v0.dev`](https://v0.dev) with a prepopulated prompt and a URL pointing back to this
