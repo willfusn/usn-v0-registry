@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-  <a href="#open-in-v0"><strong>Open in v0</strong></a> ·
-  <a href="#theming"><strong>Features</strong></a> ·
   <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
+  <a href="#open-in-v0"><strong>Open in v0</strong></a> ·
+  <a href="#theming"><strong>Theming</strong></a> ·
   <a href="#running-locally"><strong>Running Locally</strong></a> ·
   <a href="#file-structure"><strong>File Structure</strong></a> ·
   <a href="https://ui.shadcn.com/docs/registry"><strong>Read Docs</strong></a>
@@ -23,13 +23,9 @@ You can deploy your own version of the Next.js Registry Template to Vercel with 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwillsather%2Fregistry-starter&project-name=my-registry&repository-name=my-registry-starter&demo-title=Registry%20Template&demo-description=An%20Open-Source%20Registry%20Template%20Built%20With%20Next.js%20and%20Shadcn%2Fui%20Registries%20by%20Vercel&demo-url=https%3A%2F%2Fregistry-starter.vercel.app)
 
 
-## Theming
-
-To use a custom theme for all the components, all you need to do is modify the CSS tokens in
-[`globals.css`](./src/app/globals.css). More information on these practices can be found
-on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
-
 ## Open in v0
+
+<a href="https://v0.dev/chat/api/open?title=Dashboard+Kit&prompt=These+are+existing+design+system+styles+and+files.+Please+utilize+them+alongside+base+components+to+build.&url=https%3A%2F%2Fregistry-starter.vercel.app%2Fr%2Fdashboard.json"><img src="https://v0.dev/chat-static/button.svg" alt="Open in v0" width="99" height="32" /></a>
 
 This registry application also exposes `Open in v0` buttons for each component. Once this application is deployed, the
 `Open in v0` button redirects to [`v0.dev`](https://v0.dev) with a prepopulated prompt and a URL pointing back to this
@@ -39,6 +35,13 @@ and metadata to start your v0 chat with your component, theme, and other related
 These `/r/${component_name}.json` files are generated using `shadcn/ui` during the `build` and `dev` based on the
 repository's [`registry.json`](./registry.json). For more information, refer to the
 [documentation](https://ui.shadcn.com/docs/registry/registry-json).
+
+## Theming
+
+To use a custom theme for all the components, all you need to do is modify the CSS tokens in
+[`globals.css`](./src/app/globals.css). More information on these practices can be found
+on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
+
 
 ## Running locally
 
