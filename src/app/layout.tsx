@@ -1,4 +1,3 @@
-import { VercelToolbar } from "@vercel/toolbar/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
@@ -39,11 +38,7 @@ export default function RootLayout({
         "bg-background text-foreground",
       )}
     >
-      <body>
-        {children}
-
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

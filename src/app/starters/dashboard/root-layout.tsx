@@ -1,4 +1,3 @@
-import { VercelToolbar } from "@vercel/toolbar/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import React, { type ReactNode } from "react";
 import { Toaster } from "sonner";
@@ -43,8 +42,6 @@ export default function RootLayout({
           </main>
           <Toaster />
         </SidebarProvider>
-
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>
     </html>
   );

@@ -1,4 +1,3 @@
-import { VercelToolbar } from "@vercel/toolbar/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import React, { type ReactNode } from "react";
 
@@ -34,8 +33,6 @@ export default function RootLayout({
         <main className="mt-16 flex w-full justify-center">
           <div className="container">{children}</div>
         </main>
-
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>
     </html>
   );
