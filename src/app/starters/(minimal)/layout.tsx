@@ -1,9 +1,8 @@
+import { cn } from "@/lib/utils";
 import { Geist, Geist_Mono } from "next/font/google";
 import React, { type ReactNode } from "react";
-
-import { cn } from "@/lib/utils";
-
-import "@/app/globals.css";
+import "@/app/tokens.css";
+import "@/app/tailwind.css";
 
 const GeistSans = Geist({
   subsets: ["latin"],
@@ -26,7 +25,8 @@ export default function RootLayout({
       className={cn(
         GeistSans.variable,
         GeistMono.variable,
-        "bg-background text-foreground",
+        "bg-background",
+        "text-foreground",
       )}
     >
       <body>

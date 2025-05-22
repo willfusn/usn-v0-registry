@@ -2,10 +2,14 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 
-import { ComponentCard } from "@/components/component-card";
+import { ComponentCard } from "@/components/design/component-card";
 import { Button } from "@/components/ui/button";
 
 const starters = [
+  {
+    title: "Blank",
+    name: "blank",
+  },
   {
     title: "Dashboard",
     name: "dashboard",
@@ -15,11 +19,6 @@ const starters = [
     title: "Store",
     name: "store",
     url: "/starters/store",
-  },
-  {
-    title: "Blank",
-    name: "blank",
-    url: "/starters/blank",
   },
 ];
 
@@ -43,7 +42,7 @@ export default function StartPage() {
           <ComponentCard
             key={starter.name}
             name={starter.name}
-            baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
+            baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
             title={starter.title}
             promptTitle={`${starter.title} Starter Kit`}
             previewUrl={starter.url}

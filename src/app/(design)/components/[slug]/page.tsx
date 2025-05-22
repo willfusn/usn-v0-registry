@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { demos } from "@/app/(design)/components/[slug]/(demos)";
-import { ComponentCard } from "@/components/component-card";
+import { ComponentCard } from "@/components/design/component-card";
 import { Button } from "@/components/ui/button";
 import { getComponent } from "@/lib/utils";
 
@@ -46,7 +46,7 @@ export default async function ComponentPage({
 
       <ComponentCard
         name={component.name}
-        baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
+        baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
         title="Component Preview"
         promptTitle={`${component.title} Component Kit`}
         components={components}

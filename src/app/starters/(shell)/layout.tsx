@@ -1,19 +1,12 @@
+import { BrandHeader } from "@/components/brand-header";
+import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import type { ReactNode } from "react";
-import { RegistrySidebar } from "./registry-sidebar";
+import React, { type ReactNode } from "react";
+import { Toaster } from "sonner";
 import "@/app/tokens.css";
 import "@/app/tailwind.css";
-import { VercelToolbar } from "@vercel/toolbar/next";
-
-export const metadata: Metadata = {
-  title: "Design Registry",
-  description:
-    "Starter to help build a Shadcn Design Registry using Tailwind v4",
-  icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
-};
 
 const GeistSans = Geist({
   subsets: ["latin"],
@@ -36,15 +29,19 @@ export default function RootLayout({
       className={cn(
         GeistSans.variable,
         GeistMono.variable,
-        "bg-background text-foreground",
+        "bg-background",
+        "text-foreground",
       )}
     >
-      <body className="flex grow">
+      <body>
         <SidebarProvider>
-          <RegistrySidebar />
-          <main className="flex w-full justify-center">{children}</main>
+          <BrandHeader />
+          <BrandSidebar />
+          <main className="mt-16 flex w-full justify-center">
+            <div className="container">{children}</div>
+          </main>
+          <Toaster />
         </SidebarProvider>
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>
     </html>
   );
