@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button";
 
 const starters = [
   {
+    title: "Blank",
+    name: "blank",
+  },
+  {
     title: "Dashboard",
     name: "dashboard",
     url: "/starters/dashboard",
@@ -15,11 +19,6 @@ const starters = [
     title: "Store",
     name: "store",
     url: "/starters/store",
-  },
-  {
-    title: "Blank",
-    name: "blank",
-    url: "/starters/blank",
   },
 ];
 

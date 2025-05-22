@@ -31,6 +31,59 @@
         }
       ]
     },
+        {
+      "name": "blank",
+      "type": "registry:block",
+      "title": "Blank Starter",
+      "description": "A blank application with all brand components and code",
+      "files": [
+        {
+          "path": "src/app/tokens.css",
+          "type": "registry:file",
+          "target": "app/tokens.css"
+        },
+        {
+          "path": "src/app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "src/app/tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
+        },
+        {
+          "path": "src/components/brand-header.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/brand-sidebar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/product-grid.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/lib/products.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
     {
       "name": "dashboard",
       "type": "registry:block",
@@ -106,59 +159,6 @@
           "path": "src/app/starters/(minimal)/store/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
-        },
-        {
-          "path": "src/components/product-grid.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/lib/products.ts",
-          "type": "registry:lib"
-        }
-      ]
-    },
-    {
-      "name": "blank",
-      "type": "registry:block",
-      "title": "Blank Starter",
-      "description": "A blank application with all brand components and code",
-      "files": [
-        {
-          "path": "src/app/tokens.css",
-          "type": "registry:file",
-          "target": "app/tokens.css"
-        },
-        {
-          "path": "src/app/globals.css",
-          "type": "registry:file",
-          "target": "app/globals.css"
-        },
-        {
-          "path": "src/app/tailwind.config.ts",
-          "type": "registry:file",
-          "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        },
-        {
-          "path": "src/components/brand-header.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/components/logo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/components/brand-sidebar.tsx",
-          "type": "registry:component"
         },
         {
           "path": "src/components/product-grid.tsx",
