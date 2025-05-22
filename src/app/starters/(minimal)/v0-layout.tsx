@@ -13,7 +13,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(geist.className, "bg-background")}>
+    <html lang="en" className={cn(geist.className, "bg-background", "text-foreground")}>
       <body>
         <main className="mt-16 flex w-full justify-center">
           <div className="container">{children}</div>

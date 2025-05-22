@@ -7,8 +7,7 @@ import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import "@/app/tokens.css";
-import "@/app/tailwind.css";
-
+import "@/app/globals.css";
 const geist = Geist({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(geist.className, "bg-background")}>
+    <html lang="en" className={cn(geist.className, "bg-background", "text-foreground")}>
       <body>
         <SidebarProvider>
           <BrandHeader />

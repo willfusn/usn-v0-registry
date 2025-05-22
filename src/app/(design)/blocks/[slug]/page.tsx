@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { demos } from "@/app/(design)/blocks/[slug]/(demos)";
-import { ComponentCard } from "@/components/registry/component-card";
+import { ComponentCard } from "@/components/design/component-card";
 import { Button } from "@/components/ui/button";
 import { getComponent } from "@/lib/utils";
 
