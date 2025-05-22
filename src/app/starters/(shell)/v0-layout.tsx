@@ -17,7 +17,10 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(geist.className, "bg-background", "text-foreground")}>
+    <html
+      lang="en"
+      className={cn(geist.className, "bg-background", "text-foreground")}
+    >
       <body>
         <SidebarProvider>
           <BrandHeader />

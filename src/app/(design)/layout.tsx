@@ -1,8 +1,8 @@
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { SidebarProvider } from "@/components/ui/sidebar";
 import { RegistrySidebar } from "./registry-sidebar";
 import "@/app/tokens.css";
 import "@/app/tailwind.css";
@@ -40,12 +40,10 @@ export default function RootLayout({
       )}
     >
       <body className="flex grow">
-          <SidebarProvider>
-            <RegistrySidebar />
-            <main className="flex w-full justify-center">
-                {children}
-            </main>          
-          </SidebarProvider>
+        <SidebarProvider>
+          <RegistrySidebar />
+          <main className="flex w-full justify-center">{children}</main>
+        </SidebarProvider>
         {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>
     </html>

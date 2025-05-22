@@ -113,30 +113,29 @@ export function ComponentCard({
           </div>
         </CardHeader>
 
-        {
-          (components || previewUrl) && (
-            <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
-              {components &&
-                Object.entries(components).map(([key, node]) => (
-                  <div className="w-full" key={key}>
-                    {node}
-                  </div>
-                ))}
-
-              {previewUrl && (
-                <div
-                  className={
-                    "h-[800px] w-full overflow-hidden rounded-md border border-border"
-                  }
-                >
-                  <iframe
-                    src={previewUrl}
-                    className="h-full w-full"
-                    title="Page Preview"
-                  />
+        {(components || previewUrl) && (
+          <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
+            {components &&
+              Object.entries(components).map(([key, node]) => (
+                <div className="w-full" key={key}>
+                  {node}
                 </div>
-                )}
-            </CardContent>
+              ))}
+
+            {previewUrl && (
+              <div
+                className={
+                  "h-[800px] w-full overflow-hidden rounded-md border border-border"
+                }
+              >
+                <iframe
+                  src={previewUrl}
+                  className="h-full w-full"
+                  title="Page Preview"
+                />
+              </div>
+            )}
+          </CardContent>
         )}
       </Card>
     </section>
