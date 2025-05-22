@@ -18,11 +18,9 @@ const componentItems = [
 ];
 
 const blockItems = [
-  { name: "Headers", path: "/blocks/headers" },
-  { name: "Hero Sections", path: "/blocks/hero-sections" },
-  { name: "Feature Sections", path: "/blocks/feature-sections" },
-  { name: "Pricing Tables", path: "/blocks/pricing-tables" },
-  { name: "Contact Forms", path: "/blocks/contact-forms" },
+  { name: "Hero", path: "/blocks/hero" },
+  { name: "Login", path: "/blocks/login" },
+  { name: "Promo", path: "/blocks/promo" },
 ];
 
 export default function Home() {
@@ -123,7 +121,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 ">
-              <a href="https://github.com/willsather/design-system-starter">
+              <a href="https://github.com/willsather/registry-starter">
                 <svg
                   width="1024"
                   height="1024"
