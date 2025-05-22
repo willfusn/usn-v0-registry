@@ -2,13 +2,12 @@ import { VercelToolbar } from "@vercel/toolbar/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import React, { type ReactNode } from "react";
 import { Toaster } from "sonner";
-
 import { BrandHeader } from "@/components/brand-header";
 import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
-
-import "@/app/globals.css";
+import "@/app/tokens.css";
+import "@/app/tailwind.css";
 
 const geist = Geist({ subsets: ["latin"] });
 

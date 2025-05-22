@@ -117,10 +117,9 @@ export default function Home() {
               <a href="/starters" className="underline">
                 starter
               </a>{" "}
-              and click the{" "}
-              <span className="font-bold">Open in v0</span> button. You can also
-              open individual components or blocks in v0 if you want a smaller
-              or more specific starting point.
+              and click the <span className="font-bold">Open in v0</span>{" "}
+              button. You can also open individual components or blocks in v0 if
+              you want a smaller or more specific starting point.
             </p>
 
             <p className="mt-4 ">

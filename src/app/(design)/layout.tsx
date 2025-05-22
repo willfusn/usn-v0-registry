@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
-
-import { RegistrySidebar } from "@/app/(design)/registry-sidebar";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { RegistrySidebar } from "./registry-sidebar";
+import "@/app/tokens.css";
+import "@/app/tailwind.css";
+import { VercelToolbar } from "@vercel/toolbar/next";
 
 export const metadata: Metadata = {
   title: "Design Registry",
@@ -11,20 +15,39 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 
+const GeistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const GeistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
   return (
-    <SidebarProvider>
-      <div className="relative flex min-h-screen grow flex-col md:flex-row">
-        <RegistrySidebar />
-
-        <SidebarInset>
-          <div className="flex flex-col">{children}</div>
-        </SidebarInset>
-      </div>
-    </SidebarProvider>
+    <html
+      lang="en"
+      className={cn(
+        GeistSans.variable,
+        GeistMono.variable,
+        "bg-background text-foreground",
+      )}
+    >
+      <body className="flex grow">
+          <SidebarProvider>
+            <RegistrySidebar />
+            <main className="flex w-full justify-center">
+                {children}
+            </main>          
+          </SidebarProvider>
+        {process.env.NODE_ENV === "development" && <VercelToolbar />}
+      </body>
+    </html>
   );
 }
