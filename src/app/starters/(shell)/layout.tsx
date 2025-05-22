@@ -6,7 +6,7 @@ import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import "@/app/tokens.css";
-import "@/app/globals.css";
+import "@/app/tailwind.css";
 
 const GeistSans = Geist({
   subsets: ["latin"],
