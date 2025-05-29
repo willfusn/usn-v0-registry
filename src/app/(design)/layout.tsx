@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { RegistrySidebar } from "./registry-sidebar";
+import { MobileSidebarTrigger, RegistrySidebar } from "./registry-sidebar";
 
 import "@/app/tokens.css";
 import "@/app/tailwind.css";
@@ -41,6 +41,7 @@ export default function RootLayout({
     >
       <body className="flex grow">
         <SidebarProvider>
+          <MobileSidebarTrigger />
           <RegistrySidebar />
           <main className="flex w-full justify-center">{children}</main>
         </SidebarProvider>
