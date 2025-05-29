@@ -10,9 +10,8 @@ import "@/app/tokens.css";
 import "@/app/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "Design Registry",
-  description:
-    "Starter to help build a Shadcn Design Registry using Tailwind v4",
+  title: "Registry Starter",
+  description: "Starter to help build a Shadcn Registry using Tailwind v4",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 

@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "Design Registry",
+  "name": "Registry Starter",
   "homepage": "https://registry-starter.vercel.app",
   "items": [
     {
