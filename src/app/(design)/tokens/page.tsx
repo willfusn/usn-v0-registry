@@ -31,25 +31,12 @@ export default function TokensPage() {
           interface.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock
-            name="Background"
-            value="oklch(0.97 0.01 80.72)"
-            className="bg-background text-foreground"
-          />
-          <ColorBlock
-            name="Foreground"
-            value="oklch(0.3 0.04 30.2)"
-            className="bg-foreground text-background"
-          />
-          <ColorBlock
-            name="Primary"
-            value="oklch(0.52 0.13 144.17)"
-            className="bg-primary text-primary-foreground"
-          />
+          <ColorBlock name="Background" className="bg-background" />
+          <ColorBlock name="Foreground" className="bg-foreground" />
+          <ColorBlock name="Primary" className="bg-primary" />
           <ColorBlock
             name="Primary Foreground"
-            value="oklch(1.0 0 0)"
-            className="bg-primary-foreground text-primary"
+            className="bg-primary-foreground"
           />
         </div>
       </section>
@@ -62,25 +49,15 @@ export default function TokensPage() {
           interface.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock
-            name="Secondary"
-            value="oklch(0.96 0.02 147.64)"
-            className="bg-secondary text-secondary-foreground"
-          />
+          <ColorBlock name="Secondary" className="bg-secondary" />
           <ColorBlock
             name="Secondary Foreground"
-            value="oklch(0.43 0.12 144.31)"
-            className="bg-secondary-foreground text-secondary"
+            className="bg-secondary-foreground"
           />
-          <ColorBlock
-            name="Accent"
-            value="oklch(0.9 0.05 146.04)"
-            className="bg-accent text-accent-foreground"
-          />
+          <ColorBlock name="Accent" className="bg-accent" />
           <ColorBlock
             name="Accent Foreground"
-            value="oklch(0.43 0.12 144.31)"
-            className="bg-accent-foreground text-accent"
+            className="bg-accent-foreground"
           />
         </div>
       </section>
@@ -93,36 +70,15 @@ export default function TokensPage() {
           elements.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock
-            name="Card"
-            value="oklch(0.97 0.01 80.72)"
-            className="bg-card text-card-foreground"
-          />
-          <ColorBlock
-            name="Card Foreground"
-            value="oklch(0.3 0.04 30.2)"
-            className="bg-card-foreground text-card"
-          />
-          <ColorBlock
-            name="Popover"
-            value="oklch(0.97 0.01 80.72)"
-            className="bg-popover text-popover-foreground"
-          />
+          <ColorBlock name="Card" className="bg-card" />
+          <ColorBlock name="Card Foreground" className="bg-card-foreground" />
+          <ColorBlock name="Popover" className="bg-popover" />
           <ColorBlock
             name="Popover Foreground"
-            value="oklch(0.3 0.04 30.2)"
-            className="bg-popover-foreground text-popover"
+            className="bg-popover-foreground"
           />
-          <ColorBlock
-            name="Muted"
-            value="oklch(0.94 0.01 74.42)"
-            className="bg-muted text-muted-foreground"
-          />
-          <ColorBlock
-            name="Muted Foreground"
-            value="oklch(0.45 0.05 39.21)"
-            className="bg-muted-foreground text-muted"
-          />
+          <ColorBlock name="Muted" className="bg-muted" />
+          <ColorBlock name="Muted Foreground" className="bg-muted-foreground" />
         </div>
       </section>
 
@@ -133,21 +89,9 @@ export default function TokensPage() {
           Colors used for borders, inputs, and other utility elements.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <ColorBlock
-            name="Border"
-            value="oklch(0.88 0.02 74.64)"
-            className="bg-border text-foreground"
-          />
-          <ColorBlock
-            name="Input"
-            value="oklch(0.88 0.02 74.64)"
-            className="bg-input text-foreground"
-          />
-          <ColorBlock
-            name="Ring"
-            value="oklch(0.52 0.13 144.17)"
-            className="bg-ring text-foreground"
-          />
+          <ColorBlock name="Border" className="bg-border" />
+          <ColorBlock name="Input" className="bg-input" />
+          <ColorBlock name="Ring" className="bg-ring" />
         </div>
       </section>
 
@@ -159,15 +103,10 @@ export default function TokensPage() {
           users.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock
-            name="Destructive"
-            value="oklch(0.54 0.19 26.72)"
-            className="bg-destructive text-destructive-foreground"
-          />
+          <ColorBlock name="Destructive" className="bg-destructive" />
           <ColorBlock
             name="Destructive Foreground"
-            value="oklch(1.0 0 0)"
-            className="bg-destructive-foreground text-destructive"
+            className="bg-destructive-foreground"
           />
         </div>
       </section>
@@ -179,31 +118,11 @@ export default function TokensPage() {
           Colors used for data visualization and charts.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5">
-          <ColorBlock
-            name="Chart 1"
-            value="oklch(0.67 0.16 144.21)"
-            className="bg-chart-1 text-foreground"
-          />
-          <ColorBlock
-            name="Chart 2"
-            value="oklch(0.58 0.14 144.18)"
-            className="bg-chart-2 text-foreground"
-          />
-          <ColorBlock
-            name="Chart 3"
-            value="oklch(0.52 0.13 144.17)"
-            className="bg-chart-3 text-foreground"
-          />
-          <ColorBlock
-            name="Chart 4"
-            value="oklch(0.43 0.12 144.31)"
-            className="bg-chart-4 text-foreground"
-          />
-          <ColorBlock
-            name="Chart 5"
-            value="oklch(0.22 0.05 145.73)"
-            className="bg-chart-5 text-foreground"
-          />
+          <ColorBlock name="Chart 1" className="bg-chart-1" />
+          <ColorBlock name="Chart 2" className="bg-chart-2" />
+          <ColorBlock name="Chart 3" className="bg-chart-3" />
+          <ColorBlock name="Chart 4" className="bg-chart-4" />
+          <ColorBlock name="Chart 5" className="bg-chart-5" />
         </div>
       </section>
 
@@ -214,59 +133,25 @@ export default function TokensPage() {
           Colors specific to the sidebar and navigation components.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ColorBlock
-            name="Sidebar"
-            value="oklch(0.94 0.01 74.42)"
-            className="bg-sidebar))] textdebar-foreground"
-          />
+          <ColorBlock name="Sidebar" className="bg-sidebar" />
           <ColorBlock
             name="Sidebar Foreground"
-            value="oklch(0.3 0.04 30.2)"
-            className="bg-sidebar-foreground text-sidebar"
+            className="bg-sidebar-foreground"
           />
-          <ColorBlock
-            name="Sidebar Primary"
-            value="oklch(0.52 0.13 144.17)"
-            className="bg-sidebar-primary text-sidebar-primary-forereground"
-          />
+          <ColorBlock name="Sidebar Primary" className="bg-sidebar-primary" />
           <ColorBlock
             name="Sidebar Primary Foreground"
-            value="oklch(1.0 0 0)"
-            className="bg-sidebar-primary-foreground text-sidebar-primary"
+            className="bg-sidebar-primary-foreground"
           />
-          <ColorBlock
-            name="Sidebar Accent"
-            value="oklch(0.9 0.05 146.04)"
-            className="bg-sidebar-accent text-sidebar-accent-foreground"
-          />
+          <ColorBlock name="Sidebar Accent" className="bg-sidebar-accent" />
           <ColorBlock
             name="Sidebar Accent Foreground"
-            value="oklch(0.43 0.12 144.31)"
-            className="bg-sidebar-accent-foreground text-sidebar-accent"
+            className="bg-sidebar-accent-foreground"
           />
-          <ColorBlock
-            name="Sidebar Border"
-            value="oklch(0.88 0.02 74.64)"
-            className="bg-sidebar-border text-sidebar-foreground"
-          />
-          <ColorBlock
-            name="Sidebar Ring"
-            value="oklch(0.52 0.13 144.17)"
-            className="bg-sidebar-ring text-sidebar-foreground"
-          />
+          <ColorBlock name="Sidebar Border" className="bg-sidebar-border" />
+          <ColorBlock name="Sidebar Ring" className="bg-sidebar-ring" />
         </div>
       </section>
-
-      {/*<div className="mt-8 flex justify-end">*/}
-      {/*  <Button variant="outline" className="mr-2">*/}
-      {/*    <Copy className="mr-2 size-4" />*/}
-      {/*    Copy All Variables*/}
-      {/*  </Button>*/}
-      {/*  <Button>*/}
-      {/*    Customize Theme*/}
-      {/*    <ArrowRight className="ml-2 size-4" />*/}
-      {/*  </Button>*/}
-      {/*</div>*/}
     </div>
   );
 }
