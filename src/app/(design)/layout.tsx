@@ -3,10 +3,11 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
+
 import { RegistrySidebar } from "./registry-sidebar";
+
 import "@/app/tokens.css";
 import "@/app/tailwind.css";
-import { VercelToolbar } from "@vercel/toolbar/next";
 
 export const metadata: Metadata = {
   title: "Design Registry",
@@ -44,7 +45,6 @@ export default function RootLayout({
           <RegistrySidebar />
           <main className="flex w-full justify-center">{children}</main>
         </SidebarProvider>
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>
     </html>
   );
