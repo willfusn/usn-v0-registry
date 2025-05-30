@@ -145,13 +145,7 @@ export function BrandSidebar({
                     </Link>
                   </SidebarMenuButton>
                   {item.badge && (
-                    <SidebarMenuBadge
-                      className={cn(
-                        "border border-border bg-muted text-foreground",
-                      )}
-                    >
-                      {item.badge.text}
-                    </SidebarMenuBadge>
+                    <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               ))}
@@ -178,13 +172,7 @@ export function BrandSidebar({
                     </Link>
                   </SidebarMenuButton>
                   {item.badge && (
-                    <SidebarMenuBadge
-                      className={cn(
-                        "border border-border bg-muted text-foreground",
-                      )}
-                    >
-                      {item.badge.text}
-                    </SidebarMenuBadge>
+                    <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               ))}
