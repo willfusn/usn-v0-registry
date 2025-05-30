@@ -110,13 +110,18 @@
       ],
       "files": [
         {
+          "path": "src/components/brand-header.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/(shell)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/components/brand-header.tsx",
-          "type": "registry:component"
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
@@ -133,13 +138,18 @@
       ],
       "files": [
         {
+          "path": "src/components/brand-sidebar.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/(shell)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/components/brand-sidebar.tsx",
-          "type": "registry:component"
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
@@ -156,13 +166,18 @@
       ],
       "files": [
         {
+          "path": "src/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/components/login.tsx",
-          "type": "registry:component"
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
@@ -176,13 +191,18 @@
       ],
       "files": [
         {
+          "path": "src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/components/logo.tsx",
-          "type": "registry:component"
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
@@ -198,13 +218,18 @@
       ],
       "files": [
         {
+          "path": "src/components/hero.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/components/hero.tsx",
-          "type": "registry:component"
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
@@ -219,13 +244,18 @@
       ],
       "files": [
         {
+          "path": "src/components/promo.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/components/promo.tsx",
-          "type": "registry:component"
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
@@ -239,17 +269,22 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
           "path": "src/components/product-grid.tsx",
           "type": "registry:component"
         },
         {
           "path": "src/lib/products.ts",
           "type": "registry:lib"
+        },
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
         }
       ]
     },
