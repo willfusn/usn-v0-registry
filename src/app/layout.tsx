@@ -37,6 +37,10 @@ export default function RootLayout({
         "bg-background text-foreground",
       )}
     >
+      <meta
+        name="robots"
+        content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+      />
       <body className="flex grow">{children}</body>
     </html>
   );
