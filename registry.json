@@ -23,11 +23,6 @@
           "path": "src/app/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
-        },
-        {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
         }
       ]
     },
@@ -115,6 +110,11 @@
       ],
       "files": [
         {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
           "path": "src/components/brand-header.tsx",
           "type": "registry:component"
         }
@@ -133,6 +133,11 @@
       ],
       "files": [
         {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
           "path": "src/components/brand-sidebar.tsx",
           "type": "registry:component"
         }
@@ -150,6 +155,11 @@
         "https://registry-starter.vercel.app/r/logo.json"
       ],
       "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
         {
           "path": "src/components/login.tsx",
           "type": "registry:component"
@@ -171,6 +181,11 @@
       ],
       "files": [
         {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
           "path": "src/components/brand-header.tsx",
           "type": "registry:component"
         }
@@ -185,6 +200,11 @@
         "https://registry-starter.vercel.app/r/theme.json"
       ],
       "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
         {
           "path": "src/components/logo.tsx",
           "type": "registry:component"
@@ -203,6 +223,11 @@
       ],
       "files": [
         {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
           "path": "src/components/hero.tsx",
           "type": "registry:component"
         }
@@ -219,6 +244,11 @@
       ],
       "files": [
         {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
           "path": "src/components/promo.tsx",
           "type": "registry:component"
         }
@@ -233,6 +263,11 @@
         "https://registry-starter.vercel.app/r/theme.json"
       ],
       "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
         {
           "path": "src/components/product-grid.tsx",
           "type": "registry:component"
@@ -252,7 +287,13 @@
         "accordion",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "alert",
@@ -263,7 +304,13 @@
         "alert",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "avatar",
@@ -274,7 +321,13 @@
         "avatar",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "badge",
@@ -285,7 +338,13 @@
         "badge",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "breadcrumb",
@@ -296,7 +355,13 @@
         "breadcrumb",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "button",
@@ -307,7 +372,13 @@
         "button",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "calendar",
@@ -318,7 +389,13 @@
         "calendar",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "card",
@@ -329,7 +406,13 @@
         "card",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "chart",
@@ -340,7 +423,13 @@
         "chart",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "checkbox",
@@ -351,7 +440,13 @@
         "checkbox",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "data-table",
@@ -362,7 +457,13 @@
         "data-table",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "date-picker",
@@ -373,7 +474,13 @@
         "date-picker",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "dialog",
@@ -384,7 +491,13 @@
         "dialog",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "dropdown-menu",
@@ -395,7 +508,13 @@
         "dropdown-menu",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "input",
@@ -406,7 +525,13 @@
         "input",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "menu-bar",
@@ -417,7 +542,13 @@
         "menu-bar",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "select",
@@ -428,7 +559,13 @@
         "select",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "separator",
@@ -439,7 +576,13 @@
         "separator",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "skeleton",
@@ -450,7 +593,13 @@
         "skeleton",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "slider",
@@ -461,7 +610,13 @@
         "slider",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "switch",
@@ -472,7 +627,13 @@
         "switch",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "table",
@@ -483,7 +644,13 @@
         "table",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "tabs",
@@ -494,7 +661,13 @@
         "tabs",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "toggle-group",
@@ -505,7 +678,13 @@
         "toggle-group",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     },
     {
       "name": "tooltip",
@@ -516,7 +695,13 @@
         "tooltip",
         "https://registry-starter.vercel.app/r/theme.json"
       ],
-      "files": []
+      "files": [
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
     }
   ]
 }
