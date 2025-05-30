@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import React, { type ReactNode } from "react";
 import { Toaster } from "sonner";
 
@@ -9,8 +9,20 @@ import { cn } from "@/lib/utils";
 import "@/app/tokens.css";
 import "@/app/globals.css";
 
-const geist = Geist({ subsets: ["latin"] });
+const GeistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
+const GeistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
+const MontserratSerif = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +31,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(geist.className, "bg-background", "text-foreground")}
+      className={cn(
+        GeistSans.variable,
+        GeistMono.variable,
+        MontserratSerif.variable,
+        "bg-background",
+        "text-foreground",
+      )}
     >
       <body>
         <SidebarProvider>

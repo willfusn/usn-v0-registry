@@ -39,9 +39,10 @@ repository's [`registry.json`](./registry.json). For more information, refer to 
 ## Theming
 
 To use a custom theme for all the components, all you need to do is modify the CSS tokens in
-[`globals.css`](./src/app/globals.css). More information on these practices can be found
+[`tokens.css`](./src/app/tokens.css). More information on these practices can be found
 on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
 
+To use custom fonts, you can either use [`next/font/google`](https://nextjs.org/docs/pages/getting-started/fonts#google-fonts) or the [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) CSS rule. 
 
 ## Running locally
 

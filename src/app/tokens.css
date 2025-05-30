@@ -34,6 +34,10 @@
   --sidebar-border: oklch(0.88 0.02 74.64);
   --sidebar-ring: oklch(0.52 0.13 144.17);
 
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+  
   --radius: 0.5rem;
 
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
@@ -87,6 +91,10 @@
   --sidebar-accent-foreground: oklch(0.94 0.01 72.66);
   --sidebar-border: oklch(0.39 0.03 142.99);
   --sidebar-ring: oklch(0.67 0.16 144.21);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 
   --radius: 0.5rem;
 
