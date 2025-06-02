@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Copy } from "lucide-react";
-import { type ReactElement, type ReactNode, useState } from "react";
+import { type ReactElement, type ReactNode, useState, useEffect } from "react";
 
 import { OpenInV0Button } from "@/components/design/open-in-v0";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getComponent } from "@/lib/utils";
+import { getComponent, getPrompt } from "@/lib/utils";
 
 interface ComponentCardProps {
   name: string;
@@ -37,13 +37,20 @@ export function ComponentCard({
   name,
   title,
   description,
-  prompt,
+  prompt: propPrompt,
   promptTitle,
   baseUrl,
   previewUrl,
   components,
 }: ComponentCardProps) {
   const [copied, setCopied] = useState(false);
+  const [prompt, setPrompt] = useState(propPrompt);
+
+  useEffect(() => {
+    if (!propPrompt) {
+      getPrompt().then(setPrompt);
+    }
+  }, [propPrompt]);
 
   const component = getComponent(name);
 
@@ -106,7 +113,6 @@ export function ComponentCard({
                 <OpenInV0Button
                   registryUrl={registryUrl}
                   title={promptTitle}
-                  prompt={prompt}
                 />
               </div>
             </div>

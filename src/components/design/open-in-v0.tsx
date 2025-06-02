@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
-import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
@@ -22,22 +21,11 @@ function buildV0Url(registryUrl: string, title?: string, prompt?: string) {
 export function OpenInV0Button({
   registryUrl,
   title,
+  prompt,
   className,
-}: { registryUrl: string; title?: string; } & ComponentProps<
+}: { registryUrl: string; title?: string; prompt?: string } & ComponentProps<
   typeof Button
 >) {
-  const [prompt, setPrompt] = useState("These are existing design system styles and files. Please utilize them alongside base components to build.");
-
-  useEffect(() => {
-    fetch("/prompt.md")
-      .then((res) => res.text())
-      .then((text) => setPrompt(text))
-      .catch(() => {
-        // If fetch fails, keep using the default prompt
-        console.warn("Failed to load custom prompt, using default");
-      });
-  }, []);
-
   const url = buildV0Url(registryUrl, title, prompt);
 
   return (
