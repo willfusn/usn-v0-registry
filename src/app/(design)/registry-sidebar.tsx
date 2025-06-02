@@ -56,6 +56,7 @@ export const componentItems = [
   { name: "Separator", path: "/components/separator" },
   { name: "Skeleton", path: "/components/skeleton" },
   { name: "Slider", path: "/components/slider" },
+  { name: "Sonner", path: "/components/sonner" },
   { name: "Switch", path: "/components/switch" },
   { name: "Table", path: "/components/table" },
   { name: "Tabs", path: "/components/tabs" },

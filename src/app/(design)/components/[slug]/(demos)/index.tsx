@@ -20,6 +20,7 @@ import { select } from "@/app/(design)/components/[slug]/(demos)/select";
 import { separator } from "@/app/(design)/components/[slug]/(demos)/separator";
 import { skeleton } from "@/app/(design)/components/[slug]/(demos)/skeleton";
 import { slider } from "@/app/(design)/components/[slug]/(demos)/slider";
+import { sonner } from "@/app/(design)/components/[slug]/(demos)/sonner";
 import { switchComponent } from "@/app/(design)/components/[slug]/(demos)/switch";
 import { table } from "@/app/(design)/components/[slug]/(demos)/table";
 import { tabs } from "@/app/(design)/components/[slug]/(demos)/tabs";
@@ -55,6 +56,7 @@ export const demos: { [name: string]: Demo } = {
   skeleton,
   slider,
   switch: switchComponent,
+  sonner,
   table,
   tabs,
   "toggle-group": toggleGroup,

@@ -1,11 +1,12 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import React, { type ReactNode } from "react";
-import { Toaster } from "sonner";
 
 import { BrandHeader } from "@/components/brand-header";
 import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
+
 import "@/app/tokens.css";
 import "@/app/globals.css";
 
@@ -35,8 +36,7 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable,
         MontserratSerif.variable,
-        "bg-background",
-        "text-foreground",
+        "bg-background text-foreground",
       )}
     >
       <body>

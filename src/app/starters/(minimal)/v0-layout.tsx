@@ -1,17 +1,20 @@
-import { cn } from "@/lib/utils";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import React, { type ReactNode } from "react";
+
+import { Toaster } from "@/components/ui/sonner";
+import { cn } from "@/lib/utils";
+
 import "@/app/tokens.css";
 import "@/app/globals.css";
 
 const GeistSans = Geist({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
 });
 
 const GeistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
 });
 
 const MontserratSerif = Montserrat({
@@ -31,13 +34,13 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable,
         MontserratSerif.variable,
-        "bg-background",
-        "text-foreground",
+        "bg-background text-foreground",
       )}
     >
       <body>
         <main className="mt-16 flex w-full justify-center">
           <div className="container">{children}</div>
+          <Toaster />
         </main>
       </body>
     </html>

@@ -1,11 +1,11 @@
 import React, { type ReactNode } from "react";
-import { Toaster } from "sonner";
 
 import { BrandHeader } from "@/components/brand-header";
 import { BrandSidebar } from "@/components/brand-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 
-export default function RootLayout({
+export default function ShellLayout({
   children,
 }: Readonly<{
   children: ReactNode;

@@ -1,6 +1,8 @@
 import React, { type ReactNode } from "react";
 
-export default function RootLayout({
+import { Toaster } from "@/components/ui/sonner";
+
+export default function MinimalLayout({
   children,
 }: Readonly<{
   children: ReactNode;
@@ -8,6 +10,7 @@ export default function RootLayout({
   return (
     <main className="mt-16 flex w-full justify-center">
       <div className="container">{children}</div>
+      <Toaster />
     </main>
   );
 }
