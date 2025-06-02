@@ -45,7 +45,6 @@ export function ActionSonner() {
       onClick={() =>
         toast("Toast with an Action", {
           description: "A description with some more information",
-          duration: 150000,
           action: {
             label: "Action",
             onClick: () => console.log("Action!"),
