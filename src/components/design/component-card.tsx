@@ -113,6 +113,7 @@ export function ComponentCard({
                 <OpenInV0Button
                   registryUrl={registryUrl}
                   title={promptTitle}
+                  prompt={prompt}
                 />
               </div>
             </div>
