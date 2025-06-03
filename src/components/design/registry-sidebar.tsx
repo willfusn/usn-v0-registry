@@ -13,7 +13,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { RegistryLogo } from "@/app/(design)/registry-logo";
+import { RegistryLogo } from "@/components/design/registry-logo";
 import { ModeToggle } from "@/components/design/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
@@ -123,7 +123,7 @@ export function RegistrySidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="border-b">
         <div className="flex items-center justify-between px-2 py-2">
-          <Link href="/" className="flex min-w-0 items-center gap-2">
+          <Link href="/public" className="flex min-w-0 items-center gap-2">
             <RegistryLogo />
           </Link>
 

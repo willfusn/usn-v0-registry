@@ -1,8 +1,11 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import type { ReactNode } from "react";
 
+import {
+  MobileSidebarTrigger,
+  RegistrySidebar,
+} from "@/components/design/registry-sidebar";
 import { Toaster } from "@/components/ui/sonner";
-import { MobileSidebarTrigger, RegistrySidebar } from "./registry-sidebar";
 
 export default function RegistryLayout({
   children,
