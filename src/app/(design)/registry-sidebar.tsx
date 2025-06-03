@@ -14,6 +14,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { RegistryLogo } from "@/app/(design)/registry-logo";
+import { ModeToggle } from "@/components/design/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -25,6 +26,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -34,6 +36,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import type * as React from "react";
 
 export const componentItems = [
   { name: "Accordion", path: "/components/accordion" },
@@ -262,6 +265,12 @@ export function RegistrySidebar() {
           </Collapsible>
         </ScrollArea>
       </SidebarContent>
+
+      <SidebarFooter>
+        <div className="flex justify-end">
+          <ModeToggle />
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }

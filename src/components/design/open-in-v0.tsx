@@ -50,7 +50,7 @@ export function OpenInV0Button({
   return (
     <Button
       aria-label="Open in v0"
-      className={`flex items-center gap-2 rounded-md bg-black px-4 py-2 text-white hover:bg-black/90 ${className}`}
+      className={`flex items-center gap-2 rounded-md bg-black px-4 py-2 text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 ${className}`}
       onClick={handleClick}
       {...props}
     >
