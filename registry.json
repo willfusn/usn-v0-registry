@@ -4,6 +4,22 @@
   "homepage": "https://registry-starter.vercel.app",
   "items": [
     {
+      "name": "registry",
+      "type": "registry:style",
+      "cssVars": {
+        "light": {
+          "primary": "oklch(0.52 0.13 144.17)",
+          "primary-foreground": "oklch(1.0 0 0)",
+          "radius": "0.5rem"
+        },
+        "dark": {
+          "primary": "oklch(0.52 0.13 144.17)",
+          "primary-foreground": "oklch(1.0 0 0)"
+        }
+      },
+      "files": []
+    },
+    {
       "name": "theme",
       "type": "registry:theme",
       "title": "Global Theme",
