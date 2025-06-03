@@ -1,6 +1,7 @@
 import { ArrowRight, Blocks, ToyBrick } from "lucide-react";
 import Link from "next/link";
 
+import { MCPTabs } from "@/components/design/mcp-tabs";
 import {
   Card,
   CardContent,
@@ -33,7 +34,8 @@ export default function Home() {
             Registry
           </h1>
           <p className="text-muted-foreground">
-            A collection of components and blocks for your design system
+            Distribute your design system tokens, custom components, hooks,
+            pages, and other files to any React project.
           </p>
         </div>
       </div>
@@ -100,9 +102,9 @@ export default function Home() {
         </Card>
       </div>
 
-      <div className="rounded-lg border bg-card p-6">
+      <div className="mb-4 rounded-lg border bg-card p-6">
         <div className="flex flex-col gap-2">
-          <h2 className="font-semibold text-xl">About the Registry Starter</h2>
+          <h2 className="font-semibold text-xl">About</h2>
           <p className="text-muted-foreground">
             This registry serves as a central repository for all UI components
             and blocks used in your applications. It helps maintain consistency
@@ -143,6 +145,27 @@ export default function Home() {
               <span className="underline">GitHub Repository</span>
             </a>
           </p>
+        </div>
+      </div>
+
+      <div className="rounded-lg border bg-card p-6">
+        <div className="flex flex-col gap-2">
+          <h2 className="font-semibold text-xl">MCP</h2>
+          <p className="mb-4 text-muted-foreground">
+            Integrate this registry with AI IDEs using Model Context Protocol
+            (MCP) using the follow code. This utilizes this Registry's style
+            tokens and the Shadcn CLI. To ensure this works, double check that
+            the{" "}
+            <Link href="/r/registry.json">
+              <code className="inline text-sm tabular-nums underline">
+                style:registry
+              </code>
+            </Link>{" "}
+            contains the same colors as your{" "}
+            <code className="inline text-sm tabular-nums">tokens.css</code>
+          </p>
+
+          <MCPTabs rootUrl={process.env.VERCEL_BRANCH_URL ?? ""} />
         </div>
       </div>
     </main>
