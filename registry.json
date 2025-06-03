@@ -301,7 +301,7 @@
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/starters/(minimal)/store/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
