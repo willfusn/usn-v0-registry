@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import React, { type ReactNode } from "react";
 
-import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 import "@/app/tokens.css";
@@ -40,7 +39,6 @@ export default function RootLayout({
       <body>
         <main className="mt-16 flex w-full justify-center">
           <div className="container">{children}</div>
-          <Toaster />
         </main>
       </body>
     </html>
