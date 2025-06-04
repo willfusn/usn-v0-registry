@@ -162,7 +162,7 @@ export default function Home() {
             <code className="inline text-sm tabular-nums">tokens.css</code>
           </p>
 
-          <MCPTabs rootUrl={process.env.VERCEL_BRANCH_URL ?? ""} />
+          <MCPTabs rootUrl={process.env.VERCEL_URL ?? ""} />
         </div>
       </div>
     </main>
