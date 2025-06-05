@@ -3,7 +3,7 @@
 </a>
 
 <p align="center">
-    Registry Starter is a free, open-source template built with Next.js and the Shadcn/ui Registries that helps you quickly build an AI-Native Design System Implementation.
+    Registry Starter is a free, open-source template built with Next.js and Shadcn/ui Registry to accelerate your AI-Native Design System.
 </p>
 
 <p align="center">
