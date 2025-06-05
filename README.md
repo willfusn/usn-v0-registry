@@ -22,7 +22,6 @@ You can deploy your own version of the Next.js Registry Starter to Vercel with o
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwillsather%2Fregistry-starter&project-name=my-registry&repository-name=my-registry-starter&demo-title=Registry%20Starter&demo-description=An%20Open-Source%20Registry%20Starter%20Built%20With%20Next.js%20and%20Shadcn%2Fui%20Registries%20by%20Vercel&demo-url=https%3A%2F%2Fregistry-starter.vercel.app)
 
-
 ## Open in v0
 
 [![Open in v0](https://registry-starter.vercel.app/open-in-v0.svg)](https://v0.dev/chat/api/open?title=Dashboard+Kit&prompt=These+are+existing+design+system+styles+and+files.+Please+utilize+them+alongside+base+components+to+build.&url=https%3A%2F%2Fregistry-starter.vercel.app%2Fr%2Fdashboard.json)
@@ -42,9 +41,40 @@ To use a custom theme for all the components, all you need to do is modify the C
 [`tokens.css`](./src/app/tokens.css). More information on these practices can be found
 on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
 
+#### MCP
+
+To use this registry with MCP, you must also edit [`registry.json`](./registry.json)'s first
+`registry-item` named `registry`. This `registry:style` item also contains your design tokens that can be used with MCP.
+
+For example, it looks like this:
+
+```json
+    {
+      "name": "registry",
+      "type": "registry:style",
+      "cssVars": {
+        "light": {
+          "primary": "oklch(0.52 0.13 144.17)",
+          "primary-foreground": "oklch(1.0 0 0)",
+          "radius": "0.5rem",
+          ...
+        },
+        "dark": {
+          "primary": "oklch(0.52 0.13 144.17)",
+          "primary-foreground": "oklch(1.0 0 0)",
+          ...
+        }
+      },
+      "files": []
+    }
+```
+
 #### Fonts
 
-To use custom fonts, you can either use [`next/font/google`](https://nextjs.org/docs/pages/getting-started/fonts#google-fonts) or the [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) CSS rule. For example, `fonts.css` might look like:
+To use custom fonts, you can either use [
+`next/font/google`](https://nextjs.org/docs/pages/getting-started/fonts#google-fonts) or the [
+`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) CSS rule. For example, `fonts.css` might look
+like:
 
 ```css
 @font-face {
@@ -65,7 +95,7 @@ To use custom fonts, you can either use [`next/font/google`](https://nextjs.org/
 ```
 
 If you use `@font-face`, you will also need to modify [`tailwind.css`](src/app/tailwind.css) AND
-[`tailwind.config.ts`](src/app/tailwind.config.ts) to map your custom fonts to Tailwind.  Refer to this 
+[`tailwind.config.ts`](src/app/tailwind.config.ts) to map your custom fonts to Tailwind. Refer to this
 [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
 
 ## Running locally
