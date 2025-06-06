@@ -125,7 +125,7 @@ export default function Home() {
           </p>
 
           <p className="mt-4 text-[#1B1F23] dark:text-white">
-            <a href="https://github.com/willsather/registry-starter">
+            <a href="https://github.com/vercel/registry-starter">
               <svg
                 viewBox="0 0 1024 1024"
                 xmlns="http://www.w3.org/2000/svg"
