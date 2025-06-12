@@ -1,10 +1,11 @@
 "use client";
 
+import { Check, ClipboardIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { AddToCursor } from "@/components/design/add-to-cursor";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Check, ClipboardIcon } from "lucide-react";
 
 export async function copyToClipboard(value: string) {
   await navigator.clipboard.writeText(value);
@@ -14,16 +15,17 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
   const [tab, setTab] = useState("cursor");
   const [hasCopied, setHasCopied] = useState(false);
 
+  const mcp = {
+    command: "npx -y shadcn@canary registry:mcp",
+    env: {
+      REGISTRY_URL: `https://${rootUrl}/r/registry.json`,
+    },
+  };
+
   const mcpServer = JSON.stringify(
     {
       mcpServers: {
-        shadcn: {
-          command: "npx",
-          args: ["-y", "shadcn@canary", "registry:mcp"],
-          env: {
-            REGISTRY_URL: `https://${rootUrl}/r/registry.json`,
-          },
-        },
+        shadcn: mcp,
       },
     },
     null,
@@ -49,7 +51,7 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
 
       <TabsContent value="cursor">
         <p className="text-muted-foreground text-sm">
-          Copy and paste the code into{" "}
+          Click Add to Cursor or copy and paste the code into{" "}
           <code className="inline text-sm tabular-nums">.cursor/mcp.json</code>
         </p>
       </TabsContent>
@@ -64,19 +66,24 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
       </TabsContent>
 
       <div className="relative">
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={() => {
-            copyToClipboard(mcpServer);
-            setHasCopied(true);
-          }}
-          className="absolute top-3 right-3 shadow-none"
-        >
-          {hasCopied ? <Check /> : <ClipboardIcon />}
-          Copy
-        </Button>
-        <pre className="overflow-x-auto rounded-lg border bg-muted p-1">
+        <div className="absolute top-3 right-3 flex gap-2">
+          {tab === "cursor" && <AddToCursor mcp={mcp} />}
+
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => {
+              copyToClipboard(mcpServer);
+              setHasCopied(true);
+            }}
+            className="shadow-none"
+          >
+            {hasCopied ? <Check /> : <ClipboardIcon />}
+            Copy
+          </Button>
+        </div>
+
+        <pre className="mt-16 overflow-x-auto rounded-lg border bg-muted p-1 sm:mt-0">
           <code className="relative rounded bg-transparent p-1 font-mono text-muted-foreground text-sm">
             {mcpServer}
           </code>

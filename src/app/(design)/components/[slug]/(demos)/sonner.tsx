@@ -13,6 +13,6 @@ export const sonner = {
     Success: <SuccessfulSonner />,
     Warning: <WarningSonner />,
     Error: <ErrorSonner />,
-    Action: <ActionSonner />
+    Action: <ActionSonner />,
   },
 };
