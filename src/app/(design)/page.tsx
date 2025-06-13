@@ -150,9 +150,9 @@ export default function Home() {
           <h2 className="font-semibold text-xl">MCP</h2>
           <p className="mb-4 text-muted-foreground">
             Integrate this registry with AI IDEs using Model Context Protocol
-            (MCP) using the follow code. This utilizes this Registry's style
-            tokens and the Shadcn CLI. To ensure this works, double check that
-            the{" "}
+            (MCP) using the following configuration. This utilizes this
+            Registry's style tokens and the Shadcn CLI. To ensure this works,
+            double check that the{" "}
             <Link href="/r/registry.json">
               <code className="inline text-sm tabular-nums underline">
                 style:registry
