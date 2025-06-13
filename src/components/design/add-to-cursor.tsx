@@ -23,13 +23,13 @@ export function AddToCursor({
       <Link href={generateCursorDeeplink()}>
         <img
           src="https://cursor.com/deeplink/mcp-install-light.svg"
-          alt="Add postgres MCP server to Cursor"
+          alt="Add shadcn/ui Registry MCP server to Cursor"
           height="80"
           className="hidden dark:block"
         />
         <img
           src="https://cursor.com/deeplink/mcp-install-dark.svg"
-          alt="Add postgres MCP server to Cursor"
+          alt="Add shadcn/ui Registry MCP server to Cursor"
           height="80"
           className="block dark:hidden"
         />
