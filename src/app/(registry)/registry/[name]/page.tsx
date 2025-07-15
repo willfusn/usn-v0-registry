@@ -46,7 +46,7 @@ export default async function RegistryItemPage({
       <ComponentCard
         component={component}
         baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
-        prompt={await getPrompt()}
+        prompt={getPrompt()}
       />
     </div>
   );
