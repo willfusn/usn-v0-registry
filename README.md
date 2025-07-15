@@ -117,7 +117,7 @@ Your app should now be running on [localhost:3000](http://localhost:3000).
 
 `@/components/ui` contains all base `shadcn/ui` used in the registry
 
-`@/components/design` contains all components for this application
+`@/components/registry` contains all components for this application
 
 `@/hooks` contains all React hooks
 

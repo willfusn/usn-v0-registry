@@ -1,7 +1,7 @@
 import { ArrowRight, Blocks, ToyBrick } from "lucide-react";
 import Link from "next/link";
 
-import { MCPTabs } from "@/components/design/mcp-tabs";
+import { MCPTabs } from "@/components/registry/mcp-tabs";
 import {
   Card,
   CardContent,
@@ -9,11 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getSidebarBlocks, getSidebarComponents } from "@/lib/utils";
+import { getSidebarComponents, getSidebarUIPrimitives } from "@/lib/registry";
 
-const componentItems = getSidebarComponents().slice(0, 5);
+const componentItems = getSidebarUIPrimitives().slice(0, 5);
 
-const blockItems = getSidebarBlocks().slice(0, 5);
+const blockItems = getSidebarComponents().slice(0, 5);
 
 export default function Home() {
   return (

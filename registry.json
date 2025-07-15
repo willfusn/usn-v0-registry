@@ -55,12 +55,12 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -79,12 +79,12 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(shell)/v0-layout.tsx",
+          "path": "src/app/blocks/(shell)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(shell)/dashboard/page.tsx",
+          "path": "src/app/blocks/(shell)/dashboard/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -101,12 +101,12 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/store/page.tsx",
+          "path": "src/app/blocks/(minimal)/store/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -132,12 +132,12 @@
           "type": "registry:component"
         },
         {
-          "path": "src/app/starters/(shell)/v0-layout.tsx",
+          "path": "src/app/blocks/(shell)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -161,12 +161,12 @@
           "type": "registry:component"
         },
         {
-          "path": "src/app/starters/(shell)/v0-layout.tsx",
+          "path": "src/app/blocks/(shell)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -189,12 +189,12 @@
           "type": "registry:component"
         },
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -214,12 +214,12 @@
           "type": "registry:component"
         },
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -241,12 +241,12 @@
           "type": "registry:component"
         },
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -267,12 +267,12 @@
           "type": "registry:component"
         },
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
         {
-          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "path": "src/app/blocks/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -296,7 +296,7 @@
           "type": "registry:lib"
         },
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -313,7 +313,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -330,7 +330,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -347,7 +347,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -364,7 +364,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -381,7 +381,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -398,7 +398,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -415,7 +415,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -432,7 +432,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -449,7 +449,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -466,7 +466,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -483,7 +483,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -500,7 +500,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -517,7 +517,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -534,7 +534,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -551,7 +551,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -568,7 +568,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -585,7 +585,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -602,7 +602,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -619,7 +619,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -636,7 +636,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -653,7 +653,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
@@ -675,7 +675,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -692,7 +692,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -709,7 +709,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -726,7 +726,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -743,7 +743,7 @@
       ],
       "files": [
         {
-          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "path": "src/app/blocks/(minimal)/v0-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }

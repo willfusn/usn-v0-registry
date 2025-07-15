@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 
 import { demos } from "@/app/demo/[slug]/(demos)";
-import { getComponent } from "@/lib/utils";
+
+import { getComponent } from "@/lib/registry";
 
 export async function generateStaticParams() {
   return Object.keys(demos).map((slug) => ({

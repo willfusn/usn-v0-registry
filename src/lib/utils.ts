@@ -1,41 +1,8 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-import registry from "@/registry";
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
-}
-
-export interface Component {
-  name: string;
-  type: string;
-  title: string;
-  description?: string;
-  files?: { path: string; type: string; target: string }[];
-}
-
-export function getAllRegistryItems(): Component[] {
-  // exclude style item as it's not relevant to show in the ui
-  const components = registry.items.filter(
-    (item) => item.type !== "registry:style",
-  );
-
-  return components as Component[];
-}
-
-export function getComponent(name: string): Component {
-  const components = getAllRegistryItems();
-
-  const component = components.find(
-    (item: { name: string }) => item.name === name,
-  );
-
-  if (component == null) {
-    throw new Error(`Component "${name}" not found`);
-  }
-
-  return component;
 }
 
 export async function getPrompt(): Promise<string> {
@@ -47,28 +14,4 @@ export async function getPrompt(): Promise<string> {
     console.warn("Failed to load custom prompt, using default");
     return "These are existing design system styles and files. Please utilize them alongside base components to build.";
   }
-}
-
-export function getSidebarComponents() {
-  const components = getAllRegistryItems().filter(
-    (component) => component.type === "registry:ui",
-  );
-
-  return components.map(({ title, name }) => ({
-    title,
-    name,
-    path: `/components/${name}`,
-  }));
-}
-
-export function getSidebarBlocks() {
-  const components = getAllRegistryItems().filter(
-    (component) => component.type === "registry:component",
-  );
-
-  return components.map(({ title, name }) => ({
-    title,
-    name,
-    path: `/blocks/${name}`,
-  }));
 }

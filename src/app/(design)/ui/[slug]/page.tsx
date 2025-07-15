@@ -2,29 +2,30 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { ComponentCard } from "@/components/design/component-card";
+import { ComponentCard } from "@/components/registry/component-card";
 import { Button } from "@/components/ui/button";
-import { getAllRegistryItems, getComponent } from "@/lib/utils";
+import { getComponent, getRegistryItems } from "@/lib/registry";
 
 export async function generateStaticParams() {
-  const blocks = getAllRegistryItems().filter(
-    (component) => component.type === "registry:components",
+  const components = getRegistryItems().filter(
+    (component) => component.type === "registry:ui",
   );
 
-  return blocks.map(({ name }) => ({
+  return components.map(({ name }) => ({
     slug: name,
   }));
 }
 
-export default async function BlockPage({
+export default async function UIPrimitivesPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const block = getComponent(slug);
 
-  if (!block) {
+  const component = getComponent(slug);
+
+  if (!component) {
     notFound();
   }
 
@@ -38,16 +39,18 @@ export default async function BlockPage({
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">{block.title}</h1>
+          <h1 className="font-bold text-3xl tracking-tight">
+            {component.title}
+          </h1>
         </div>
       </div>
 
       <ComponentCard
-        name={block.name}
+        name={component.name}
         baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
-        title="Block Preview"
-        demoUrl={`/demo/${block.name}`}
-        promptTitle={`${block.title} Block Kit`}
+        title="Preview"
+        demoUrl={`/demo/${component.name}`}
+        promptTitle={`${component.title} Component Kit`}
       />
     </div>
   );

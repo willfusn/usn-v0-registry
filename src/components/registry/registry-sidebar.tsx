@@ -13,8 +13,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { RegistryLogo } from "@/components/design/registry-logo";
-import { ModeToggle } from "@/components/design/theme-toggle";
+import { RegistryLogo } from "@/components/registry/registry-logo";
+import { ModeToggle } from "@/components/registry/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -36,16 +36,16 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { getSidebarBlocks, getSidebarComponents } from "@/lib/utils";
+import { getSidebarComponents, getSidebarUIPrimitives } from "@/lib/registry";
+
+const uiItems = getSidebarUIPrimitives();
 
 const componentItems = getSidebarComponents();
-
-const blockItems = getSidebarBlocks();
 
 export const gettingStartedItems = [
   { title: "Home", path: "/" },
   { title: "Design Tokens", path: "/tokens" },
-  { title: "Starters", path: "/starters" },
+  { title: "Blocks", path: "/blocks" },
 ];
 
 export function MobileSidebarTrigger() {
@@ -66,24 +66,24 @@ export function RegistrySidebar() {
   const { setOpenMobile } = useSidebar();
 
   const [searchTerm, setSearchTerm] = useState("");
+  const [filteredUiItems, setFilteredUiItems] = useState(uiItems);
   const [filteredComponents, setFilteredComponents] = useState(componentItems);
-  const [filteredBlocks, setFilteredBlocks] = useState(blockItems);
 
   useEffect(() => {
     if (searchTerm) {
+      setFilteredUiItems(
+        uiItems.filter((item) =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
+        ),
+      );
       setFilteredComponents(
         componentItems.filter((item) =>
           item.title.toLowerCase().includes(searchTerm.toLowerCase()),
         ),
       );
-      setFilteredBlocks(
-        blockItems.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
-      );
     } else {
+      setFilteredUiItems(uiItems);
       setFilteredComponents(componentItems);
-      setFilteredBlocks(blockItems);
     }
   }, [searchTerm]);
 
@@ -164,7 +164,7 @@ export function RegistrySidebar() {
                   <div className="flex min-w-0 items-center">
                     <Blocks className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
-                      Blocks
+                      Components
                     </span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
@@ -174,7 +174,7 @@ export function RegistrySidebar() {
               <CollapsibleContent>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {filteredBlocks.map((item) => (
+                    {filteredComponents.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
                           asChild
@@ -202,7 +202,7 @@ export function RegistrySidebar() {
                   <div className="flex min-w-0 items-center">
                     <ToyBrick className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
-                      Components
+                      UI Primitives
                     </span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
@@ -211,7 +211,7 @@ export function RegistrySidebar() {
               <CollapsibleContent>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {filteredComponents.map((item) => (
+                    {filteredUiItems.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
                           asChild

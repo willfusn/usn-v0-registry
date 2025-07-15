@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import {
   MobileSidebarTrigger,
   RegistrySidebar,
-} from "@/components/design/registry-sidebar";
+} from "@/components/registry/registry-sidebar";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function RegistryLayout({

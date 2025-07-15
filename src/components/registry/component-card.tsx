@@ -3,7 +3,7 @@
 import { Check, Copy } from "lucide-react";
 import { type ReactElement, type ReactNode, useEffect, useState } from "react";
 
-import { OpenInV0Button } from "@/components/design/open-in-v0";
+import { OpenInV0Button } from "@/components/registry/open-in-v0";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,7 +18,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getComponent, getPrompt } from "@/lib/utils";
+import { getComponent } from "@/lib/registry";
+import { getPrompt } from "@/lib/utils";
 
 interface ComponentCardProps {
   name: string;

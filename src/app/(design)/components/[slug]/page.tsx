@@ -2,27 +2,26 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { ComponentCard } from "@/components/design/component-card";
+import { ComponentCard } from "@/components/registry/component-card";
 import { Button } from "@/components/ui/button";
-import { getAllRegistryItems, getComponent } from "@/lib/utils";
+import { getComponent, getRegistryItems } from "@/lib/registry";
 
 export async function generateStaticParams() {
-  const blocks = getAllRegistryItems().filter(
-    (component) => component.type === "registry:ui",
+  const components = getRegistryItems().filter(
+    (component) => component.type === "registry:components",
   );
 
-  return blocks.map(({ name }) => ({
+  return components.map(({ name }) => ({
     slug: name,
   }));
 }
 
-export default async function ComponentPage({
+export default async function ComponentsPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
   const component = getComponent(slug);
 
   if (!component) {
@@ -50,7 +49,7 @@ export default async function ComponentPage({
         baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
         title="Component Preview"
         demoUrl={`/demo/${component.name}`}
-        promptTitle={`${component.title} Component Kit`}
+        promptTitle={`${component.title} Block Kit`}
       />
     </div>
   );
