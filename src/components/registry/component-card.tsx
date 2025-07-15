@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Copy } from "lucide-react";
-import { type ReactElement, type ReactNode, useEffect, useState } from "react";
+import { useState } from "react";
 
 import { OpenInV0Button } from "@/components/registry/open-in-v0";
 import { Button } from "@/components/ui/button";
@@ -18,40 +18,22 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getRegistryItem } from "@/lib/registry";
-import { getPrompt } from "@/lib/utils";
+import type { Component } from "@/lib/registry";
 
 interface ComponentCardProps {
-  name: string;
+  component: Component;
   baseUrl: string;
-  description?: string;
-  title?: string;
-  prompt?: string;
-  promptTitle?: string;
-  demoUrl?: string;
+  prompt: string;
 }
 
 export function ComponentCard({
-  name,
-  title,
-  description,
-  prompt: propPrompt,
-  promptTitle,
+  component,
   baseUrl,
-  demoUrl,
+  prompt,
 }: ComponentCardProps) {
   const [copied, setCopied] = useState(false);
-  const [prompt, setPrompt] = useState(propPrompt);
 
-  useEffect(() => {
-    if (!propPrompt) {
-      getPrompt().then(setPrompt);
-    }
-  }, [propPrompt]);
-
-  const component = getRegistryItem(name);
-
-  const registryUrl = `https://${baseUrl}/r/${name}.json`;
+  const registryUrl = `https://${baseUrl}/r/${component.name}.json`;
   const npxCommand = `npx shadcn@latest add ${registryUrl}`;
 
   const copyToClipboard = async () => {
@@ -64,25 +46,15 @@ export function ComponentCard({
     }
   };
 
-  if (component == null) {
-    return (
-      <div className="flex h-full items-center justify-center">
-        <p className="text-muted-foreground">No registry item found</p>
-      </div>
-    );
-  }
-
   return (
     <section>
       <Card id="starting-kit" className="border-foreground/25">
         <CardHeader>
           <div className="flex flex-col gap-4">
-            <CardTitle className="font-medium text-lg">{title}</CardTitle>
+            <CardTitle className="font-medium text-lg">Preview</CardTitle>
 
             <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-16">
-              <CardDescription>
-                {description ?? component.description}
-              </CardDescription>
+              <CardDescription>{component.description}</CardDescription>
 
               <div className="flex items-center gap-1 sm:ml-auto">
                 <TooltipProvider>
@@ -109,7 +81,7 @@ export function ComponentCard({
 
                 <OpenInV0Button
                   registryUrl={registryUrl}
-                  title={promptTitle}
+                  title={`${component.title} Kit`}
                   prompt={prompt}
                 />
               </div>
@@ -117,21 +89,19 @@ export function ComponentCard({
           </div>
         </CardHeader>
 
-        {demoUrl && (
-          <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
-            <div
-              className={
-                "h-[800px] w-full overflow-hidden rounded-md border border-border p-4"
-              }
-            >
-              <iframe
-                src={demoUrl}
-                className="h-full w-full"
-                title="Page Preview"
-              />
-            </div>
-          </CardContent>
-        )}
+        <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
+          <div
+            className={
+              "h-[800px] w-full overflow-hidden rounded-md border border-border p-4"
+            }
+          >
+            <iframe
+              src={`/demo/${component.name}`}
+              className="h-full w-full"
+              title="Page Preview"
+            />
+          </div>
+        </CardContent>
       </Card>
     </section>
   );

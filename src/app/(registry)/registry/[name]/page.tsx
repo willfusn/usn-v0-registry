@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ComponentCard } from "@/components/registry/component-card";
 import { Button } from "@/components/ui/button";
 import { getRegistryItem, getRegistryItems } from "@/lib/registry";
+import { getPrompt } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const components = getRegistryItems();
@@ -43,11 +44,9 @@ export default async function RegistryItemPage({
       </div>
 
       <ComponentCard
-        name={component.name}
+        component={component}
         baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
-        title="Preview"
-        demoUrl={`/demo/${component.name}`}
-        promptTitle={`${component.title} Block Kit`}
+        prompt={await getPrompt()}
       />
     </div>
   );
