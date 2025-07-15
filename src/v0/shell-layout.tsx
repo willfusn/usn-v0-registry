@@ -24,7 +24,8 @@ const MontserratSerif = Montserrat({
   subsets: ["latin"],
   variable: "--font-serif",
 });
-export default function RootLayout({
+
+export default function ShellLayout({
   children,
 }: Readonly<{
   children: ReactNode;

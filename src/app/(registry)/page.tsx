@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Card className="shadow-none mb-4">
+      <Card className="mb-4 shadow-none">
         <CardHeader className="space-y-1">
           <div className="flex items-center justify-between">
             <CardTitle>Blocks</CardTitle>
@@ -131,7 +131,7 @@ export default function Home() {
         </Card>
       </div>
 
-      <div className="rounded-lg border bg-card p-6 mb-4">
+      <div className="mb-4 rounded-lg border bg-card p-6">
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-xl">MCP</h2>
           <p className="mb-4 text-muted-foreground">
