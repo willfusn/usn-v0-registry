@@ -4,7 +4,7 @@ import {
   Sonner,
   SuccessfulSonner,
   WarningSonner,
-} from "@/app/(design)/components/[slug]/(demos)/sonner-toasts";
+} from "@/app/demo/[slug]/(demos)/sonner-toasts";
 
 export const sonner = {
   name: "sonner",

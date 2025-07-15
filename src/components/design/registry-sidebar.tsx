@@ -36,48 +36,16 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import type * as React from "react";
+import { getSidebarBlocks, getSidebarComponents } from "@/lib/utils";
 
-export const componentItems = [
-  { name: "Accordion", path: "/components/accordion" },
-  { name: "Alert", path: "/components/alert" },
-  { name: "Avatar", path: "/components/avatar" },
-  { name: "Badge", path: "/components/badge" },
-  { name: "Breadcrumb", path: "/components/breadcrumb" },
-  { name: "Button", path: "/components/button" },
-  { name: "Calendar", path: "/components/calendar" },
-  { name: "Card", path: "/components/card" },
-  { name: "Chart", path: "/components/chart" },
-  { name: "Checkbox", path: "/components/checkbox" },
-  { name: "Date Picker", path: "/components/date-picker" },
-  { name: "Data Table", path: "/components/data-table" },
-  { name: "Dialog", path: "/components/dialog" },
-  { name: "Dropdown Menu", path: "/components/dropdown-menu" },
-  { name: "Input", path: "/components/input" },
-  { name: "Menu Bar", path: "/components/menu-bar" },
-  { name: "Select", path: "/components/select" },
-  { name: "Separator", path: "/components/separator" },
-  { name: "Skeleton", path: "/components/skeleton" },
-  { name: "Slider", path: "/components/slider" },
-  { name: "Sonner", path: "/components/sonner" },
-  { name: "Switch", path: "/components/switch" },
-  { name: "Table", path: "/components/table" },
-  { name: "Tabs", path: "/components/tabs" },
-  { name: "Toggle Group", path: "/components/toggle-group" },
-  { name: "Tooltip", path: "/components/tooltip" },
-];
+const componentItems = getSidebarComponents();
 
-export const blockItems = [
-  { name: "Hero", path: "/blocks/hero" },
-  { name: "Login", path: "/blocks/login" },
-  { name: "Promo", path: "/blocks/promo" },
-  { name: "Product Grid", path: "/blocks/product-grid" },
-];
+const blockItems = getSidebarBlocks();
 
 export const gettingStartedItems = [
-  { name: "Home", path: "/" },
-  { name: "Design Tokens", path: "/tokens" },
-  { name: "Starters", path: "/starters" },
+  { title: "Home", path: "/" },
+  { title: "Design Tokens", path: "/tokens" },
+  { title: "Starters", path: "/starters" },
 ];
 
 export function MobileSidebarTrigger() {
@@ -105,12 +73,12 @@ export function RegistrySidebar() {
     if (searchTerm) {
       setFilteredComponents(
         componentItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
         ),
       );
       setFilteredBlocks(
         blockItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
         ),
       );
     } else {
@@ -178,7 +146,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={item.path}
                           >
-                            {item.name}
+                            {item.title}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
@@ -207,7 +175,7 @@ export function RegistrySidebar() {
                 <SidebarGroupContent>
                   <SidebarMenu>
                     {filteredBlocks.map((item) => (
-                      <SidebarMenuItem key={item.path}>
+                      <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
                           asChild
                           isActive={pathname === item.path}
@@ -216,7 +184,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={item.path}
                           >
-                            {item.name}
+                            {item.title}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
@@ -244,7 +212,7 @@ export function RegistrySidebar() {
                 <SidebarGroupContent>
                   <SidebarMenu>
                     {filteredComponents.map((item) => (
-                      <SidebarMenuItem key={item.path}>
+                      <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
                           asChild
                           isActive={pathname === item.path}
@@ -253,7 +221,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={item.path}
                           >
-                            {item.name}
+                            {item.title}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>

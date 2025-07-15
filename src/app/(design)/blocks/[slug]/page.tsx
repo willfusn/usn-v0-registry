@@ -2,14 +2,17 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { demos } from "@/app/(design)/blocks/[slug]/(demos)";
 import { ComponentCard } from "@/components/design/component-card";
 import { Button } from "@/components/ui/button";
-import { getComponent } from "@/lib/utils";
+import { getAllRegistryItems, getComponent } from "@/lib/utils";
 
 export async function generateStaticParams() {
-  return Object.keys(demos).map((slug) => ({
-    slug,
+  const blocks = getAllRegistryItems().filter(
+    (component) => component.type === "registry:components",
+  );
+
+  return blocks.map(({ name }) => ({
+    slug: name,
   }));
 }
 
@@ -24,8 +27,6 @@ export default async function BlockPage({
   if (!block) {
     notFound();
   }
-
-  const { components } = demos[slug];
 
   return (
     <div className="container p-5 md:p-10">
@@ -45,8 +46,8 @@ export default async function BlockPage({
         name={block.name}
         baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
         title="Block Preview"
+        demoUrl={`/demo/${block.name}`}
         promptTitle={`${block.title} Block Kit`}
-        components={components}
       />
     </div>
   );

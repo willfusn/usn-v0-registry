@@ -9,21 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { getSidebarBlocks, getSidebarComponents } from "@/lib/utils";
 
-const componentItems = [
-  { name: "Accordion", path: "/components/accordion" },
-  { name: "Button", path: "/components/button" },
-  { name: "Card", path: "/components/card" },
-  { name: "Dialog", path: "/components/dialog" },
-  { name: "Dropdown Menu", path: "/components/dropdown-menu" },
-];
+const componentItems = getSidebarComponents().slice(0, 5);
 
-const blockItems = [
-  { name: "Hero", path: "/blocks/hero" },
-  { name: "Login", path: "/blocks/login" },
-  { name: "Promo", path: "/blocks/promo" },
-  { name: "Product Grid", path: "/blocks/product-grid" },
-];
+const blockItems = getSidebarBlocks().slice(0, 5);
 
 export default function Home() {
   return (
@@ -62,7 +52,7 @@ export default function Home() {
                   className="flex items-center justify-between"
                 >
                   <Link href={item.path} className="text-sm hover:underline">
-                    {item.name}
+                    {item.title}
                   </Link>
                   <ArrowRight className="size-4 text-muted-foreground" />
                 </div>
@@ -92,7 +82,7 @@ export default function Home() {
                   className="flex items-center justify-between"
                 >
                   <Link href={item.path} className="text-sm hover:underline">
-                    {item.name}
+                    {item.title}
                   </Link>
                   <ArrowRight className="size-4 text-muted-foreground" />
                 </div>

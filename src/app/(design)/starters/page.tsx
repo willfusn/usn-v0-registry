@@ -45,7 +45,7 @@ export default function StartPage() {
             baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
             title={starter.title}
             promptTitle={`${starter.title} Starter Kit`}
-            previewUrl={starter.url}
+            demoUrl={starter.url}
           />
         ))}
       </div>

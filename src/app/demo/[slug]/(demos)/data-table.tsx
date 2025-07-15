@@ -1,4 +1,4 @@
-import { FinanceDataTable } from "@/app/(design)/components/[slug]/(demos)/data-table-payments";
+import { FinanceDataTable } from "@/app/demo/[slug]/(demos)/data-table-payments";
 
 export const dataTable = {
   name: "data-table",
