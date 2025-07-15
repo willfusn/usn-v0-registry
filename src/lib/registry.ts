@@ -17,43 +17,7 @@ export function getRegistryItems(): Component[] {
   return components as Component[];
 }
 
-export function getSidebarBlocks() {
-  const blocks = getRegistryItems().filter(
-    (component) => component.type === "registry:block",
-  );
-
-  return blocks.map(({ title, name }) => ({
-    title,
-    name,
-    path: name !== "blank" ? `/blocks/${name}` : undefined, // don't preview blank block
-  }));
-}
-
-export function getSidebarUIPrimitives() {
-  const components = getRegistryItems().filter(
-    (component) => component.type === "registry:ui",
-  );
-
-  return components.map(({ title, name }) => ({
-    title,
-    name,
-    path: `/ui/${name}`,
-  }));
-}
-
-export function getSidebarComponents() {
-  const components = getRegistryItems().filter(
-    (component) => component.type === "registry:component",
-  );
-
-  return components.map(({ title, name }) => ({
-    title,
-    name,
-    path: `/components/${name}`,
-  }));
-}
-
-export function getComponent(name: string): Component {
+export function getRegistryItem(name: string): Component {
   const components = getRegistryItems();
 
   const component = components.find(
@@ -65,4 +29,22 @@ export function getComponent(name: string): Component {
   }
 
   return component;
+}
+
+export function getBlocks() {
+  return getRegistryItems().filter(
+    (component) => component.type === "registry:block",
+  );
+}
+
+export function getUIPrimitives() {
+  return getRegistryItems().filter(
+    (component) => component.type === "registry:ui",
+  );
+}
+
+export function getComponents() {
+  return getRegistryItems().filter(
+    (component) => component.type === "registry:component",
+  );
 }

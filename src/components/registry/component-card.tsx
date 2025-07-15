@@ -18,7 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getComponent } from "@/lib/registry";
+import { getRegistryItem } from "@/lib/registry";
 import { getPrompt } from "@/lib/utils";
 
 interface ComponentCardProps {
@@ -49,7 +49,7 @@ export function ComponentCard({
     }
   }, [propPrompt]);
 
-  const component = getComponent(name);
+  const component = getRegistryItem(name);
 
   const registryUrl = `https://${baseUrl}/r/${name}.json`;
   const npxCommand = `npx shadcn@latest add ${registryUrl}`;
@@ -121,7 +121,7 @@ export function ComponentCard({
           <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
             <div
               className={
-                "h-[800px] w-full overflow-hidden rounded-md border border-border"
+                "h-[800px] w-full overflow-hidden rounded-md border border-border p-4"
               }
             >
               <iframe

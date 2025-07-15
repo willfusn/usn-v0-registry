@@ -95,7 +95,7 @@ like:
 ```
 
 If you use `@font-face`, you will also need to modify [`tailwind.css`](src/app/tailwind.css) AND
-[`tailwind.config.ts`](src/app/tailwind.config.ts) to map your custom fonts to Tailwind. Refer to this
+[`tailwind.config.ts`](src/v0/tailwind.config.ts) to map your custom fonts to Tailwind. Refer to this
 [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
 
 ## Running locally
@@ -109,16 +109,18 @@ Your app should now be running on [localhost:3000](http://localhost:3000).
 
 ## File Structure
 
-`app/(design)` routes contains the registry pages.
+`app/(registry)` routes contains the registry pages.
 
-`app/starters` routes contains various starters (using either `minimal` and `shell` layouts)
+`app/demo` routes contains various UI primitives, Components, or Blocks (based on `registry.json`)
 
-`@/components` contains all compound components used in the registry
+`@/components` contains all components used in the registry
 
-`@/components/ui` contains all base `shadcn/ui` used in the registry
+`@/components/ui` contains all `shadcn/ui` UI Primitives used in the registry
 
-`@/components/registry` contains all components for this application
+`@/components/registry` contains all components for this Registry Starter application
 
 `@/hooks` contains all React hooks
 
 `@/lib` contains all business logic & utils
+
+`@/v0` contains all v0 collateral used in `registry.json`

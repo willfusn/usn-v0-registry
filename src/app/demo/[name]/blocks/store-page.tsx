@@ -1,7 +1,7 @@
 import ProductGrid from "@/components/product-grid";
 import { getCategories, getProducts } from "@/lib/products";
 
-export default async function Store() {
+export default async function StorePage() {
   const products = await getProducts();
   const categories = await getCategories();
 

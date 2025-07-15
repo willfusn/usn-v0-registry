@@ -9,11 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getSidebarComponents, getSidebarUIPrimitives } from "@/lib/registry";
+import { getComponents, getUIPrimitives } from "@/lib/registry";
 
-const componentItems = getSidebarUIPrimitives().slice(0, 5);
+const componentItems = getUIPrimitives().slice(0, 5);
 
-const blockItems = getSidebarComponents().slice(0, 5);
+const blockItems = getComponents().slice(0, 5);
 
 export default function Home() {
   return (
@@ -51,7 +51,10 @@ export default function Home() {
                   key={item.name}
                   className="flex items-center justify-between"
                 >
-                  <Link href={item.path} className="text-sm hover:underline">
+                  <Link
+                    href={`/registry/${item.name}`}
+                    className="text-sm hover:underline"
+                  >
                     {item.title}
                   </Link>
                   <ArrowRight className="size-4 text-muted-foreground" />
@@ -81,7 +84,10 @@ export default function Home() {
                   key={item.name}
                   className="flex items-center justify-between"
                 >
-                  <Link href={item.path} className="text-sm hover:underline">
+                  <Link
+                    href={`/registry/${item.name}`}
+                    className="text-sm hover:underline"
+                  >
                     {item.title}
                   </Link>
                   <ArrowRight className="size-4 text-muted-foreground" />

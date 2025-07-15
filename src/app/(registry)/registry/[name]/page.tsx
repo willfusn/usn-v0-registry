@@ -4,25 +4,23 @@ import { notFound } from "next/navigation";
 
 import { ComponentCard } from "@/components/registry/component-card";
 import { Button } from "@/components/ui/button";
-import { getComponent, getRegistryItems } from "@/lib/registry";
+import { getRegistryItem, getRegistryItems } from "@/lib/registry";
 
 export async function generateStaticParams() {
-  const components = getRegistryItems().filter(
-    (component) => component.type === "registry:components",
-  );
+  const components = getRegistryItems();
 
   return components.map(({ name }) => ({
-    slug: name,
+    name,
   }));
 }
 
-export default async function ComponentsPage({
+export default async function RegistryItemPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ name: string }>;
 }) {
-  const { slug } = await params;
-  const component = getComponent(slug);
+  const { name } = await params;
+  const component = getRegistryItem(name);
 
   if (!component) {
     notFound();
@@ -47,7 +45,7 @@ export default async function ComponentsPage({
       <ComponentCard
         name={component.name}
         baseUrl={process.env.VERCEL_BRANCH_URL ?? ""}
-        title="Component Preview"
+        title="Preview"
         demoUrl={`/demo/${component.name}`}
         promptTitle={`${component.title} Block Kit`}
       />
