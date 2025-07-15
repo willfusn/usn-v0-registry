@@ -3,6 +3,7 @@
 import {
   Blocks,
   ChevronDown,
+  Component,
   Home,
   Menu,
   Search,
@@ -206,7 +207,7 @@ export function RegistrySidebar() {
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
-                    <Blocks className="size-4 flex-shrink-0" />
+                    <Component className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
                       Components
                     </span>

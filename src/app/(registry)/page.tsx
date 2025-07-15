@@ -1,4 +1,4 @@
-import { ArrowRight, Blocks, ToyBrick } from "lucide-react";
+import { ArrowRight, Blocks, Component, ToyBrick } from "lucide-react";
 import Link from "next/link";
 
 import { MCPTabs } from "@/components/registry/mcp-tabs";
@@ -9,11 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getComponents, getUIPrimitives } from "@/lib/registry";
+import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
-const componentItems = getUIPrimitives().slice(0, 5);
-
-const blockItems = getComponents().slice(0, 5);
+const uiItems = getUIPrimitives().slice(0, 5);
+const componentItems = getComponents().slice(0, 5);
+const blockItems = getBlocks().slice(0, 5);
 
 export default function Home() {
   return (
@@ -30,17 +30,83 @@ export default function Home() {
         </div>
       </div>
 
+      <Card className="shadow-none mb-4">
+        <CardHeader className="space-y-1">
+          <div className="flex items-center justify-between">
+            <CardTitle>Blocks</CardTitle>
+            <div className="rounded-md bg-primary p-1">
+              <Blocks className="size-5 text-primary-foreground" />
+            </div>
+          </div>
+          <CardDescription>
+            Pre-built starter kits for consistent, repeatable generations
+          </CardDescription>
+        </CardHeader>
+
+        <CardContent>
+          <div className="space-y-2">
+            {blockItems.map((item) => (
+              <div
+                key={item.name}
+                className="flex items-center justify-between"
+              >
+                <Link
+                  href={`/registry/${item.name}`}
+                  className="text-sm hover:underline"
+                >
+                  {item.title}
+                </Link>
+                <ArrowRight className="size-4 text-muted-foreground" />
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
       <div className="mb-4 grid gap-6 md:grid-cols-2">
         <Card className="shadow-none">
           <CardHeader className="space-y-1">
             <div className="flex items-center justify-between">
-              <CardTitle>Components</CardTitle>
-              <div className="rounded-md bg-primary p-1">
+              <CardTitle>UI Primitives</CardTitle>
+              <div className="rounded-md bg-foreground p-1">
                 <ToyBrick className="size-5 text-primary-foreground" />
               </div>
             </div>
             <CardDescription>
-              Reusable UI components for your application
+              Reusable UI primitives to build your components
+            </CardDescription>
+          </CardHeader>
+
+          <CardContent>
+            <div className="space-y-2">
+              {uiItems.map((item) => (
+                <div
+                  key={item.name}
+                  className="flex items-center justify-between"
+                >
+                  <Link
+                    href={`/registry/${item.name}`}
+                    className="text-sm hover:underline"
+                  >
+                    {item.title}
+                  </Link>
+                  <ArrowRight className="size-4 text-muted-foreground" />
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-none">
+          <CardHeader className="space-y-1">
+            <div className="flex items-center justify-between">
+              <CardTitle>Components</CardTitle>
+              <div className="rounded-md bg-foreground p-1">
+                <Component className="size-5 text-primary-foreground" />
+              </div>
+            </div>
+            <CardDescription>
+              Compound components using common patterns
             </CardDescription>
           </CardHeader>
 
@@ -63,42 +129,30 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-
-        <Card className="shadow-none">
-          <CardHeader className="space-y-1">
-            <div className="flex items-center justify-between">
-              <CardTitle>Blocks</CardTitle>
-              <div className="rounded-md bg-foreground p-1">
-                <Blocks className="size-5 text-primary-foreground" />
-              </div>
-            </div>
-            <CardDescription>
-              Pre-built UI blocks for common patterns
-            </CardDescription>
-          </CardHeader>
-
-          <CardContent>
-            <div className="space-y-2">
-              {blockItems.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex items-center justify-between"
-                >
-                  <Link
-                    href={`/registry/${item.name}`}
-                    className="text-sm hover:underline"
-                  >
-                    {item.title}
-                  </Link>
-                  <ArrowRight className="size-4 text-muted-foreground" />
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
       </div>
 
-      <div className="mb-4 rounded-lg border bg-card p-6">
+      <div className="rounded-lg border bg-card p-6 mb-4">
+        <div className="flex flex-col gap-2">
+          <h2 className="font-semibold text-xl">MCP</h2>
+          <p className="mb-4 text-muted-foreground">
+            Integrate this registry with AI IDEs using Model Context Protocol
+            (MCP) using the following configuration. This utilizes this
+            Registry's style tokens and the Shadcn CLI. To ensure this works,
+            double check that the{" "}
+            <Link href="/r/registry.json">
+              <code className="inline text-sm tabular-nums underline">
+                style:registry
+              </code>
+            </Link>{" "}
+            contains the same colors as your{" "}
+            <code className="inline text-sm tabular-nums">tokens.css</code>
+          </p>
+
+          <MCPTabs rootUrl={process.env.VERCEL_BRANCH_URL ?? ""} />
+        </div>
+      </div>
+
+      <div className="rounded-lg border bg-card p-6">
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-xl">About</h2>
           <p className="text-muted-foreground">
@@ -138,27 +192,6 @@ export default function Home() {
               <span className="underline">GitHub Repository</span>
             </a>
           </p>
-        </div>
-      </div>
-
-      <div className="rounded-lg border bg-card p-6">
-        <div className="flex flex-col gap-2">
-          <h2 className="font-semibold text-xl">MCP</h2>
-          <p className="mb-4 text-muted-foreground">
-            Integrate this registry with AI IDEs using Model Context Protocol
-            (MCP) using the following configuration. This utilizes this
-            Registry's style tokens and the Shadcn CLI. To ensure this works,
-            double check that the{" "}
-            <Link href="/r/registry.json">
-              <code className="inline text-sm tabular-nums underline">
-                style:registry
-              </code>
-            </Link>{" "}
-            contains the same colors as your{" "}
-            <code className="inline text-sm tabular-nums">tokens.css</code>
-          </p>
-
-          <MCPTabs rootUrl={process.env.VERCEL_BRANCH_URL ?? ""} />
         </div>
       </div>
     </main>
