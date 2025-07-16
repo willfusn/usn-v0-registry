@@ -1,9 +1,11 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
+
+import { FontBlock } from "@/app/(registry)/tokens/font-block";
+import { Button } from "@/components/ui/button";
 import { ColorBlock } from "./color-block";
 
 export default function TokensPage() {
@@ -22,6 +24,19 @@ export default function TokensPage() {
           A comprehensive overview of all color tokens used in the design system
         </p>
       </div>
+
+      {/* Fonts */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Fonts</h2>
+        <p className="mb-6 text-muted-foreground">
+          The core font families that define the primary typography.
+        </p>
+        <div className="grid grid-cols-1 gap-4">
+          <FontBlock className="font-sans" />
+          <FontBlock className="font-serif" />
+          <FontBlock className="font-mono" />
+        </div>
+      </section>
 
       {/* Primary Theme */}
       <section className="mb-12">
