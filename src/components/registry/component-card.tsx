@@ -96,6 +96,7 @@ export function ComponentCard({
             }
           >
             <iframe
+              id="iframe"
               src={`/demo/${component.name}`}
               className="h-full w-full"
               title="Page Preview"
