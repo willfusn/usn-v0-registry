@@ -84,12 +84,7 @@
         {
           "path": "src/app/tokens.css",
           "type": "registry:file",
-          "target": "app/tokens.css"
-        },
-        {
-          "path": "src/app/tailwind.css",
-          "type": "registry:file",
-          "target": "app/tailwind.css"
+          "target": "app/globals.css"
         }
       ]
     },
