@@ -48,7 +48,7 @@ To use this registry with MCP, you must also edit [`registry.json`](./registry.j
 contains your design tokens / CSS variables.
 
 The `shadcn/ui` CLI's MCP command will use the entire `registy.json` file, so it must be put in the `/public` folder 
-with all of your `registry:item`s.  This will enable you to use your registry in tools like Cursor & Windsurf. 
+with all of your `registry:item`s. This will enable you to use your registry in tools like Cursor & Windsurf. 
 
 #### Fonts
 
@@ -75,9 +75,8 @@ like:
 }
 ```
 
-If you use `@font-face`, you will also need to modify [`tailwind.css`](src/app/tailwind.css) AND
-[`tailwind.config.ts`](src/v0/tailwind.config.ts) to map your custom fonts to Tailwind. Refer to this
-[Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
+If you use `@font-face`, you will also need to modify [`tailwind.css`](src/app/tailwind.css) to map your custom 
+fonts to Tailwind. Refer to this [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
 
 ## Running locally
 
@@ -104,4 +103,4 @@ Your app should now be running on [localhost:3000](http://localhost:3000).
 
 `@/lib` contains all business logic & utils
 
-`@/v0` contains all v0 collateral used in `registry.json`
+`@/layouts` contains all v0 layouts used in `registry.json`
