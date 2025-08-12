@@ -82,8 +82,8 @@
       },
       "files": [
         {
-          "path": "src/app/tokens.css",
-          "type": "registry:file",
+          "path": "src/app/globals.css",
+          "type": "registry:style",
           "target": "app/globals.css"
         },
         {

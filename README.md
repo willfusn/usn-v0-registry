@@ -75,7 +75,7 @@ like:
 }
 ```
 
-If you use `@font-face`, you will also need to modify [`tailwind.css`](src/app/tailwind.css) to map your custom 
+If you use `@font-face`, you will also need to modify [`globals.css`](src/app/globals.css) to map your custom 
 fonts to Tailwind. Refer to this [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
 
 ## Running locally
