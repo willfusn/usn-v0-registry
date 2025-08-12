@@ -85,6 +85,11 @@
           "path": "src/app/tokens.css",
           "type": "registry:file",
           "target": "app/globals.css"
+        },
+        {
+          "path": "postcss.config.mjs",
+          "type": "registry:file",
+          "target": "postcss.config.mjs"
         }
       ]
     },
