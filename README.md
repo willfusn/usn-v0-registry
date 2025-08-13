@@ -38,7 +38,7 @@ repository's [`registry.json`](./registry.json). For more information, refer to 
 ## Theming
 
 To use a custom theme for all the components, all you need to do is modify the CSS tokens in
-[`tokens.css`](./src/app/tokens.css). More information on these practices can be found
+[`globals.css`](./src/app/globals.css). More information on these practices can be found
 on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
 
 #### MCP
@@ -53,9 +53,9 @@ with all of your `registry:item`s. This will enable you to use your registry in 
 #### Fonts
 
 To use custom fonts, you can either use [
-`next/font/google`](https://nextjs.org/docs/pages/getting-started/fonts#google-fonts) or the [
-`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) CSS rule. For example, `fonts.css` might look
-like:
+`next/font/google`](https://nextjs.org/docs/pages/getting-started/fonts#google-fonts) or the 
+[`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) CSS rule in your 
+[`globals.css`](./src/app/globals.css).
 
 ```css
 @font-face {
@@ -65,18 +65,11 @@ like:
     src: url('https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.woff2') format('woff2'),
     url('https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbj49c.woff') format('woff');
 }
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.woff2') format('woff2'),
-    url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_w.woff') format('woff');
-}
 ```
 
-If you use `@font-face`, you will also need to modify [`globals.css`](src/app/globals.css) to map your custom 
-fonts to Tailwind. Refer to this [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
+If you use `@font-face`, ensure you modify [`globals.css`](src/app/globals.css) tailwind configuration to map 
+your custom font variables to Tailwind fonts. Refer to this
+[Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
 
 ## Running locally
 
