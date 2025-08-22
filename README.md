@@ -10,6 +10,8 @@
   <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
   <a href="#open-in-v0"><strong>Open in v0</strong></a> ·
   <a href="#theming"><strong>Theming</strong></a> ·
+  <a href="#mcp"><strong>MCP</strong></a> ·
+  <a href="#authentication"><strong>Authentication</strong></a> ·
   <a href="#running-locally"><strong>Running Locally</strong></a> ·
   <a href="#file-structure"><strong>File Structure</strong></a> ·
   <a href="https://ui.shadcn.com/docs/registry"><strong>Read Docs</strong></a>
@@ -41,15 +43,6 @@ To use a custom theme for all the components, all you need to do is modify the C
 [`globals.css`](./src/app/globals.css). More information on these practices can be found
 on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
 
-#### MCP
-
-To use this registry with MCP, you must also edit [`registry.json`](./registry.json)'s first
-`registry-item` named `theme`. This `registry:theme` item not only contains the tailwind configuration, but it also
-contains your design tokens / CSS variables.
-
-The `shadcn/ui` CLI's MCP command will use the entire `registy.json` file, so it must be put in the `/public` folder 
-with all of your `registry:item`s. This will enable you to use your registry in tools like Cursor & Windsurf. 
-
 #### Fonts
 
 To use custom fonts, you can either use [
@@ -70,6 +63,60 @@ To use custom fonts, you can either use [
 If you use `@font-face`, ensure you modify [`globals.css`](src/app/globals.css) tailwind configuration to map 
 your custom font variables to Tailwind fonts. Refer to this
 [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
+
+## MCP
+
+To use this registry with MCP, you must also edit [`registry.json`](./registry.json)'s first
+`registry-item` named `theme`. This `registry:theme` item not only contains the tailwind configuration, but it also
+contains your design tokens / CSS variables.
+
+The `shadcn/ui` CLI's MCP command will use the entire `registy.json` file, so it must be put in the `/public` folder
+with all of your `registry:item`s. This will enable you to use your registry in tools like Cursor & Windsurf.
+
+## Authentication
+
+To protect your registry, you must first protect your `registry.json` and all `registry:item` JSON files.  
+This is made possible with an environment variable and basic Next.js Middleware.
+
+1. Create new `REGISTRY_AUTH_TOKEN`. For example, you can generate one:
+
+    ```bash
+    node -e "console.log(crypto.randomBytes(32).toString('base64url'))"
+    ```
+
+2. Add new `middleware.ts` file to protect `/r/:path` routes
+
+    ```ts
+    // src/middleware.ts
+    import { NextResponse } from "next/server";
+    import type { NextRequest } from "next/server";
+    
+    export const config = { matcher: "/r/:path*" };
+    
+    export function middleware(request: NextRequest) {
+      const token = request.nextUrl.searchParams.get("token");
+    
+      if (token == null || token !== process.env.REGISTRY_AUTH_TOKEN) {
+        return new NextResponse("Unauthorized", { status: 401 });
+      }
+    
+      return NextResponse.next();
+    }
+    
+    ```
+
+When using `Open in v0`, the v0 platform will use the `token` search parameter to authenticate with your Registry:
+
+```ts
+const v0Url = `https://v0.dev/chat/api/open?url=https%3A%2F%2Fregistry-starter.vercel.app%2Fr%2Faccordion.json&token=${process.env.REGISTRY_AUTH_TOKEN}`
+```
+
+> [!NOTE]  
+> This method only protects the `/r/:path` routes, this does NOT protect the Registry's UI / component previews. If you
+> choose to protect the UI / component preview, you must ensure the `registry.json` and all `registry:item`s are 
+> publicly accessible or protected using the `token` search parameter. This ensures v0 and other AI Tools have access to
+> use the registry
+    
 
 ## Running locally
 
