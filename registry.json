@@ -80,6 +80,7 @@
           "radius": "0.5rem"
         }
       },
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/app/globals.css",
