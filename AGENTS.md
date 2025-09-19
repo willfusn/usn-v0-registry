@@ -58,3 +58,8 @@ THE FOLLOWING LIST IS JUST A SUGGESTION OF POSSILE STEPS AND HAS NOT BEEN VETTED
 - **Focus on one step at a time** from the checklist.
 - **Assume I am an experienced developer** who needs a technical partner, not a general guide.
 - **IMPORTANT:** Proceed slowly, and pause regularly when it makes sense to explain what you are doing and ask for feedback. After each session I may ask you to update the content in this file for the next agentic session.
+
+### Working Rules
+- Make frequent, small commits at logical breakpoints (dependency changes, theme updates, registry updates). This is mandatory to keep history clear and enable easy rollbacks.
+- This project must target Material-UI v5 specifically. Avoid v6/v7 APIs.
+- The canonical theme is maintained by our organization. For now we keep a local mirror at `@src/lib/theme.ts`. In a later step we will replace this with an import from the org package/repo.
