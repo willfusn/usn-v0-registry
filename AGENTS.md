@@ -63,3 +63,4 @@ THE FOLLOWING LIST IS JUST A SUGGESTION OF POSSILE STEPS AND HAS NOT BEEN VETTED
 - Make frequent, small commits at logical breakpoints (dependency changes, theme updates, registry updates). This is mandatory to keep history clear and enable easy rollbacks.
 - This project must target Material-UI v5 specifically. Avoid v6/v7 APIs.
 - The canonical theme is maintained by our organization. For now we keep a local mirror at `@src/lib/theme.ts`. In a later step we will replace this with an import from the org package/repo.
+- Before each commit, update this document with any new rules, decisions, or deviations so future sessions have the latest context.

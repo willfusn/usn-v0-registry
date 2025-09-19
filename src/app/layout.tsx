@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { cn } from "@/lib/utils";
+import theme from "@/lib/theme";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 
 import "@/app/globals.css";
 
@@ -37,21 +39,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
-        GeistSans.variable,
-        GeistMono.variable,
-        MontserratSerif.variable,
-        "bg-background text-foreground",
-      )}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${MontserratSerif.variable}`}
     >
       <meta
         name="robots"
         content="noindex, nofollow, noarchive, nosnippet, noimageindex"
       />
-      <body className="flex grow">
-        {children}
-        <Analytics />
-        <SpeedInsights />
+      <body>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );
