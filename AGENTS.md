@@ -65,3 +65,4 @@ THE FOLLOWING LIST IS JUST A SUGGESTION OF POSSILE STEPS AND HAS NOT BEEN VETTED
 - The canonical theme is maintained by our organization. For now we keep a local mirror at `@src/lib/theme.ts`. In a later step we will replace this with an import from the org package/repo.
 - Before each commit, update this document with any new rules, decisions, or deviations so future sessions have the latest context.
  - We added a simple validation page at `@src/app/mui/page.tsx` to verify the org theme and `BrandButton`. Keep it minimal and MUI-only.
+ - Migrating Shadcn components to MUI will be done via thin adapters to preserve call sites initially. First migrated: `@src/components/ui/button.tsx` now wraps `@mui/material/Button`.
