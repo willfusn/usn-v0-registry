@@ -1,9 +1,9 @@
 <a href="https://registry-starter.vercel.app/">
-  <h1 align="center">Registry Starter</h1>
+  <h1 align="center">MUI v5 Registry Starter</h1>
 </a>
 
 <p align="center">
-    Registry Starter is a free, open-source template built with Next.js and Shadcn/ui Registry to accelerate your AI-Native Design System.
+    A custom v0 registry using Next.js and Material-UI v5 (Emotion). Tailwind/Shadcn removed.
 </p>
 
 <p align="center">
@@ -39,9 +39,7 @@ repository's [`registry.json`](./registry.json). For more information, refer to 
 
 ## Theming
 
-To use a custom theme for all the components, all you need to do is modify the CSS tokens in
-[`globals.css`](./src/app/globals.css). More information on these practices can be found
-on [ui.shadcn.com/docs](https://ui.shadcn.com/docs).
+The canonical theme lives in [`src/lib/theme.ts`](./src/lib/theme.ts). The app wraps all pages with MUI `ThemeProvider` and `CssBaseline`.
 
 #### Fonts
 
@@ -64,14 +62,12 @@ If you use `@font-face`, ensure you modify [`globals.css`](src/app/globals.css) 
 your custom font variables to Tailwind fonts. Refer to this
 [Tailwind documentation](https://tailwindcss.com/docs/font-family#customizing-your-theme)
 
-## MCP
+## Registry endpoints
 
-To use this registry with MCP, you must also edit [`registry.json`](./registry.json)'s first
-`registry-item` named `theme`. This `registry:theme` item not only contains the tailwind configuration, but it also
-contains your design tokens / CSS variables.
+This app exposes the registry JSON for v0 under:
 
-The `shadcn/ui` CLI's MCP command will use the entire `registy.json` file, so it must be put in the `/public` folder
-with all of your `registry:item`s. This will enable you to use your registry in tools like Cursor & Windsurf.
+- http://localhost:3000/registry
+- http://localhost:3000/registry.json
 
 ## Authentication
 
@@ -126,6 +122,15 @@ pnpm dev
 ```
 
 Your app should now be running on [localhost:3000](http://localhost:3000).
+
+Visit [/mui](http://localhost:3000/mui) to validate the org theme and `BrandButton`.
+
+## Using with v0
+
+1. Start the dev server (see above) or deploy a preview to Vercel.
+2. In v0, set the custom registry URL to your deployed registry or local URL above.
+3. Add "Org MUI v5 Theme" then add "MUI Button".
+4. v0 will include `@mui/material` deps and import the theme from `src/lib/theme.ts`.
 
 ## File Structure
 

@@ -66,3 +66,5 @@ THE FOLLOWING LIST IS JUST A SUGGESTION OF POSSILE STEPS AND HAS NOT BEEN VETTED
 - Before each commit, update this document with any new rules, decisions, or deviations so future sessions have the latest context.
  - We added a simple validation page at `@src/app/mui/page.tsx` to verify the org theme and `BrandButton`. Keep it minimal and MUI-only.
  - Migrating Shadcn components to MUI will be done via thin adapters to preserve call sites initially. First migrated: `@src/components/ui/button.tsx` now wraps `@mui/material/Button`. First consumer migrated: `@src/components/ui/pagination.tsx` now uses the adapter for links.
+ - The registry JSON is served at `/registry` and `/registry.json` for local v0 testing.
+ - A designer-friendly guide lives at `@docs/designer-guide.md`.
