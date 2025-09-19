@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 import type * as React from "react";
 
-import { type Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
@@ -41,25 +41,18 @@ type PaginationLinkProps = {
 } & Pick<React.ComponentProps<typeof Button>, "size"> &
   React.ComponentProps<"a">;
 
-function PaginationLink({
-  className,
-  isActive,
-  size = "icon",
-  ...props
-}: PaginationLinkProps) {
+function PaginationLink({ className, isActive, size = "icon", ...props }: PaginationLinkProps) {
   return (
-    <a
+    <Button
+      component="a"
       aria-current={isActive ? "page" : undefined}
       data-slot="pagination-link"
       data-active={isActive}
-      className={cn(
-        buttonVariants({
-          variant: isActive ? "outline" : "ghost",
-          size,
-        }),
-        className,
-      )}
-      {...props}
+      variant={isActive ? "outline" : "ghost"}
+      size={size}
+      sx={{ minWidth: 36, p: 0 }}
+      className={className}
+      {...(props as any)}
     />
   );
 }
@@ -72,11 +65,11 @@ function PaginationPrevious({
     <PaginationLink
       aria-label="Go to previous page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pl-2.5", className)}
+      className={cn(className)}
       {...props}
     >
       <ChevronLeftIcon />
-      <span className="hidden sm:block">Previous</span>
+      <span>Previous</span>
     </PaginationLink>
   );
 }
@@ -89,10 +82,10 @@ function PaginationNext({
     <PaginationLink
       aria-label="Go to next page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pr-2.5", className)}
+      className={cn(className)}
       {...props}
     >
-      <span className="hidden sm:block">Next</span>
+      <span>Next</span>
       <ChevronRightIcon />
     </PaginationLink>
   );
